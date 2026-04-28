@@ -27,6 +27,7 @@ import initScrollProgress from './sections-special/scrollProgress.js';
 
 const reduced = isReducedMotion();
 const EFFECTS = { 1: Effect1, 2: Effect2, 3: Effect3, 4: Effect4, 5: Effect5 };
+const heroModelViewer = import('@google/model-viewer');
 
 const lenis = reduced ? null : initLenis();
 
@@ -47,7 +48,7 @@ const boot = async () => {
 
   document.body.classList.remove('loading');
 
-  initHero({ gsap, ScrollTrigger, reduced });
+  initHero({ gsap, ScrollTrigger, reduced, modelViewerReady: heroModelViewer });
 
   // Wire codrops type-expand effects per [data-effect] section.
   // Each article has one .type element; effect class is chosen by data-effect attr.

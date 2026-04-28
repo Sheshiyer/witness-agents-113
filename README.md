@@ -12,8 +12,8 @@
 # Witness Agents · `113.tryambakam.space`
 
 **Self-consciousness as technology.** Body as medium. Breath as interface.
-Two interpretation agents — Aletheios and Pichet — sitting between
-sixteen engines and the practitioner who reads them.
+Sixteen engines, the canticle, essays, maps, and open code gathered into one
+inspectable field for self-consciousness.
 
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![GSAP](https://img.shields.io/badge/GSAP-3.12-88CE02?style=flat-square&logo=greensock&logoColor=black)](https://greensock.com/gsap/)
@@ -28,16 +28,17 @@ sixteen engines and the practitioner who reads them.
 
 ## What this is
 
-A standalone landing page for the **Witness Agents** product — the interpretation
-infrastructure layer of [Tryambakam Noesis](https://tryambakam.space).
+A standalone research-facing orientation page for the **Witness Agents** surface of
+[Tryambakam Noesis](https://tryambakam.space).
 
 The site fuses two design grammars:
 
 - **A codrops-style poetic typography flow** — 18 sections, one engine poster
   per section, scroll-triggered Flip animations that expand each image inline
   within the typography it lives inside.
-- **A product-page architecture** — hero with dual CTAs, "Why" bento, comparison
-  strip, lineage credibility, FAQ accordion, newsletter, sitemap footer.
+- **A research-interface architecture** — hero with dual CTAs, "Why" bento,
+  comparison strip, lineage credibility, FAQ accordion, direct
+  correspondence, sitemap footer.
 
 Section H2s spell **`WITNESSED`** as a hidden acrostic. Type the word anywhere on
 the page to trigger the L2 reveal.
@@ -75,7 +76,7 @@ the page to trigger the L2 reveal.
                   └────────────┬─────────────┘
                                │
                   ┌────────────▼─────────────┐
-                  │  NEWSLETTER + FOOTER     │
+                  │  SIGNAL + FOOTER         │
                   └──────────────────────────┘
 ```
 
@@ -96,8 +97,8 @@ the page to trigger the L2 reveal.
   `(i × 113) mod viewport`, with cursor-proximity filaments connecting them.
 - **Brand-locked** — Panchang + Satoshi from FontShare, Void Black canvas,
   Sacred Gold as the single accent. No emojis, no Inter, no "AI purple."
-- **Performance-budgeted** — `bun run build` produces ~11 KB HTML, ~9 KB CSS,
-  ~70 KB JS (all gzipped). Lighthouse-friendly.
+- **Performance-aware** — the page keeps the editorial surface lean and ships
+  the hero 3D model experience as a separate chunk.
 
 ---
 
@@ -134,8 +135,8 @@ bun run preview
 ```
 .
 ├── DESIGN.md                # 13-section semantic spec (source of truth)
-├── copy/sections.md         # final brand-voice copy
-├── index.html               # 18-section codrops flow + product-page wrappers
+├── copy/sections.md         # canonical public copy + prompt references
+├── index.html               # 18-section codrops flow + research-interface wrappers
 ├── public/
 │   ├── _headers             # CSP, HSTS, immutable cache rules
 │   ├── _redirects           # / → /index.html canonical
@@ -149,18 +150,26 @@ bun run preview
 │   ├── motion.css           # keyframes + reduced-motion gates
 │   ├── utilities.css
 │   ├── geometry.css         # SVG positioning + stroke-reveal states
-│   └── sections.css         # codrops layouts + product-page CSS
+│   └── sections.css         # codrops layouts + section CSS
 └── js/
     ├── main.js                # bootstrap
     ├── effects/effect-{1..5}.js   # codrops Flip-based image expansions
     ├── lib/                       # gsap, lenis, breath, splitText, seed, ...
     ├── motion/                    # reusable motion primitives
     ├── sections-special/          # hero, why, tapestry, threshold, faq,
-    │                              # newsletter, magnetic, scrollProgress
+    │                              # signal, magnetic, scrollProgress
     ├── easter-eggs/               # manifest, acrostic, l2-konami, l3-fragment,
     │                              # numerology, console
     └── integrations/linkMap.js
 ```
+
+---
+
+## Editorial surfaces
+
+- `copy/sections.md` — canonical public copy and section-level prompt refs
+- `tasks/seo-brief.md` — title, description, OG/Twitter copy, and alt strategy
+- `tasks/visual-prompt-bank.md` — manual prompt bank for OG, hero 3D, and all engine posters
 
 ---
 
@@ -195,7 +204,8 @@ Every external link routes through `js/integrations/linkMap.js`:
 | `tryambakam.space` (parent) | https://tryambakam.space |
 | `selemene` — sixteen engines API | https://selemene.tryambakam.space |
 | `1319` — the canticle (27 chapters) | https://1319.tryambakam.space |
-| `kopina` — PHAS-ION wearable | https://kopina.io |
+| `research` — public library | https://18765.tryambakam.space/research |
+| `maps` — orientation routes | https://18765.tryambakam.space/maps |
 | `noesis` — Selemene-engine repo | https://github.com/Sheshiyer/Selemene-engine |
 | `somatic-canticles` — content repo | https://github.com/Sheshiyer/Somatic-Canticles |
 

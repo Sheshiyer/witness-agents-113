@@ -18,6 +18,6 @@ export const greet = () => {
   console.log('%c> selemene    : selemene.tryambakam.space', STYLE_PARCH);
   console.log('%c> the canticle: 1319.tryambakam.space', STYLE_PARCH);
   console.log('%c> the field   : tryambakam.space', STYLE_PARCH);
-  console.log('%c\n(this page is one of nine nodes. count again.)\n', STYLE_MUTED);
+  console.log('%c\n(one field. nine coordinates. count again.)\n', STYLE_MUTED);
   console.log('%c[hint] try typing.', STYLE_MUTED);
 };

@@ -1,0 +1,50 @@
+{
+  "date": "2026-04-28",
+  "balanceBefore": 1770,
+  "base": {
+    "taskId": "019dd457-c50d-788b-b086-90cb55b2f1c1",
+    "reused": true,
+    "createdAt": "2026-04-28T13:46:58.350Z",
+    "credits": 30,
+    "sourceOutput": "public/models/sigil-base.glb",
+    "sourceBytes": 41861240,
+    "previewOutput": "public/models/sigil-base-preview.png"
+  },
+  "variants": [
+    {
+      "name": "duotone",
+      "taskId": "019dd4c7-ff67-7f55-a0e0-1ed4f62caddf",
+      "credits": 10,
+      "sourceOutput": "public/models/sigil-duotone.glb",
+      "sourceBytes": 27611372,
+      "previewOutput": "public/models/sigil-duotone-preview.png",
+      "optimizedOutput": "public/models/sigil-duotone-hero.glb",
+      "optimizedBytes": 292180
+    },
+    {
+      "name": "emboss",
+      "taskId": "019dd4ca-5398-7169-9233-4ff8cab0232a",
+      "credits": 10,
+      "sourceOutput": "public/models/sigil-emboss.glb",
+      "sourceBytes": 28253312,
+      "previewOutput": "public/models/sigil-emboss-preview.png",
+      "optimizedOutput": "public/models/sigil-emboss-hero.glb",
+      "optimizedBytes": 318956
+    },
+    {
+      "name": "foil",
+      "taskId": "019dd4cf-2735-70f4-b240-91ec319923d1",
+      "credits": 10,
+      "sourceOutput": "public/models/sigil-foil.glb",
+      "sourceBytes": 27781664,
+      "previewOutput": "public/models/sigil-foil-preview.png",
+      "optimizedOutput": "public/models/sigil-foil-hero.glb",
+      "optimizedBytes": 266132
+    }
+  ],
+  "recommendation": {
+    "liveAsset": "public/models/sigil-emboss-hero.glb",
+    "fallbackAsset": "public/models/sigil-hero.glb",
+    "reason": "The emboss variant delivered the strongest darker ceremonial read while remaining web-safe after optimization."
+  }
+}

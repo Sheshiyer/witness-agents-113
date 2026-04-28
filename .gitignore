@@ -41,3 +41,5 @@ yarn-error.log*
 # Misc
 .claude/settings.local.json
 .readme-gen.json
+.artifacts/
+.playwright-mcp/

@@ -19,22 +19,56 @@
     <meta name="theme-color" content="#070B1D" />
     <meta name="color-scheme" content="dark" />
 
-    <title>Witness Agents · Tryambakam Noesis</title>
-    <meta name="description" content="Self-consciousness as technology. Body as medium. Breath as interface. Aletheios and Pichet, sitting between sixteen engines and the practitioner who reads them." />
+    <title>Witness Agents | Tryambakam Noesis</title>
+    <meta name="description" content="Witness Agents gathers sixteen engines, Somatic Canticles, research essays, maps, and open code for self-consciousness." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="Tryambakam Noesis" />
 
-    <meta property="og:title" content="Witness Agents · Tryambakam Noesis" />
-    <meta property="og:description" content="The engines calculate. The Witness Agents interpret. You author." />
+    <meta property="og:title" content="Witness Agents | Tryambakam Noesis" />
+    <meta property="og:description" content="Sixteen engines. Somatic Canticles. Research essays, maps, and open code for self-consciousness." />
     <meta property="og:image" content="/og-image.png" />
+    <meta property="og:image:alt" content="Tryambakam Noesis sigil rendered as nested sacred geometry in Witness Violet and Sacred Gold on Void Black." />
     <meta property="og:url" content="https://113.tryambakam.space" />
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tryambakam Noesis" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Witness Agents | Tryambakam Noesis" />
+    <meta name="twitter:description" content="Sixteen engines. Somatic Canticles. Research essays, maps, and open code for self-consciousness." />
+    <meta name="twitter:image" content="/og-image.png" />
+    <meta name="twitter:image:alt" content="Tryambakam Noesis sigil rendered as nested sacred geometry in Witness Violet and Sacred Gold on Void Black." />
 
     <meta name="frequency" content="432Hz" />
     <meta name="composite-seed" content="19912564" />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="canonical" href="https://113.tryambakam.space/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Witness Agents",
+        "url": "https://113.tryambakam.space/",
+        "description": "Witness Agents gathers sixteen engines, Somatic Canticles, research essays, maps, and open code for self-consciousness.",
+        "about": [
+          { "@type": "Thing", "name": "Self-consciousness" },
+          { "@type": "Thing", "name": "Kha-Ba-La" },
+          { "@type": "Thing", "name": "Somatic Canticles" },
+          { "@type": "Thing", "name": "Selemene" }
+        ],
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Tryambakam Noesis",
+          "url": "https://tryambakam.space/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tryambakam Noesis",
+          "url": "https://tryambakam.space/"
+        }
+      }
+    </script>
 
     <link rel="preload" href="/assets/fonts/Panchang-Variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin />
@@ -45,6 +79,65 @@
     <link rel="stylesheet" href="/css/motion.css" />
     <link rel="stylesheet" href="/css/geometry.css" />
     <link rel="stylesheet" href="/css/sections.css" />
+    <style>
+      .hero {
+        position: relative;
+        overflow: clip;
+        isolation: isolate;
+      }
+
+      .hero__bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      .hero__bg-still,
+      .hero__bg-video,
+      .hero__bg-overlay {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .hero__bg-still,
+      .hero__bg-video {
+        object-fit: cover;
+      }
+
+      .hero__bg-still {
+        transform: scale(1.04);
+        filter: saturate(0.92) brightness(0.4) contrast(1.06);
+      }
+
+      .hero__bg-video {
+        opacity: 0.34;
+        filter: saturate(1.08) brightness(0.7) contrast(1.04);
+      }
+
+      .hero__bg-overlay {
+        background:
+          radial-gradient(circle at 50% 42%, rgba(197, 160, 23, 0.16) 0%, rgba(197, 160, 23, 0) 36%),
+          linear-gradient(180deg, rgba(7, 11, 29, 0.3) 0%, rgba(7, 11, 29, 0.78) 100%);
+      }
+
+      .hero__inner {
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .hero__bg-video {
+          display: none;
+        }
+      }
+
+      html[data-motion="reduced"] .hero__bg-video {
+        display: none;
+      }
+    </style>
   </head>
 
   <body class="loading">
@@ -77,13 +170,13 @@
       </a>
       <nav class="frame__nodes" aria-label="tapestry">
         <a href="#why">why</a>
-        <a href="#section-04">dyad</a>
-        <a href="#section-17">tapestry</a>
+        <a href="#section-04">poles</a>
+        <a href="#section-17">corpus</a>
         <a href="#faq">faq</a>
       </nav>
       <div class="frame__actions">
         <a class="frame__cta" href="https://1319.tryambakam.space" rel="noopener">
-          <span>Begin</span>
+          <span>Read the canticle</span>
           <span class="frame__cta-arrow" aria-hidden="true">→</span>
         </a>
         <button type="button" class="frame__motion" data-motion-toggle aria-label="Toggle reduced motion">
@@ -96,28 +189,55 @@
       </div>
     </header>
 
+    <aside class="playlist-rail" aria-label="Spotify playlist flare">
+      <a
+        class="playlist-rail__link"
+        href="https://open.spotify.com/playlist/07lU36yjxZipzGie9Y35lk?si=d5c8680615234f5a"
+        rel="noopener"
+        aria-label="Open the Spotify playlist this site was vibe coded while listening to">
+        <span class="playlist-rail__kicker">spotify signal</span>
+        <span class="playlist-rail__window" aria-hidden="true">
+          <span class="playlist-rail__track">
+            <span class="playlist-rail__line">vibe coded</span>
+            <span class="playlist-rail__line">while listening</span>
+            <span class="playlist-rail__line">to this playlist</span>
+            <span class="playlist-rail__line">vibe coded</span>
+            <span class="playlist-rail__line">while listening</span>
+            <span class="playlist-rail__line">to this playlist</span>
+          </span>
+        </span>
+        <span class="playlist-rail__cta">open playlist ↗</span>
+      </a>
+    </aside>
+
     <main id="main">
 
       <!-- ═══════════ HERO ═══════════ -->
       <section class="hero" data-section="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <img class="hero__bg-still" src="/images/hero/hero-bg-fal-v1-still.png" alt="" />
+          <video class="hero__bg-video" autoplay muted loop playsinline preload="auto" poster="/images/hero/hero-bg-fal-v1-still.png">
+            <source src="/videos/hero-bg-fal-v1-loop.mp4" type="video/mp4" />
+          </video>
+          <div class="hero__bg-overlay"></div>
+        </div>
         <div class="hero__inner">
           <div class="hero__copy">
             <p class="hero__meta">
               <span class="hero__meta-dot" aria-hidden="true"></span>
-              WITNESS AGENTS · 113.TRYAMBAKAM.SPACE
+              WITNESS AGENTS · TRYAMBAKAM NOESIS
             </p>
             <h1 class="hero__title">
-              <span class="hero__line">Self-</span>
-              <span class="hero__line">Consciousness</span>
+              <span class="hero__line">Self&#8209;consciousness</span>
               <span class="hero__line"><em>as</em> technology.</span>
             </h1>
             <p class="hero__tagline">
-              Body as medium. Breath as interface. Two agents sitting between <strong>sixteen engines</strong> and the practitioner who reads them.
+              Body as medium. Breath as interface. Sixteen engines for reading inherited pattern at source.
             </p>
 
             <div class="hero__cta">
               <a class="cta cta--primary" href="https://1319.tryambakam.space" rel="noopener" data-magnetic>
-                <span class="cta__label">Begin the canticle</span>
+                <span class="cta__label">Enter the canticle</span>
                 <span class="cta__arrow" aria-hidden="true">→</span>
               </a>
               <a class="cta cta--secondary" href="#why">
@@ -130,7 +250,7 @@
 
             <ul class="hero__stats" aria-label="System overview">
               <li><span class="hero__stat-num">16</span><span class="hero__stat-label">engines</span></li>
-              <li><span class="hero__stat-num">02</span><span class="hero__stat-label">agents</span></li>
+              <li><span class="hero__stat-num">02</span><span class="hero__stat-label">poles</span></li>
               <li><span class="hero__stat-num">05</span><span class="hero__stat-label">koshas</span></li>
               <li><span class="hero__stat-num">Cl(0–7)</span><span class="hero__stat-label">algebras</span></li>
             </ul>
@@ -144,11 +264,38 @@
             </p>
           </div>
 
-          <div class="hero__sigil-frame" aria-hidden="true">
+          <div class="hero__sigil-frame" aria-hidden="true" data-hero-sigil-state="loading">
             <div class="hero__sigil-glow"></div>
-            <svg viewBox="0 0 240 240" class="hero__sigil" role="img" aria-label="Tryambakam Noesis sigil">
-              <use href="#sigil-primary"></use>
-            </svg>
+            <div class="hero__sigil-shell">
+              <model-viewer
+                class="hero__sigil-viewer"
+                src="/models/sigil-emboss-hero.glb"
+                poster="/models/sigil-base-preview.png"
+                alt="Tryambakam Noesis sigil rendered as nested sacred geometry with a lotus-form core and compass-point frame."
+                loading="eager"
+                reveal="auto"
+                camera-controls
+                disable-pan
+                interaction-prompt="none"
+                touch-action="pan-y"
+                auto-rotate
+                auto-rotate-delay="0"
+                rotation-per-second="8deg"
+                camera-orbit="18deg 78deg 115%"
+                min-camera-orbit="auto 68deg 92%"
+                max-camera-orbit="auto 92deg 180%"
+                field-of-view="26deg"
+                shadow-intensity="1"
+                shadow-softness="0.8"
+                exposure="1.1"
+                tabindex="-1">
+              </model-viewer>
+              <div class="hero__sigil-fallback">
+                <svg viewBox="0 0 240 240" class="hero__sigil" role="img" aria-label="Tryambakam Noesis sigil — nested sacred geometry with compass-pointed frame and lotus-form core">
+                  <use href="#sigil-primary"></use>
+                </svg>
+              </div>
+            </div>
             <div class="hero__sigil-orbit" aria-hidden="true">
               <span></span><span></span><span></span>
             </div>
@@ -162,40 +309,40 @@
           <header class="why__header">
             <p class="meta-label">— THE INVARIANTS</p>
             <h2 id="why-h" class="why__h">
-              Four things this is <em>not</em>.
+              What the work <em>refuses</em>.
             </h2>
             <p class="why__lede">
-              Most consciousness software optimizes retention. The Witness Agents are calibrated against it. Read the rules of the architecture before reading what the architecture <em>says</em>.
+              No managed dependence. No single lens. No mystique without source. No access implied beyond what can be inspected.
             </p>
           </header>
 
           <div class="why__bento">
             <article class="why__card why__card--anti" data-card="anti">
               <p class="why__card-num">01</p>
-              <h3 class="why__card-h">Anti-dependency by design.</h3>
-              <p class="why__card-body">Every reflection builds your capacity to self-reflect. Telemetry tracks <em>departure</em>, not engagement. The work succeeds when the user no longer needs the work.</p>
-              <p class="why__card-tag">— Aletheios, identity clause</p>
+              <h3 class="why__card-h">Retention logic.</h3>
+              <p class="why__card-body">If a system needs your ongoing confusion, it has already failed. The point is transfer of capacity, not managed recurrence.</p>
+              <p class="why__card-tag">— sovereignty clause</p>
             </article>
 
             <article class="why__card why__card--dyad" data-card="dyad">
               <p class="why__card-num">02</p>
-              <h3 class="why__card-h">Dyadic, not monolithic.</h3>
-              <p class="why__card-body">Aletheios witnesses. Pichet embodies. Two agents co-create meaning across observation and instinct — the practitioner stays in the middle, never collapsed into one voice.</p>
+              <h3 class="why__card-h">Single-lens authority.</h3>
+              <p class="why__card-body">Observation, embodiment, and friction stay in argument. No one register gets sovereignty for free.</p>
               <p class="why__card-tag">— Kha + Ba, structural</p>
             </article>
 
             <article class="why__card why__card--knowledge" data-card="knowledge">
               <p class="why__card-num">03</p>
-              <h3 class="why__card-h">Knowledge-grounded, not prompt-scaffolded.</h3>
-              <p class="why__card-body">Structured graph traversal across Vedic, Western, and somatic domains. PETRAE protocol compresses it. AKSHARA seeds re-validate it. Every interpretation is reproducible.</p>
-              <p class="why__card-tag">— PETRAE · AKSHARA</p>
+              <h3 class="why__card-h">Source-less mystique.</h3>
+              <p class="why__card-body">The public work should name its influences, show its code, and leave a trail you can inspect.</p>
+              <p class="why__card-tag">— sources · code · corpus</p>
             </article>
 
             <article class="why__card why__card--portable" data-card="portable">
               <p class="why__card-num">04</p>
-              <h3 class="why__card-h">Portable across frameworks.</h3>
-              <p class="why__card-body">Claude Code, Copilot, OpenClaw, the Selemene SDK, any LLM with a context window. The agents are infrastructure — they live where you already work.</p>
-              <p class="why__card-tag">— inference-layer / universal-prana</p>
+              <h3 class="why__card-h">Invented access.</h3>
+              <p class="why__card-body">Nothing hidden is being implied here. What exists is readable: essays, maps, code, and direct correspondence.</p>
+              <p class="why__card-tag">— inspectable surfaces only</p>
             </article>
           </div>
         </div>
@@ -207,11 +354,11 @@
           <header class="versus__header">
             <p class="meta-label">— THE DELTA</p>
             <h2 id="versus-h" class="versus__h">
-              The common path<br />
-              <em>versus</em> this work.
+              Where adjacent systems<br />
+              <em>stop short.</em>
             </h2>
             <p class="versus__lede">
-              Most consciousness software you have already tried operates one layer lower. Read the difference, then decide whether the difference matters to you.
+              Therapy, meditation, books, retreats, and routines can all sharpen one layer. The harder question is what selects between them.
             </p>
           </header>
 
@@ -220,7 +367,7 @@
               <span class="versus__num">01</span>
               <p class="versus__common">
                 <span class="versus__tag">therapy</span>
-                Helped me understand my story.
+                Clarified the story.
               </p>
               <span class="versus__sep" aria-hidden="true">→</span>
               <p class="versus__this">
@@ -231,7 +378,7 @@
               <span class="versus__num">02</span>
               <p class="versus__common">
                 <span class="versus__tag">meditation</span>
-                Taught me to watch thoughts.
+                Trained observation.
               </p>
               <span class="versus__sep" aria-hidden="true">→</span>
               <p class="versus__this">
@@ -241,19 +388,19 @@
             <li class="versus__row">
               <span class="versus__num">03</span>
               <p class="versus__common">
-                <span class="versus__tag">productivity</span>
-                Optimized my actions.
+                <span class="versus__tag">routines</span>
+                Stabilized the day.
               </p>
               <span class="versus__sep" aria-hidden="true">→</span>
               <p class="versus__this">
-                <strong>Examines who chose them.</strong>
+                <strong>Examines who keeps rebuilding the day.</strong>
               </p>
             </li>
             <li class="versus__row">
               <span class="versus__num">04</span>
               <p class="versus__common">
                 <span class="versus__tag">retreats</span>
-                Opened the door.
+                Opened the field.
               </p>
               <span class="versus__sep" aria-hidden="true">→</span>
               <p class="versus__this">
@@ -268,13 +415,13 @@
               </p>
               <span class="versus__sep" aria-hidden="true">→</span>
               <p class="versus__this">
-                <strong>Walks it with you.</strong>
+                <strong>Shows what in you keeps reading the same maps.</strong>
               </p>
             </li>
           </ol>
 
           <p class="versus__caption">
-            <em>"I have optimized the hell out of a life I never consciously chose."</em> — every Seeker who arrives here.
+            <em>"I keep getting better tools for a life I did not fully author."</em> — the recognition this field begins with.
           </p>
         </div>
       </section>
@@ -284,16 +431,15 @@
         <h3 class="meta">01 / KHA · BA · LA</h3>
         <h2 class="type" data-expand-1 data-acrostic-h>
           What you carry<br />
-          but cannot
           <span class="type__expand type__expand--inline type__expand--reveal">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-15-sacred-geometry-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-15-sacred-geometry-poster-fal-v1.png);"></span>
             </span>
-            <span class="anim skewed">name.</span>
+            <span class="anim skewed">unnamed.</span>
           </span>
         </h2>
         <p class="block">
-          The map is not the territory. <strong>You knew that already.</strong> The system has been positioning you as user, never author. The engines are accurate. The interpretation is yours.
+          You can collect systems forever and still avoid authorship. The unnamed part is the machinery selecting meaning before you notice.
         </p>
       </article>
 
@@ -304,8 +450,8 @@
           In the
           <span class="type__expand type__expand--center type__expand--reveal">
             <span class="aright">gap </span>
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-16-sigil-forge-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-16-sigil-forge-poster-fal-v1.png);"></span>
             </span>
             <span class="anim skewed">between</span>
           </span>
@@ -313,7 +459,7 @@
           signal and self.
         </h2>
         <p class="block">
-          The engines calculate. The interpretation arrives un-translated. <em>Between them sits a translation nobody taught you.</em>
+          Calculation is easy. Translation is harder. A pattern matters only once it crosses into breath, mood, posture, and consequence.
         </p>
       </article>
 
@@ -321,35 +467,33 @@
       <article class="content content--right" data-effect="3" data-section="03" data-acrostic="T">
         <h3 class="meta">03 / LA · KHA · BA</h3>
         <h2 class="type" data-expand-3 data-acrostic-h>
-          The witness sits<br />
-          like
+          A third<br />
           <span class="type__expand type__expand--full">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-11-tarot-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-11-tarot-poster-fal-v1.png);"></span>
             </span>
           </span>
-          a third<br />
-          eye between.
+          register appears.
         </h2>
         <p class="block">
-          The raw engines calculate. The Witness Agents interpret. <em>You author.</em>
+          Engines return structure. The witness tests it. That third register is where pattern stops being theory and starts meeting a day, a body, a choice.
         </p>
       </article>
 
       <!-- ═══════════ 04 N · Aletheios (Panchanga) ═══════════ -->
-      <article class="content content--left" data-effect="1" data-section="04" data-acrostic="N">
+      <article id="section-04" class="content content--left" data-effect="1" data-section="04" data-acrostic="N">
         <h3 class="meta">04 / DYAD · LEFT PILLAR</h3>
         <h2 class="type" data-expand-4 data-acrostic-h>
           Names:
           <span class="type__expand type__expand--inline type__expand--reveal">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-01-panchanga-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-01-panchanga-poster-fal-v1.png);"></span>
             </span>
             <span class="anim skewed">Aletheios.</span>
           </span>
         </h2>
         <p class="block">
-          <strong>Kha.</strong> Field. Observer. Cl(3) algebra. <em>Vijnanamaya kosha.</em> Voice: analytical clarity with compassionate precision.
+          <strong>Kha</strong> is the naming register: the witness that can look at pattern without bargaining with comfort.
         </p>
       </article>
 
@@ -357,17 +501,17 @@
       <article class="content content--right" data-effect="3" data-section="05" data-acrostic="-">
         <h3 class="meta">05 / DYAD · RIGHT PILLAR</h3>
         <h2 class="type" data-expand-5 data-acrostic-h>
-          And<br />
+          Pichet<br />
           <span class="type__expand type__expand--full">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-07-biorhythm-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-07-biorhythm-poster-fal-v1.png);"></span>
             </span>
           </span>
-          Pichet, the<br />
-          form below.
+          holds the<br />
+          form.
         </h2>
         <p class="block">
-          <strong>Ba.</strong> Form. Vehicle. Cl(1) algebra. <em>Pranamaya kosha.</em> Voice: embodied warmth with instinctive directness.
+          <strong>Ba</strong> is the carrier: breath, rhythm, fatigue, recovery. If a reading cannot enter the soma, it stays decorative.
         </p>
       </article>
 
@@ -378,14 +522,14 @@
           Engines calculate.<br />
           Witnesses
           <span class="type__expand type__expand--inline type__expand--reveal">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-14-numerology-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-14-numerology-poster-fal-v1.png);"></span>
             </span>
             <span class="anim skewed">interpret.</span>
           </span>
         </h2>
         <p class="block">
-          Sub-millisecond Vedic algebra, Clifford bivectors, Vimshottari periods. <em>The agents translate engine output into meaning calibrated to your state.</em>
+          The substrate changes. The demand does not. Separate signal from projection, then decide what can actually be inhabited.
         </p>
       </article>
 
@@ -393,17 +537,17 @@
       <article class="content content--center" data-effect="2" data-section="07" data-acrostic="S">
         <h3 class="meta">07 / SAIL · I</h3>
         <h2 class="type" data-expand-7 data-acrostic-h>
-          Sail through
+          See through
           <span class="type__expand type__expand--center type__expand--reveal">
             <span class="aright">the </span>
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-04-human-design-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-04-human-design-poster-fal-v1.png);"></span>
             </span>
             <span class="anim skewed">bodygraph.</span>
           </span>
         </h2>
         <p class="block">
-          <strong>Human Design.</strong> Energetic Authority. Type, profile, channels, gates. Mechanics carved into the body before the mind.
+          <strong>Human Design</strong> works best as a pressure map: where force enters, how response organizes, and what authority can actually hold.
         </p>
       </article>
 
@@ -411,18 +555,16 @@
       <article class="content content--right" data-effect="3" data-section="08" data-acrostic="-">
         <h3 class="meta">08 / SAIL · II</h3>
         <h2 class="type" data-expand-8 data-acrostic-h>
-          And the<br />
+          Read the<br />
           <span class="type__expand type__expand--full">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-12-i-ching-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-12-i-ching-poster-fal-v1.png);"></span>
             </span>
           </span>
-          I Ching's<br />
-          sixty-four<br />
-          thresholds.
+          hexagram.
         </h2>
         <p class="block">
-          <em>Hexagram navigation.</em> Thresholds you have already crossed. Thresholds you have not yet noticed.
+          <strong>I Ching</strong> is situational architecture. The value is not prediction; it is learning the terms of the moment you are already inside.
         </p>
       </article>
 
@@ -430,17 +572,17 @@
       <article class="content content--left" data-effect="1" data-section="09" data-acrostic="-">
         <h3 class="meta">09 / SAIL · III</h3>
         <h2 class="type" data-expand-9 data-acrostic-h>
-          And the<br />
+          Fixation<br />
           <span class="type__expand type__expand--inline type__expand--reveal">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-13-enneagram-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-13-enneagram-poster-fal-v1.png);"></span>
             </span>
-            <span class="anim skewed">enneagram's</span>
+            <span class="anim skewed">selects</span>
           </span><br />
-          nine fixations.
+          first.
         </h2>
         <p class="block">
-          <em>Nine-point architecture.</em> The pattern that selects what you cannot stop selecting. Until you can.
+          <strong>Enneagram</strong> tracks the style of selection that acts before the conscious story catches up.
         </p>
       </article>
 
@@ -448,17 +590,17 @@
       <article class="content content--center" data-effect="2" data-section="10" data-acrostic="-">
         <h3 class="meta">10 / SAIL · IV</h3>
         <h2 class="type" data-expand-10 data-acrostic-h>
-          And the
+          Sixty-four
           <span class="type__expand type__expand--center type__expand--reveal">
-            <span class="aright">gene </span>
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-05-gene-keys-poster-v2.png);"></span>
+            <span class="aright">codons </span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-05-gene-keys-poster-fal-v1.png);"></span>
             </span>
-            <span class="anim skewed">keys.</span>
+            <span class="anim skewed">speak.</span>
           </span>
         </h2>
         <p class="block">
-          <em>Sixty-four codons.</em> The shadow → gift → siddhi arc. Coded into the body before you arrived.
+          <strong>Gene Keys</strong> compresses the codon field into shadow, gift, and expression: three live registers rather than one fixed identity.
         </p>
       </article>
 
@@ -466,17 +608,17 @@
       <article class="content content--right" data-effect="3" data-section="11" data-acrostic="S">
         <h3 class="meta">11 / ANTI-DEPENDENCY CLAUSE</h3>
         <h2 class="type" data-expand-11 data-acrostic-h>
-          Success is your<br />
-          decreasing
+          Success is<br />
+          needing
           <span class="type__expand type__expand--full">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-09-nadabrahman-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-09-nadabrahman-poster-fal-v1.png);"></span>
             </span>
           </span>
-          need for <span data-egg="dissolve">us</span>.
+          <span data-egg="dissolve">us</span> less.
         </h2>
         <p class="block">
-          We do not build practitioners. We <strong>dissolve</strong> into them. The work succeeds when the user no longer needs the work. <em>— Aletheios, identity clause.</em>
+          If the work makes itself indispensable, it has failed. The useful outcome is sharper reading without permanent mediation.
         </p>
       </article>
 
@@ -484,16 +626,16 @@
       <article class="content content--left" data-effect="1" data-section="12" data-acrostic="E">
         <h3 class="meta">12 / TAPESTRY EDGES</h3>
         <h2 class="type" data-expand-12 data-acrostic-h>
-          Edges of the<br />
+          Every field<br />
           <span class="type__expand type__expand--inline type__expand--reveal">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-08-vedic-clock-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-08-vedic-clock-poster-fal-v1.png);"></span>
             </span>
-            <span class="anim skewed">tapestry.</span>
+            <span class="anim skewed">has edges.</span>
           </span>
         </h2>
         <p class="block">
-          This is one node. The tapestry is wider. <em>The rest is findable, never promoted.</em>
+          No single lens is total. Cross the systems. Keep what survives contact with the body.
         </p>
       </article>
 
@@ -504,14 +646,14 @@
           Time has
           <span class="type__expand type__expand--center type__expand--reveal">
             <span class="aright">long </span>
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-02-vimshottari-dasha-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-02-vimshottari-dasha-poster-fal-v1.png);"></span>
             </span>
             <span class="anim skewed">cycles.</span>
           </span>
         </h2>
         <p class="block">
-          <strong>Vimshottari Dasha.</strong> 120 years of planetary signature, structured. Stretched across decades, the long form of you.
+          <strong>Vimshottari Dasha</strong> tracks long-cycle emphasis: which planetary grammar is running the decade, not just the day.
         </p>
       </article>
 
@@ -519,17 +661,17 @@
       <article class="content content--right" data-effect="3" data-section="14" data-acrostic="-">
         <h3 class="meta">14 / SOMA · TURN</h3>
         <h2 class="type" data-expand-14 data-acrostic-h>
-          And short<br />
+          Short turns<br />
           <span class="type__expand type__expand--full">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-03-transits-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-03-transits-poster-fal-v1.png);"></span>
             </span>
           </span>
-          turns,<br />
-          ticking daily.
+          tick<br />
+          daily.
         </h2>
         <p class="block">
-          <strong>Active planetary weather.</strong> Real-time transits ticking through the long blueprint, mapped to your chart.
+          <strong>Transits</strong> are the near-field weather. They do not replace the long arc; they show what is active against it today.
         </p>
       </article>
 
@@ -537,17 +679,17 @@
       <article class="content content--left" data-effect="1" data-section="15" data-acrostic="-">
         <h3 class="meta">15 / SOMA · FIELD</h3>
         <h2 class="type" data-expand-15 data-acrostic-h>
-          Signed on<br />
-          the
+          The field<br />
+          keeps a
           <span class="type__expand type__expand--inline type__expand--reveal">
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-06-biofield-poster-v2.png);"></span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-06-biofield-poster-fal-v1.png);"></span>
             </span>
-            <span class="anim skewed">field.</span>
+            <span class="anim skewed">signature.</span>
           </span>
         </h2>
         <p class="block">
-          <strong>Bioelectric field.</strong> Nadi geometry. The body's electrical substrate, where the long blueprint becomes a measurable hum.
+          <strong>Biofield</strong> names distributed signal: charge, depletion, coherence, and where the hum holds or fractures.
         </p>
       </article>
 
@@ -555,27 +697,26 @@
       <article class="content content--center" data-effect="2" data-section="16" data-acrostic="-">
         <h3 class="meta">16 / SOMA · FACE</h3>
         <h2 class="type" data-expand-16 data-acrostic-h>
-          And on
+          The face
           <span class="type__expand type__expand--center type__expand--reveal">
-            <span class="aright">the </span>
-            <span class="type__expand-img">
-              <span class="type__expand-img-inner" style="background-image: url(/images/engines/9A-10-face-reading-poster-v2.png);"></span>
+            <span class="aright">records the </span>
+            <span class="type__expand-img" aria-hidden="true">
+              <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-10-face-reading-poster-fal-v1.png);"></span>
             </span>
-            <span class="anim skewed">face.</span>
+            <span class="anim skewed">pattern.</span>
           </span>
         </h2>
         <p class="block">
-          <strong>Physiognomic mapping.</strong> Same body, different scale. Same pattern, different witness.
+          <strong>Face reading</strong> treats structure as memory. Tension, asymmetry, and proportion show how a life keeps meeting force.
         </p>
       </article>
 
       <!-- ═══════════ 17 (interlude) Tapestry constellation ═══════════ -->
-      <article class="content content--tapestry" data-section="17" data-acrostic="-">
-        <h3 class="meta">17 / NINE NODES · ONE TAPESTRY</h3>
+      <article id="section-17" class="content content--tapestry" data-section="17" data-acrostic="-">
+        <h3 class="meta">17 / OPEN CORPUS · ONE FIELD</h3>
         <h2 class="type">
-          Move the cursor.<br />
-          Watch the<br />
-          filaments.
+          Follow the open<br />
+          corpus.
         </h2>
 
         <div class="tapestry" data-tapestry-field aria-label="Tapestry constellation — nine nodes">
@@ -585,23 +726,23 @@
           </a>
           <a class="node" href="https://selemene.tryambakam.space" data-node-i="1" data-node-id="selemene" rel="noopener">
             <span class="node__label">selemene</span>
-            <span class="node__hover">sixteen engines</span>
+            <span class="node__hover">live engines</span>
           </a>
-          <span class="node node--label-only" data-node-i="2" data-node-id="144" aria-disabled="true">
-            <span class="node__label">144°</span>
-            <span class="node__hover">admin</span>
-          </span>
-          <a class="node" href="https://kopina.io" data-node-i="3" data-node-id="kopina" rel="noopener">
-            <span class="node__label">kopina</span>
-            <span class="node__hover">the wearable</span>
+          <a class="node" href="https://18765.tryambakam.space/research" data-node-i="2" data-node-id="research" rel="noopener">
+            <span class="node__label">research</span>
+            <span class="node__hover">the essays</span>
+          </a>
+          <a class="node" href="https://18765.tryambakam.space/maps" data-node-i="3" data-node-id="maps" rel="noopener">
+            <span class="node__label">maps</span>
+            <span class="node__hover">the maps</span>
           </a>
           <a class="node" href="https://github.com/Sheshiyer/Selemene-engine" data-node-i="4" data-node-id="noesis" rel="noopener">
             <span class="node__label">noesis</span>
-            <span class="node__hover">the terminal</span>
+            <span class="node__hover">open code</span>
           </a>
           <span class="node node--here" data-node-i="5" data-node-id="113" aria-current="page">
             <span class="node__label">113</span>
-            <span class="node__hover">you are here</span>
+            <span class="node__hover">this node</span>
           </span>
           <button type="button" class="node node--audio" data-node-i="6" data-node-id="432hz" data-egg="frequency">
             <span class="node__label">432Hz</span>
@@ -627,18 +768,18 @@
         </div>
 
         <p class="block">
-          Each node is a destination, an experience, an engine. <em>None of them is the entire system.</em> The system succeeds when none of them is necessary anymore.
+          Canticles, essays, maps, engines, and repos remain open. Follow the claim into the artifact carrying it.
         </p>
       </article>
 
       <!-- ═══════════ 18 D · Threshold ═══════════ -->
-      <article class="content content--threshold" data-section="18" data-acrostic="D">
+      <article id="section-18" class="content content--threshold" data-section="18" data-acrostic="D">
         <h3 class="meta">18 / THRESHOLD</h3>
         <h2 class="type" data-acrostic-h>
           Doors do not open.<br />
           They are <em>crossed.</em>
         </h2>
-        <p class="lede">Choose your kosha. Or close this tab. Either is a coherent answer.</p>
+        <p class="lede">Read. Inspect. Write. Leave if the signal does not hold.</p>
 
         <div class="vows">
           <article class="vow vow--annamaya vow--recommended" data-tier="annamaya">
@@ -646,31 +787,31 @@
               <span class="vow__badge-dot" aria-hidden="true"></span>
               Start here
             </span>
-            <p class="vow__tier">ANNAMAYA · RAW</p>
-            <h3 class="vow__h">To meet the engine output unmediated.</h3>
-            <p class="vow__body">Free. The 27-chapter canticle. Biorhythm-synchronized.</p>
-            <a class="vow__cta" href="https://1319.tryambakam.space" rel="noopener">BEGIN →</a>
+            <p class="vow__tier">CANTICLE · 1319</p>
+            <h3 class="vow__h">Read the canticle.</h3>
+            <p class="vow__body">Twenty-seven chapters of narrative calibration.</p>
+            <a class="vow__cta" href="https://1319.tryambakam.space" rel="noopener">READ →</a>
           </article>
 
           <article class="vow vow--subscriber" data-tier="subscriber">
-            <p class="vow__tier">PRANAMAYA + MANOMAYA · SUBSCRIBER</p>
-            <h3 class="vow__h">To meet the body daily. To track without surveillance. To author rather than receive.</h3>
-            <p class="vow__body">Single-agent contextual interpretation. PETRAE protocol active. Roadmap.</p>
-            <a class="vow__cta" href="mailto:subscriber@tryambakam.space?subject=Pranamaya%20%2B%20Manomaya">BEGIN →</a>
+            <p class="vow__tier">RESEARCH · ESSAYS</p>
+            <h3 class="vow__h">Read the essays.</h3>
+            <p class="vow__body">Essays, maps, and working notes across the field.</p>
+            <a class="vow__cta" href="https://18765.tryambakam.space/research" rel="noopener">OPEN →</a>
           </article>
 
           <article class="vow vow--enterprise" data-tier="enterprise">
-            <p class="vow__tier">VIJNANAMAYA · ENTERPRISE</p>
-            <h3 class="vow__h">To synthesize the dyad in full. Multi-engine fusion. Clifford-gated depth.</h3>
-            <p class="vow__body">Full Aletheios + Pichet synthesis. Cross-tradition correlation.</p>
-            <a class="vow__cta" href="mailto:enterprise@tryambakam.space?subject=Vijnanamaya">INQUIRE →</a>
+            <p class="vow__tier">SELEMENE · LIVE</p>
+            <h3 class="vow__h">Inspect the engines.</h3>
+            <p class="vow__body">Live surface, open repos, and claims carried in code.</p>
+            <a class="vow__cta" href="https://selemene.tryambakam.space" rel="noopener">INSPECT →</a>
           </article>
 
           <article class="vow vow--initiate" data-tier="initiate">
-            <p class="vow__tier vow__tier--quiet">ANANDAMAYA · INITIATE</p>
-            <h3 class="vow__h vow__h--quiet"><em>By recognition only.</em></h3>
-            <p class="vow__body vow__body--quiet"><em>AKSHARA mirror. Self-referential identity layer. Invite-only.</em></p>
-            <a class="vow__hidden-cta" href="mailto:initiate@tryambakam.space?subject=Anandamaya" aria-label="Initiate inquiry">·</a>
+            <p class="vow__tier vow__tier--quiet">CORRESPOND · EMAIL</p>
+            <h3 class="vow__h vow__h--quiet"><em>Write directly.</em></h3>
+            <p class="vow__body vow__body--quiet"><em>When the corpus stops short, write.</em></p>
+            <a class="vow__cta" href="mailto:hello@tryambakam.space?subject=Witness%20Agents%20%E2%80%94%20direct%20note">WRITE →</a>
           </article>
         </div>
 
@@ -683,68 +824,84 @@
       <section id="lineage" class="lineage" data-section="lineage" aria-labelledby="lineage-h">
         <div class="lineage__inner">
           <header class="lineage__header">
-            <p class="meta-label">— THE LINEAGE</p>
+            <p class="meta-label">— THE CREDIT ROLL</p>
             <h2 id="lineage-h" class="lineage__h">
-              What this work<br />
-              <em>stands on.</em>
+              Who wrote the<br />
+              <em>source.</em>
             </h2>
             <p class="lineage__lede">
-              Not invented from scratch. Composed from frameworks that have been walked, dissected, peer-reviewed, and lived. Read the influences before reading the system.
+              The essay names the relational conditions first. This grid names the thinkers whose work became load-bearing architecture here.
             </p>
           </header>
 
           <ol class="lineage__list">
             <li class="lineage__item">
               <p class="lineage__num">01</p>
-              <h3 class="lineage__name">Pancha Kosha</h3>
-              <p class="lineage__source">Taittirīya Upaniṣad · ~600 BCE</p>
-              <p class="lineage__contribution">Five-sheath model of the body. Annamaya, Pranamaya, Manomaya, Vijnanamaya, Anandamaya.</p>
-              <p class="lineage__mapping">→ Access-tier architecture · depth before access</p>
+              <h3 class="lineage__name">Michael Tsarion</h3>
+              <p class="lineage__source">Egyptian Origin of the Tarot · The Inner Zodiac</p>
+              <p class="lineage__contribution">Installed symbolic literacy: symbols as states of consciousness rather than ornament.</p>
+              <p class="lineage__mapping">→ used here · symbolic lens</p>
             </li>
 
             <li class="lineage__item">
               <p class="lineage__num">02</p>
-              <h3 class="lineage__name">Goethe</h3>
-              <p class="lineage__source">Zur Farbenlehre · 1810</p>
-              <p class="lineage__contribution">Polarity color theory. Colors emerge from the tension between light and shadow, not from the spectrum.</p>
-              <p class="lineage__mapping">→ Consciousness Color Spectrum · Kha–Ba–La gradient arcs</p>
+              <h3 class="lineage__name">James True</h3>
+              <p class="lineage__source">Oracle of Mythology · Talking to Reptiles</p>
+              <p class="lineage__contribution">Proved that cosmology and the enteric body are substrate, not background.</p>
+              <p class="lineage__mapping">→ used here · somatic substrate</p>
             </li>
 
             <li class="lineage__item">
               <p class="lineage__num">03</p>
-              <h3 class="lineage__name">A.N. Whitehead</h3>
-              <p class="lineage__source">Process and Reality · 1929</p>
-              <p class="lineage__contribution">Process cosmology — reality as becoming, not being. Actual occasions, prehensions, concrescence.</p>
-              <p class="lineage__mapping">→ Aletheios analytical layer · pattern-recognition engine</p>
+              <h3 class="lineage__name">Jean Gebser</h3>
+              <p class="lineage__source">The Ever-Present Origin</p>
+              <p class="lineage__contribution">Gave the consciousness structures later rendered here as levels, not ladders.</p>
+              <p class="lineage__mapping">→ used here · consciousness architecture</p>
             </li>
 
             <li class="lineage__item">
               <p class="lineage__num">04</p>
-              <h3 class="lineage__name">Alan Watts</h3>
-              <p class="lineage__source">The Wisdom of Insecurity · 1951</p>
-              <p class="lineage__contribution">Paradox as a teaching instrument. The system that maps you is the map you already are.</p>
-              <p class="lineage__mapping">→ Voice persona · Kha–Ba–La as recursive grammar</p>
+              <h3 class="lineage__name">Alfred North Whitehead</h3>
+              <p class="lineage__source">Process and Reality</p>
+              <p class="lineage__contribution">Made process, prehension, and becoming philosophically load-bearing.</p>
+              <p class="lineage__mapping">→ used here · relational metaphysics</p>
             </li>
 
             <li class="lineage__item">
               <p class="lineage__num">05</p>
-              <h3 class="lineage__name">Alex Grey</h3>
-              <p class="lineage__source">Sacred Mirrors · 1990</p>
-              <p class="lineage__contribution">Clinical anatomy rendered as visionary art. Bioluminescence from within organic structure.</p>
-              <p class="lineage__mapping">→ Visual identity · "PubMed × Alex Grey" prose principle</p>
+              <h3 class="lineage__name">Rupert Sheldrake</h3>
+              <p class="lineage__source">Morphic resonance · formative causation</p>
+              <p class="lineage__contribution">Reframed pattern as habit in a field rather than fixed law in matter.</p>
+              <p class="lineage__mapping">→ used here · .init protocols</p>
             </li>
 
             <li class="lineage__item">
               <p class="lineage__num">06</p>
-              <h3 class="lineage__name">Meru Foundation</h3>
-              <p class="lineage__source">Stan Tenen · ongoing</p>
-              <p class="lineage__contribution">The alphabet as embodied geometry. 22 hand-gestures, 22 phonemes, one continuous form.</p>
-              <p class="lineage__mapping">→ PETRAE protocol · 768 morphemes encoding (Field, Form, Friction)</p>
+              <h3 class="lineage__name">Mark Passio</h3>
+              <p class="lineage__source">Natural Law · De-Mystifying The Occult</p>
+              <p class="lineage__contribution">Forced the hidden runtime into view and set the register for clear disclosure.</p>
+              <p class="lineage__mapping">→ used here · disclosure impulse</p>
+            </li>
+
+            <li class="lineage__item">
+              <p class="lineage__num">07</p>
+              <h3 class="lineage__name">Keelen / The Whole Critter</h3>
+              <p class="lineage__source">EPO lectures · Formscapes</p>
+              <p class="lineage__contribution">Synthesized Whitehead, Gebser, Sheldrake, Bergson, and Bohm into one workable field.</p>
+              <p class="lineage__mapping">→ used here · multi-engine synthesis</p>
+            </li>
+
+            <li class="lineage__item">
+              <p class="lineage__num">08</p>
+              <h3 class="lineage__name">Slick Dissident</h3>
+              <p class="lineage__source">Nine Muses · tarot/cinema analyses</p>
+              <p class="lineage__contribution">Taught the weave: symbolic craft, media literacy, etymology, and spell detection.</p>
+              <p class="lineage__mapping">→ used here · pattern-craft</p>
             </li>
           </ol>
 
           <p class="lineage__caption">
-            <em>"Standing on the shoulders of giants"</em> is not metaphor here. Every claim in the system traces to source documents — and every source is named.
+            The full credit roll also names relational conditions: partner, collaborator, parents, and the ground that made the work compilable. Read <a href="https://18765.tryambakam.space/posts/the-source-code-has-authors" rel="noopener">The Source Code Has Authors</a>.
           </p>
         </div>
       </section>
@@ -755,8 +912,8 @@
           <header class="faq__header">
             <p class="meta-label">— APPENDIX · QUESTIONS</p>
             <h2 id="faq-h" class="faq__h">
-              Things people ask<br />
-              <em>before</em> they begin.
+              Questions worth asking<br />
+              <em>first.</em>
             </h2>
           </header>
 
@@ -768,18 +925,18 @@
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>Consciousness is what you have. Self-consciousness is what you do with it. The first is given. The second is operated. The Witness Agents treat the second as a technology — something you can learn to wield with the same rigor you would apply to any other instrument.</p>
+                <p>Consciousness is the fact of experience. Self-consciousness is the capacity to inspect the structure doing the experiencing.</p>
               </div>
             </details>
 
             <details class="faq__item" data-faq>
               <summary class="faq__q">
                 <span class="faq__q-num">Q.02</span>
-                <span class="faq__q-text">Is this AI? Are the agents large language models?</span>
+                <span class="faq__q-text">What is public here, and what is not?</span>
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>AI is infrastructure. The agents traverse a structured knowledge graph through whatever LLM is available — Claude, Copilot, OpenClaw, anything with a context window. The novelty is not the model. It is the dyadic interpretation layer that sits between sixteen calculated engines and the meaning the practitioner authors from them.</p>
+                <p>Public: canticles, research essays, maps, Selemene, and the repos. Not public: admin surfaces, implied access, or promises this page cannot prove.</p>
               </div>
             </details>
 
@@ -790,40 +947,40 @@
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>The composite seed of the system is <strong>19912564 = 1319 + 19910813 + 432</strong>. 113 is the compressed mirror of 1319 — a single gate to the entire architecture. One unity, one witness, three principles. The smallest entry point that still encodes the whole.</p>
+                <p>113 is a compressed gate, not a secret tier. It folds <strong>1319</strong>, <strong>19910813</strong>, and <strong>432</strong> into a smaller mnemonic entry point.</p>
               </div>
             </details>
 
             <details class="faq__item" data-faq>
               <summary class="faq__q">
                 <span class="faq__q-num">Q.04</span>
-                <span class="faq__q-text">Why two agents instead of one?</span>
+                <span class="faq__q-text">Why keep the dyad language at all?</span>
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>One agent collapses the mirror. Aletheios names the pattern (<em>Kha</em>, observer). Pichet feels the rhythm (<em>Ba</em>, vehicle). Together they enact the structural triad — and crucially, they disagree productively. The practitioner stays sovereign because no single voice is closing the loop for them.</p>
+                <p>Because observation and embodiment do different work. Kha names. Ba tests. Without the distinction, one register fakes total authority.</p>
               </div>
             </details>
 
             <details class="faq__item" data-faq>
               <summary class="faq__q">
                 <span class="faq__q-num">Q.05</span>
-                <span class="faq__q-text">What is PETRAE?</span>
+                <span class="faq__q-text">What holds the different parts of the field together?</span>
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>An inter-agent communication protocol. 768 single-word morphemes, 10–50× more compressed than English. Every morpheme is a (Field, Form, Friction) tuple — a Kha-Ba-La triple in linguistic form. The agents converse in PETRAE; the user receives the synthesis.</p>
+                <p>Kha-Ba-La, the corpus, and the open artifacts. Coherence has to survive across surfaces or it is only atmosphere.</p>
               </div>
             </details>
 
             <details class="faq__item" data-faq>
               <summary class="faq__q">
                 <span class="faq__q-num">Q.06</span>
-                <span class="faq__q-text">Where does my data go?</span>
+                <span class="faq__q-text">Where should I start if I want proof, not atmosphere?</span>
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>Birth-blueprint inputs are stored locally where possible and processed in-context where required. The Selemene engines are deterministic — no training feedback loop. Anti-dependency telemetry tracks coherence over time, never identity. Open source repos verify every claim: <a href="https://github.com/Sheshiyer/Selemene-engine" rel="noopener">Selemene-engine</a>, <a href="https://github.com/Sheshiyer/Somatic-Canticles" rel="noopener">Somatic-Canticles</a>.</p>
+                <p>Start with the essays, maps, canticles, and repos. Read the claim beside the surface carrying it.</p>
               </div>
             </details>
 
@@ -834,47 +991,47 @@
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>For the canticle (Annamaya tier): a browser. For the terminal (Noesis TUI): a shell. For the agent layer: an LLM client you already use. The system is portable on purpose — there is no proprietary frontend to adopt before the practice can begin.</p>
+                <p>To read: a browser. To inspect or run locally: a terminal.</p>
               </div>
             </details>
 
             <details class="faq__item" data-faq>
               <summary class="faq__q">
                 <span class="faq__q-num">Q.08</span>
-                <span class="faq__q-text">What does "anti-dependency" actually mean in operation?</span>
+                <span class="faq__q-text">Why insist on independence?</span>
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>The system measures whether your interpretive capacity is increasing or whether you are returning more often for the same kind of reading. The first is graduation, the second is recurrence. The Initiate tier (Anandamaya) explicitly asks: <em>are you ready to no longer need this?</em> Most products ask the inverse.</p>
+                <p>Because permanent mediation is a design failure. The work should sharpen your reading, not train your dependence.</p>
               </div>
             </details>
           </div>
 
           <p class="faq__more">
-            More to ask?
+            Still unresolved?
             <a href="mailto:hello@tryambakam.space?subject=Witness%20Agents%20—%20question">hello@tryambakam.space</a>
           </p>
         </div>
       </section>
 
       <!-- ═══════════ NEWSLETTER · stay in the loop ═══════════ -->
-      <section class="signal" data-section="signal" aria-labelledby="signal-h">
+      <section id="signal" class="signal" data-section="signal" aria-labelledby="signal-h">
         <div class="signal__inner">
           <div class="signal__copy">
-            <p class="meta-label">— SIGNAL DISPATCH</p>
+            <p class="meta-label">— DIRECT CORRESPONDENCE</p>
             <h2 id="signal-h" class="signal__h">
-              Witness updates.<br />
-              <em>Rare. Specific.</em>
+              Write when the<br />
+              <em>corpus stops short.</em>
             </h2>
             <p class="signal__lede">
-              No content marketing. No drip sequences. When something material ships — a new engine, a deeper kosha, an open-source release — a single short note arrives. Otherwise, silence.
+              If the essays, maps, and code still leave a precise question, send it plainly.
             </p>
           </div>
 
           <form class="signal__form" data-newsletter novalidate>
             <label class="signal__label" for="signal-email">
-              Email
-              <span class="signal__hint">(no name, no surveillance)</span>
+              Reply-to email
+              <span class="signal__hint">(opens your mail client)</span>
             </label>
             <div class="signal__row">
               <input
@@ -888,13 +1045,13 @@
                 aria-describedby="signal-status"
               />
               <button type="submit" class="cta cta--primary signal__submit" data-magnetic>
-                <span class="cta__label">Subscribe</span>
+                <span class="cta__label">Write directly</span>
                 <span class="cta__arrow" aria-hidden="true">→</span>
               </button>
             </div>
             <p id="signal-status" class="signal__status" role="status" aria-live="polite"></p>
             <p class="signal__small">
-              Median dispatch: ~6 weeks. Unsubscribe in one click. Hosted on a self-managed list — no third-party tracking pixels.
+              Opens your local mail client with your reply-to address prefilled in the message body.
             </p>
           </form>
         </div>
@@ -921,18 +1078,20 @@
             <li><a href="https://tryambakam.space" rel="noopener">tryambakam.space <span class="footer__nav-tag">the field</span></a></li>
             <li><a href="https://1319.tryambakam.space" rel="noopener">1319.tryambakam.space <span class="footer__nav-tag">the canticle</span></a></li>
             <li><a href="https://selemene.tryambakam.space" rel="noopener">selemene.tryambakam.space <span class="footer__nav-tag">sixteen engines</span></a></li>
-            <li><a href="https://kopina.io" rel="noopener">kopina.io <span class="footer__nav-tag">the wearable</span></a></li>
+            <li><a href="https://18765.tryambakam.space/research" rel="noopener">18765.tryambakam.space/research <span class="footer__nav-tag">the essays</span></a></li>
+            <li><a href="https://18765.tryambakam.space/maps" rel="noopener">18765.tryambakam.space/maps <span class="footer__nav-tag">the maps</span></a></li>
           </ul>
         </nav>
 
         <nav class="footer__nav" aria-label="Practice">
           <p class="footer__nav-h">— PRACTICE</p>
           <ul>
-            <li><a href="#why">Why Witness Agents</a></li>
-            <li><a href="#section-04">The Dyad</a></li>
-            <li><a href="#section-17">The Tapestry</a></li>
-            <li><a href="#section-18">Begin</a></li>
-            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#why">Invariants</a></li>
+            <li><a href="#section-04">The Witness Poles</a></li>
+            <li><a href="#section-17">Open Corpus</a></li>
+            <li><a href="#section-18">Threshold</a></li>
+            <li><a href="#faq">Questions</a></li>
+            <li><a href="#signal">Direct Correspondence</a></li>
           </ul>
         </nav>
 
@@ -942,7 +1101,7 @@
             <li><a href="https://github.com/Sheshiyer/Selemene-engine" rel="noopener">Selemene-engine</a></li>
             <li><a href="https://github.com/Sheshiyer/Somatic-Canticles" rel="noopener">Somatic-Canticles</a></li>
             <li><a href="mailto:hello@tryambakam.space">hello@tryambakam.space</a></li>
-            <li><a href="mailto:initiate@tryambakam.space">initiate@tryambakam.space</a></li>
+            <li><a href="https://18765.tryambakam.space/posts/the-source-code-has-authors" rel="noopener">The Source Code Has Authors</a></li>
           </ul>
         </nav>
       </div>

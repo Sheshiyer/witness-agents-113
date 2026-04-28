@@ -1,0 +1,31 @@
+{
+  "startedAt": "2026-04-28T14:56:35.684Z",
+  "images": [
+    {
+      "label": "og-image-main",
+      "output": "public/og-image.png",
+      "url": "https://v3b.fal.media/files/b/0a981443/nnhoNHr3Ec_IFQFx2yvng.png",
+      "bytes": 551533,
+      "seed": 113900,
+      "endpoint": "https://fal.run/fal-ai/flux/dev"
+    },
+    {
+      "label": "hero-bg-still",
+      "output": "public/images/hero/hero-bg-fal-v1-still.png",
+      "url": "https://v3b.fal.media/files/b/0a981445/sNkR74hdvBNpgrVti0h9E.png",
+      "bytes": 887092,
+      "seed": 113901,
+      "endpoint": "https://fal.run/fal-ai/flux/dev"
+    }
+  ],
+  "video": {
+    "label": "hero-bg-video",
+    "output": "public/videos/hero-bg-fal-v1-source.mp4",
+    "url": "https://v3b.fal.media/files/b/0a981452/LEPMbVWFtmgEf29wbvQAQ_video.mp4",
+    "bytes": 4813850,
+    "seed": 113990,
+    "endpoint": "https://fal.run/bytedance/seedance-2.0/image-to-video",
+    "loopedOutput": "public/videos/hero-bg-fal-v1-loop.mp4"
+  },
+  "finishedAt": "2026-04-28T15:01:26.310Z"
+}

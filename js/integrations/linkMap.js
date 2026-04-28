@@ -19,16 +19,15 @@ export const LINK_MAP = Object.freeze({
     url: 'https://1319.tryambakam.space',
     role: 'the canticle · 27 chapters · biorhythm-synchronized'
   },
-  admin: {
-    label: '144°',
-    url: 'https://144.tryambakam.space',
-    role: 'admin · private',
-    publicClick: false
+  research: {
+    label: 'research',
+    url: 'https://18765.tryambakam.space/research',
+    role: 'research library'
   },
-  kopina: {
-    label: 'kopina',
-    url: 'https://kopina.io',
-    role: 'PHAS-ION wearable'
+  maps: {
+    label: 'maps',
+    url: 'https://18765.tryambakam.space/maps',
+    role: 'orientation routes'
   },
   noesisTui: {
     label: 'noesis',

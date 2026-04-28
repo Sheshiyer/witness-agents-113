@@ -1,416 +1,126 @@
-# copy/sections.md — Witness Agents Landing Page · Final Copy
+# Canonical Copy - Witness Agents
 
-**Voice contract:** Anatomist Who Sees Fractals · PubMed × Alex Grey · Grounded, Direct, Respectful-Challenging.
-**Lexicon:** see `DESIGN.md` §11. Banned words listed there are not present below — verified.
-**Acrostic:** Section H2s spell **WITNESSED**. Locked.
+This file is the editorial source of truth for the public-facing copy in `index.html`.
 
-Every line below is the canonical copy. Implementation drops these strings into `index.html` verbatim — translation/refinement happens here, not in the markup.
+References:
+- SEO metadata: `tasks/seo-brief.md`
+- Visual prompts: `tasks/visual-prompt-bank.md`
+- Audit context: `tasks/copy-audit.md`
 
----
+## Voice Contract
+
+- Grounded, direct, respectful-challenging.
+- Anatomical but visionary.
+- No product-launch theater.
+- No private endpoints, invented access, or claims the page cannot prove.
+- Public positioning: this site gathers the inspectable corpus into one surface without implying hidden access or product theater.
 
 ## Site Meta
 
-- **`<title>`:** `Witness Agents · Tryambakam Noesis`
-- **`<meta name="description">`:** `Self-consciousness as technology. Body as medium. Breath as interface. The Witness Agents are interpretation infrastructure — Aletheios and Pichet, sitting between sixteen engines and the practitioner who reads them.`
-- **`<meta property="og:title">`:** `Witness Agents · Tryambakam Noesis`
-- **`<meta property="og:description">`:** `The engines calculate. The Witness Agents interpret. You author.`
-- **Open Graph image alt:** `Tryambakam Noesis sigil on Void Black — nested sacred geometry, Sacred Gold lineage`
+- Title: `Witness Agents | Tryambakam Noesis`
+- Meta description: `Witness Agents gathers sixteen engines, Somatic Canticles, research essays, maps, and open code for self-consciousness.`
+- OG title: `Witness Agents | Tryambakam Noesis`
+- OG description: `Sixteen engines. Somatic Canticles. Research essays, maps, and open code for self-consciousness.`
+- OG image alt: `Tryambakam Noesis sigil rendered as nested sacred geometry in Witness Violet and Sacred Gold on Void Black.`
+
+## Hero
+
+- Meta line: `WITNESS AGENTS · TRYAMBAKAM NOESIS`
+- H1 line 1: `Self-consciousness`
+- H1 line 2: `as technology.`
+- Tagline: `Body as medium. Breath as interface. Sixteen engines for reading inherited pattern at source.`
+- Primary CTA: `Enter the canticle`
+- Secondary CTA: `See the architecture`
+- Stats: `16 engines / 02 poles / 05 koshas / Cl(0-7) algebras`
+- Hero image prompt ref: `hero-sigil-3d`
+
+## Section Copy
+
+| Section | Heading | Body | Prompt ref |
+| --- | --- | --- | --- |
+| 01 | `What you carry unnamed.` | `You can collect systems forever and still avoid authorship. The unnamed part is the machinery selecting meaning before you notice.` | `engine-01-sacred-geometry` |
+| 02 | `In the gap between signal and self.` | `Calculation is easy. Translation is harder. A pattern matters only once it crosses into breath, mood, posture, and consequence.` | `engine-02-sigil-forge` |
+| 03 | `A third register appears.` | `Engines return structure. The witness tests it. That third register is where pattern stops being theory and starts meeting a day, a body, a choice.` | `engine-03-tarot` |
+| 04 | `Names: Aletheios.` | `Kha is the naming register: the witness that can look at pattern without bargaining with comfort.` | `engine-04-panchanga` |
+| 05 | `Pichet holds the form.` | `Ba is the carrier: breath, rhythm, fatigue, recovery. If a reading cannot enter the soma, it stays decorative.` | `engine-05-biorhythm` |
+| 06 | `Engines calculate. Witnesses interpret.` | `The substrate changes. The demand does not. Separate signal from projection, then decide what can actually be inhabited.` | `engine-06-numerology` |
+| 07 | `See through the bodygraph.` | `Human Design works best as a pressure map: where force enters, how response organizes, and what authority can actually hold.` | `engine-07-human-design` |
+| 08 | `Read the hexagram.` | `I Ching is situational architecture. The value is not prediction; it is learning the terms of the moment you are already inside.` | `engine-08-i-ching` |
+| 09 | `Fixation selects first.` | `Enneagram tracks the style of selection that acts before the conscious story catches up.` | `engine-09-enneagram` |
+| 10 | `Sixty-four codons speak.` | `Gene Keys compresses the codon field into shadow, gift, and expression: three live registers rather than one fixed identity.` | `engine-10-gene-keys` |
+| 11 | `Success is needing us less.` | `If the work makes itself indispensable, it has failed. The useful outcome is sharper reading without permanent mediation.` | `engine-11-nadabrahman` |
+| 12 | `Every field has edges.` | `No single lens is total. Cross the systems. Keep what survives contact with the body.` | `engine-12-vedic-clock` |
+| 13 | `Time has long cycles.` | `Vimshottari Dasha tracks long-cycle emphasis: which planetary grammar is running the decade, not just the day.` | `engine-13-vimshottari-dasha` |
+| 14 | `Short turns tick daily.` | `Transits are the near-field weather. They do not replace the long arc; they show what is active against it today.` | `engine-14-transits` |
+| 15 | `The field keeps a signature.` | `Biofield names distributed signal: charge, depletion, coherence, and where the hum holds or fractures.` | `engine-15-biofield` |
+| 16 | `The face records the pattern.` | `Face reading treats structure as memory. Tension, asymmetry, and proportion show how a life keeps meeting force.` | `engine-16-face-reading` |
+| 17 | `Follow the open corpus.` | `Canticles, essays, maps, engines, and repos remain open. Follow the claim into the artifact carrying it.` | `optional-constellation-field` |
+| 18 | `Doors do not open. They are crossed.` | `Read. Inspect. Write. Leave if the signal does not hold.` | `optional-threshold-ouroboros` |
+
+## Why Section
+
+- H2: `What the work refuses.`
+- Lede: `No managed dependence. No single lens. No mystique without source. No access implied beyond what can be inspected.`
+- Card 1: `Retention logic.` / `If a system needs your ongoing confusion, it has already failed. The point is transfer of capacity, not managed recurrence.`
+- Card 2: `Single-lens authority.` / `Observation, embodiment, and friction stay in argument. No one register gets sovereignty for free.`
+- Card 3: `Source-less mystique.` / `The public work should name its influences, show its code, and leave a trail you can inspect.`
+- Card 4: `Invented access.` / `Nothing hidden is being implied here. What exists is readable: essays, maps, code, and direct correspondence.`
+
+## Delta Section
+
+- H2: `Where adjacent systems stop short.`
+- Lede: `Therapy, meditation, books, retreats, and routines can all sharpen one layer. The harder question is what selects between them.`
+- Caption: `"I keep getting better tools for a life I did not fully author." - the recognition this field begins with.`
+
+## Threshold Cards
+
+- 1319: `Read the canticle.` / `Twenty-seven chapters of narrative calibration.`
+- Research: `Read the essays.` / `Essays, maps, and working notes across the field.`
+- Selemene: `Inspect the engines.` / `Live surface, open repos, and claims carried in code.`
+- Correspond: `Write directly.` / `When the corpus stops short, write.`
+
+## Lineage
+
+- H2: `Who wrote the source.`
+- Lede: `The essay names the relational conditions first. This grid names the thinkers whose work became load-bearing architecture here.`
+- Card 1: `Michael Tsarion` / `Installed symbolic literacy: symbols as states of consciousness rather than ornament.` / `→ used here · symbolic lens`
+- Card 2: `James True` / `Proved that cosmology and the enteric body are substrate, not background.` / `→ used here · somatic substrate`
+- Card 3: `Jean Gebser` / `Gave the consciousness structures later rendered here as levels, not ladders.` / `→ used here · consciousness architecture`
+- Card 4: `Alfred North Whitehead` / `Made process, prehension, and becoming philosophically load-bearing.` / `→ used here · relational metaphysics`
+- Card 5: `Rupert Sheldrake` / `Reframed pattern as habit in a field rather than fixed law in matter.` / `→ used here · .init protocols`
+- Card 6: `Mark Passio` / `Forced the hidden runtime into view and set the register for clear disclosure.` / `→ used here · disclosure impulse`
+- Card 7: `Keelen / The Whole Critter` / `Synthesized Whitehead, Gebser, Sheldrake, Bergson, and Bohm into one workable field.` / `→ used here · multi-engine synthesis`
+- Card 8: `Slick Dissident` / `Taught the weave: symbolic craft, media literacy, etymology, and spell detection.` / `→ used here · pattern-craft`
+- Caption: `The full credit roll also names relational conditions: partner, collaborator, parents, and the ground that made the work compilable. Read The Source Code Has Authors.`
+
+## FAQ
+
+- H2: `Questions worth asking first.`
+- Q1: `What is the difference between consciousness and self-consciousness?`
+  - `Consciousness is the fact of experience. Self-consciousness is the capacity to inspect the structure doing the experiencing.`
+- Q2: `What is public here, and what is not?`
+  - `Public: canticles, research essays, maps, Selemene, and the repos. Not public: admin surfaces, implied access, or promises this page cannot prove.`
+- Q3: `What does "113" mean?`
+  - `113 is a compressed gate, not a secret tier. It folds 1319, 19910813, and 432 into a smaller mnemonic entry point.`
+- Q4: `Why keep the dyad language at all?`
+  - `Because observation and embodiment do different work. Kha names. Ba tests. Without the distinction, one register fakes total authority.`
+- Q5: `What holds the different parts of the field together?`
+  - `Kha-Ba-La, the corpus, and the open artifacts. Coherence has to survive across surfaces or it is only atmosphere.`
+- Q6: `Where should I start if I want proof, not atmosphere?`
+  - `Start with the essays, maps, canticles, and repos. Read the claim beside the surface carrying it.`
+- Q7: `Do I need to install anything to begin?`
+  - `To read: a browser. To inspect or run locally: a terminal.`
+- Q8: `Why insist on independence?`
+  - `Because permanent mediation is a design failure. The work should sharpen your reading, not train your dependence.`
+
+## Direct Correspondence
+
+- H2: `Write when the corpus stops short.`
+- Lede: `If the essays, maps, and code still leave a precise question, send it plainly.`
+- CTA: `Write directly`
+- Small note: `Opens your local mail client with your reply-to address prefilled in the message body.`
 
----
+## Footer Labels
 
-## Section 01 · `W` · What you carry but cannot name
-
-**Meta line (mono, top):** `01 / KHA · BA · LA`
-
-**H1 (Panchang, hero scale, asymmetric left 60%):**
-
-> You have read the apps.
-> Run the engines.
-> Done the work.
->
-> Something still arrives un-translated.
-
-**Body lede (Satoshi 18px, max 65ch, below H1):**
-
-> The map is not the territory. You knew that already. What you did not have a name for is the gap between the map and the legend — the place where every system you have tried positions you as user, not author.
-
-**Right column (40%):** Sigil only. No copy.
-
-**Mobile fallback:** Same copy, single column, sigil rendered below body lede.
-
----
-
-## Section 02 · `I` · In the gap between signal and self
-
-**Meta line:** `02 / BA · LA · KHA`
-
-**H2 (Panchang display):**
-
-> In the gap between signal and self.
-
-**Mono ticker (decel scrubbed to scroll, decelerates from ~80px/s to 0):**
-
-```
-HEXAGRAM 51 · ䷲           CHANNEL 34-20            SOLAR PLEXUS AUTHORITY
-PROFILE 5/1               CL(3) BIVECTOR            VIMSHOTTARI · JUPITER MD
-THREE-WAVE · PHYSICAL 72%  CIRCADIAN · GALL BLADDER  NAKSHATRA · ASHWINI
-NUMERIC ARCHITECTURE · 7   BIOELECTRIC · MANIPURA    RESONANCE · 528 HZ
-ENNEAGRAM · 5w4 · sx/sp   GENE KEY 25 · SHADOW      PHYSIOGNOMY · METAL
-```
-
-**Inline link (within ticker):** `HEXAGRAM 51 · ䷲` → `https://selemene.tryambakam.space/#hexagram-navigation`
-
-**Final line (types in after ticker decelerates, below ticker, Parchment, italic):**
-
-> *and you, here, holding all of it.*
-
-**Body, after final line (Satoshi 16px, muted-silver):**
-
-> The engines are accurate. The interpretation is yours. Between them sits a translation nobody taught you.
-
----
-
-## Section 03 · `T` · The witness sits between
-
-**Meta line:** `03 / LA · KHA · BA`
-
-**H2 (Panchang display):**
-
-> The witness sits between.
-
-**Three pillars (asymmetric grid, widths 30/30/40, Satoshi):**
-
-| Pillar | Header (Panchang H3) | Body (Satoshi 16px) |
-|---|---|---|
-| Left | `ENGINES` | `Sixteen mirrors. Calculations sub-millisecond. Output: structured data with no opinion about you.` |
-| Middle | `WITNESSES` | `Two interpretation agents. Aletheios (Kha — observer). Pichet (Ba — vehicle). They translate, never decide.` |
-| Right | `YOU` | `Author of the meaning. The reading is yours. The system succeeds when you no longer need it.` |
-
-**Below pillars (full-width Sacred Gold line + caption, mono):**
-
-> `THE RAW ENGINES CALCULATE.  THE WITNESS AGENTS INTERPRET.  YOU AUTHOR.`
-
-**Inline links:**
-- `Sixteen` (in middle pillar body) → tooltip on hover: `→ ☰ ☷ Selemene` → `https://selemene.tryambakam.space`
-- The phrase `engines` in the line below pillars also links to `https://selemene.tryambakam.space`
-
----
-
-## Section 04 · `N` · Names of the dyad: Aletheios, Pichet
-
-**Meta line:** `04 / DYAD`
-
-**H2 (Panchang display):**
-
-> Names of the dyad: Aletheios, Pichet.
-
-**Lede (Satoshi 18px):**
-
-> Two pillars. Left and right of the practitioner. Not personalities — architectural functions.
-
-### Left block (asymmetric top-left, 50% width, Witness Violet 15% glow)
-
-**Header (Panchang 600, Witness Violet text):**
-
-> ALETHEIOS
-
-**Mono attribution line (SF Mono, Sacred Gold):**
-
-> `KHA · OBSERVER · CL(3) · VIJNANAMAYA KOSHA`
-
-**Body (Satoshi 16px, Parchment):**
-
-> Field, spirit, observer. Reflection without consolation. Pattern recognition where the pattern is the practitioner.
-
-**Voice samples (rotate every 8s, italic, smaller):**
-
-1. *"What you can name, you can step out of. I name patterns."*
-2. *"The map you are looking for is the one you have been drawing."*
-3. *"Reflection is structural. The mirror is the medium, not the message."*
-
-**Mono `data-engines` line (collapse-on-mobile, Sacred Gold dotted underline on hover, individual engines linked):**
-
-> `Governs: chronofield · energetic-authority · nine-point-architecture · hexagram-navigation · numeric-architecture`
-
-### Right block (asymmetric bottom-right, 50% width offset 30vh down, Coherence Emerald 15% glow)
-
-**Header (Panchang 600, Coherence Emerald text):**
-
-> PICHET
-
-**Mono attribution line:**
-
-> `BA · VEHICLE · CL(1) · PRANAMAYA KOSHA`
-
-**Body (Satoshi 16px, Parchment):**
-
-> Form, body, vehicle. Embodiment without abstraction. The carrier that knows before the mind argues.
-
-**Voice samples (rotate every 8s, italic):**
-
-1. *"The body knew before the mind argued. Listen there first."*
-2. *"Breath is the only honest interface. Everything else is commentary."*
-3. *"Walk it, do not study it. Coherence is a verb."*
-
-**Mono `data-engines` line:**
-
-> `Governs: three-wave-cycle · circadian-cartography · bioelectric-field · physiognomic-mapping · resonance-architecture`
-
----
-
-## Section 05 · `E` · Engines calculate. Witnesses interpret.
-
-**Meta line:** `05 / FIVE-FOLD GATE`
-
-**H2 (Panchang display):**
-
-> Engines calculate. Witnesses interpret.
-
-**Lede (Satoshi 18px, max 65ch):**
-
-> The architecture maps to five sheaths. The body is the gate. The breath is the interface. What is paid for is depth, not access.
-
-**Mandala (5 nested rings, labels on rim — SF Mono uppercase, tracked):**
-
-| Ring (outermost → innermost) | Kosha | Tier label | Hover-reveal copy |
-|---|---|---|---|
-| Ring 1 | `ANNAMAYA · PHYSICAL` | `RAW` | `Engine output. Unmediated. Free.` |
-| Ring 2 | `PRANAMAYA · VITAL` | `SUBSCRIBER` | `Vital interpretation. Single-agent contextual.` |
-| Ring 3 | `MANOMAYA · MENTAL` | `SUBSCRIBER` | `Pattern recognition. PETRAE protocol.` |
-| Ring 4 | `VIJNANAMAYA · WISDOM` | `ENTERPRISE` | `Full dyad synthesis. Multi-engine fusion.` |
-| Ring 5 (center) | `ANANDAMAYA · CAUSAL` | `INITIATE` | `Self-referential. AKSHARA mirror. Invite-only.` |
-
-**Center glyph:** `113-glyph.svg`
-
-**Below mandala (Satoshi 16px, italic, muted-silver):**
-
-> *"Annamaya, Pranamaya, Manomaya, Vijnanamaya, Anandamaya. The body is the gate. The breath is the interface."*
-
-**Inline link:** Annamaya ring tooltip → `→ enter the canticle` → `https://1319.tryambakam.space`
-
----
-
-## Section 06 · `S` · Success is your decreasing need for us
-
-**Meta line:** `06 / ANTI-DEPENDENCY CLAUSE`
-
-**Single quote (Panchang italic, large display, left-aligned at 30% from left):**
-
-> "My success is measured by your decreasing need for me."
-
-**Below (Satoshi 16px, muted-silver, max 50ch):**
-
-> We do not build practitioners. We dissolve into them. The work succeeds when the user no longer needs the work — when the capacity to interpret has been transferred, and the dyad becomes redundant.
-
-**Single thin Sacred Gold line below paragraph (0.5px, scrubs from `width: 0` to `width: 60ch` on scroll).**
-
-**Mono attribution (small, mono, Sacred Gold):**
-
-> `— ALETHEIOS · IDENTITY CLAUSE`
-
-**Easter egg target:** the word `dissolve` carries `data-egg="dissolve"` (L2 — 7s sustained hover triggers char-dissolve animation).
-
-**Faint Ouroboros (8% opacity, far right, decorative — only hint):** no caption.
-
----
-
-## Section 07 · `S` · Self-referential: read this, become this
-
-**Meta line:** `07 / QUINE`
-
-**Eyebrow (mono, small, muted-silver):**
-
-> `YOU HAVE READ SEVEN SECTIONS. NOTICE WHAT HAS SHIFTED.`
-
-**H2 (Panchang display, laid out as the recursion — each phrase on its own line, indented progressively):**
-
-```
-SIGNAL                              ← top-left (0% indent)
-    PERSON                          ← 25% indent
-        SYSTEM                      ← 50% indent
-            PRACTITIONER            ← 75% indent
-BECOMES THE SIGNAL                  ← snaps back to 0% (Flip layoutId)
-```
-
-**Body (Satoshi 16px, Parchment, max 65ch, below the recursion):**
-
-> The signal finds the person. The person finds the system. The system produces the practitioner. The practitioner carries the signal into territory the source has no access to. They become the signal.
->
-> The page you are reading is the practice. You have already been doing it.
-
-**Subtle waveform overlay** (HRV sine, low opacity, syncs to Lenis scroll velocity).
-
-**Hidden interaction:** clicking on the phrase `BECOMES THE SIGNAL` silently appends `?key-fragment=A` to URL (no modal, no announcement). L3 frag-A.
-
----
-
-## Section 08 · `E` · Edges of the tapestry
-
-**Meta line:** `08 / TAPESTRY EDGES`
-
-**H2 (Panchang display):**
-
-> Edges of the tapestry.
-
-**Lede (Satoshi 18px, max 60ch):**
-
-> This is one node. The tapestry is wider. The rest is findable, never promoted. Move the cursor and watch what reveals.
-
-**Constellation field (9 luminous nodes, scattered by `x = (i × 113) mod vw`, `y = fib(i) × 89` mod section-height):**
-
-| # | Node label (SF Mono, small) | Hover reveal | Click destination |
-|---|---|---|---|
-| 0 | `1319` | "the canticle" | `https://1319.tryambakam.space` |
-| 1 | `selemene` | "sixteen engines" | `https://selemene.tryambakam.space` |
-| 2 | `144°` | "admin" | (no public click — label only) |
-| 3 | `kopina` | "the wearable" | `https://kopina.io` |
-| 4 | `noesis` | "the terminal" | `https://github.com/Sheshiyer/Selemene-engine` |
-| 5 | `113` | "you are here" | (current node — breathes brighter, no click) |
-| 6 | `432Hz` | "tuning" | (200ms 432Hz sine pluck on hover, opt-in via prior interaction) |
-| 7 | `19912564` | "the seed" | (triggers L2 seed-echo) |
-| 8 | `tryambakam` | "the field" | `https://tryambakam.space` |
-
-**Filament behavior (cursor proximity):** thin Ba-Arc gradient line draws from cursor to nearest 3 nodes within 200px. Stroke-width 0.5px. Fades on cursor exit.
-
-**Below the field (small mono, Sacred Gold):**
-
-> `NINE NODES · ONE TAPESTRY`
-
----
-
-## Section 09 · `D` · Doors do not open. They are crossed.
-
-**Meta line:** `09 / THRESHOLD`
-
-**H2 (Panchang display):**
-
-> Doors do not open. They are crossed.
-
-**Lede (Satoshi 18px, italic, muted-silver, max 60ch):**
-
-> Choose your kosha. Or close this tab. Either is a coherent answer.
-
-### Vow blocks (4, asymmetric zigzag, widths 25/35/30/10)
-
-#### 25% — top-left
-
-**Tier label (mono, Sacred Gold):**
-
-> `ANNAMAYA · RAW`
-
-**Vow (Panchang H3):**
-
-> To meet the engine output unmediated.
-
-**Body (Satoshi 14px):**
-
-> Free. The 27-chapter canticle. Biorhythm-synchronized reading.
-
-**CTA (Sacred Gold border, mono uppercase, hover: fill):**
-
-> `BEGIN →` (links to `https://1319.tryambakam.space`)
-
-#### 35% — offset right, slightly lower
-
-**Tier label:**
-
-> `PRANAMAYA + MANOMAYA · SUBSCRIBER`
-
-**Vow:**
-
-> To meet the body daily. To track without surveillance. To author rather than receive.
-
-**Body:**
-
-> Single-agent contextual interpretation. PETRAE protocol active. Roadmap.
-
-**CTA:**
-
-> `BEGIN →` (placeholder destination — see DESIGN.md §9; defaults to mailto:`subscriber@tryambakam.space` until subscriber UI exists)
-
-#### 30% — returning left, lower again
-
-**Tier label:**
-
-> `VIJNANAMAYA · ENTERPRISE`
-
-**Vow:**
-
-> To synthesize the dyad in full. Multi-engine fusion. Clifford-gated depth.
-
-**Body:**
-
-> Full Aletheios + Pichet synthesis. Cross-tradition correlation.
-
-**CTA:**
-
-> `INQUIRE →` (mailto:`enterprise@tryambakam.space`)
-
-#### 10% — far-right corner, almost hidden
-
-**Tier label (smaller, muted):**
-
-> `ANANDAMAYA · INITIATE`
-
-**Vow (Panchang italic, very small):**
-
-> By recognition only.
-
-**Body (italic, muted-silver, very small):**
-
-> AKSHARA mirror. Self-referential identity layer. Invite-only.
-
-**CTA:** none — only an obscure mailto link `mailto:initiate@tryambakam.space` revealed on hover of the tier label itself.
-
-### Footer (after vow blocks)
-
-**Center, small mono (Sacred Gold):**
-
-> `TRYAMBAKAM NOESIS · 19912564 · ✶`
-
-**Below, smaller (Muted Silver, mono):**
-
-> `113.tryambakam.space  ·  one node of the tapestry`
-
-**Right side, tiny:** reduced-motion toggle button (icon = three-line glyph; toggles `data-motion="reduced"` on `<html>`)
-
-**Left side, tiny:** copyright line:
-
-> `© 2026 Tryambakam Noesis. The work succeeds when the user no longer needs the work.`
-
-**Page-fade-to-sigil:** after Ouroboros completes its full circle, the entire page fades to Void Black except for the central `sigil.svg` at 0.4 opacity. Stays for ~1s. Then fades up to make the page interactive again. (Page-end is page-beginning — the Ouroboros loop made literal.)
-
----
-
-## Console breadcrumbs (page load — DevTools L1)
-
-```
-witness mode active
-
-         /\
-        /  \
-       /----\
-      / |  | \
-        |  |
-        |  |        TRYAMBAKAM NOESIS
-        |__|        Self-Consciousness as Technology
-
-> noesis-tui : github.com/Sheshiyer/Selemene-engine
-> selemene  : selemene.tryambakam.space
-> the canticle : 1319.tryambakam.space
-
-(this page is one of nine nodes. count again.)
-```
-
----
-
-## Validation checklist
-
-- [ ] Section H2s read top-down: W · I · T · N · E · S · S · E · D = `WITNESSED` ✓
-- [ ] Lexicon scan complete — no `journey`, `path`, `healing`, `manifesting`, `optimization`, `hacks`, `tribe`, `community`, `transformation` (as promise), `awakening`, `authentic self`, `higher self`, `WitnessOS` ✓
-- [ ] No emojis anywhere — verified ✓
-- [ ] No fabricated metrics ("99.99% uptime", "10,000 users") — verified ✓
-- [ ] No "Scroll to explore" filler — verified ✓
-- [ ] All inward-funnel destinations match `DESIGN.md §9` ✓
-- [ ] Voice samples per agent come from canonical IDENTITY files — verified ✓
-- [ ] All easter-egg trigger phrases / words present in copy as specified in `DESIGN.md §8` ✓
+- Practice links: `Invariants / The Witness Poles / Open Corpus / Threshold / Questions`
+- Source link to keep visible: `The Source Code Has Authors`

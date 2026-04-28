@@ -1,14 +1,12 @@
 /*
- * newsletter.js — single-input email form with state machine.
+ * newsletter.js — direct-contact form.
  *  • Validates client-side (HTML5 + simple regex)
- *  • POSTs to a placeholder endpoint (replaces with real one later)
+ *  • Opens the user's mail client instead of POSTing to a placeholder endpoint
  *  • Loading / success / error states surfaced via [data-state]
- *  • No third-party tracking pixels
  */
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-// TODO: replace with real ingestion endpoint when Cloudflare Worker ships
-const ENDPOINT = '/api/signal';
+const MAILTO_BASE = 'mailto:hello@tryambakam.space?subject=Witness%20Agents%20%E2%80%94%20direct%20note';
 
 export default function initNewsletter() {
   const form = document.querySelector('[data-newsletter]');
@@ -38,28 +36,12 @@ export default function initNewsletter() {
 
     input.removeAttribute('aria-invalid');
     submit.disabled = true;
-    setStatus('loading', 'transmitting…');
+    setStatus('loading', 'opening your mail client...');
 
-    try {
-      const res = await fetch(ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source: '113.tryambakam.space' })
-      });
-
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-      setStatus('success', 'received. when something material ships, you will hear from us.');
-      input.value = '';
-    } catch (err) {
-      // Graceful fallback — the endpoint may not exist yet.
-      // Acknowledge silently to the user; log to console for the developer.
-      console.warn('[newsletter] endpoint not available — falling back to mailto.', err);
-      setStatus('success', 'received. (offline pickup — written to dispatch ledger.)');
-      input.value = '';
-    } finally {
-      submit.disabled = false;
-    }
+    const body = encodeURIComponent(`Reply-to: ${email}\n\n`);
+    window.location.href = `${MAILTO_BASE}&body=${body}`;
+    setStatus('success', 'mail client opened. if nothing happened, write to hello@tryambakam.space.');
+    submit.disabled = false;
   });
 
   // Clear error state on focus

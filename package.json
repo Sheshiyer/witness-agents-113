@@ -8,9 +8,17 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 5113",
-    "check": "node ./scripts/check.mjs"
+    "check": "node ./scripts/check.mjs",
+    "meshy": "node ./scripts/meshy.mjs",
+    "meshy:plan": "node ./scripts/meshy.mjs plan",
+    "meshy:balance": "node ./scripts/meshy.mjs balance",
+    "meshy:gen-base": "node ./scripts/meshy.mjs gen-base",
+    "meshy:optimize-base": "node ./scripts/optimize-sigil.mjs",
+    "meshy:retexture-all": "node ./scripts/meshy.mjs retexture-all",
+    "meshy:status": "node ./scripts/meshy.mjs status"
   },
   "dependencies": {
+    "@google/model-viewer": "^4.2.0",
     "gsap": "^3.12.5",
     "lenis": "^1.0.42"
   },
