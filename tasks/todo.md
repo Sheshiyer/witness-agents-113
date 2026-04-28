@@ -259,6 +259,29 @@
 - Integrity fix:
   - added missing `id` anchors for `#section-04`, `#section-17`, `#section-18`, and `#signal` so edited footer/nav links now resolve correctly
 
+## 2026-04-28 Channel Trust + Issue Draft Pass
+
+### Plan
+- [x] Audit every remaining public mention of direct contact, subscription, and pending access.
+- [x] Remove inactive `hello@tryambakam.space` and `mailto:` affordances from the site.
+- [x] Replace the fake correspondence flow with an honest channel-status block and implementation tracker link.
+- [x] Draft the unresolved wiring work as GitHub issues before any remote write.
+- [x] Build, review, commit, and push the final pass.
+
+### Review
+- Trust break identified: the page still exposed a polished contact path even though `hello@tryambakam.space` is inactive and no subscription pipeline exists.
+- Site correction:
+  - threshold card now marks the direct channel as pending and points at the repo issues list
+  - FAQ no longer routes readers to a dead inbox
+  - the old mailto form was removed and replaced by a channel-status block that states what is and is not live
+  - footer source links now point to `Implementation Issues` instead of the inactive inbox
+- Code correction:
+  - removed the dead `newsletter.js` contact-flow module and its bootstrap import
+- Documentation:
+  - drafted issue bodies in `tasks/github-issues-draft.md`
+- Verification:
+  - `npm run build` passed on 2026-04-28
+
 ## 2026-04-28 Source-Grounded Credit Roll + De-Meta Copy Pass
 
 ### Plan
@@ -309,3 +332,36 @@
   - desktop render captured with local Chrome headless at `1440x2200`: `.artifacts/playlist-marquee-pass/desktop-1440.png`
   - narrow viewport check captured in the in-app browser: `.artifacts/playlist-marquee-pass/viewport-with-rail.png`
   - result: rail is visible and balanced on desktop; it drops out cleanly on the narrow in-app viewport
+
+## 2026-04-28 Playlist Rail Redesign
+
+### Plan
+- [x] Pull the real public Spotify metadata for the playlist title, owner, track list, and visible artist names.
+- [x] Replace the lightweight rail markup with a denser module: title treatment, metadata pills, animated vertical track marquee, and artist tags.
+- [x] Move the rail animation from CSS-only scrolling into a dedicated GSAP module.
+- [x] Rebuild and visually verify the redesigned rail on desktop and a narrow viewport, then document the result.
+
+### Review
+- Replaced the low-information rail with a full playlist module using the public Spotify embed metadata for:
+  - playlist title: `begin_journey`
+  - curator: `Mage Narayan`
+  - visible artist roster and track titles
+- The rail now contains:
+  - vertical `vibe coded to` spine label
+  - typographic title treatment for `begin / journey`
+  - metadata pills
+  - vertical marquee of real track-title / artist pairs
+  - artist tags drawn from the public roster (`Bluetech`, `Shaman's Dream`, `Sensient`, `Plastikman`, `Richie Hawtin`, `Steve Moore`)
+  - stronger CTA styling
+- Motion system upgrade:
+  - removed the CSS-only loop
+  - added `js/sections-special/playlistRail.js`
+  - GSAP now handles intro reveal, floating drift, halo pulse, marquee travel, and hover acceleration/state changes
+- Constraint handling remains intact:
+  - rail hides below `1024px`
+  - reduced motion disables the animated behavior by exiting before marquee/tween setup
+- Verification:
+  - `npm run build` passed on 2026-04-28
+  - desktop render captured with local Chrome headless at `1440x2200`: `.artifacts/playlist-rail-redesign/desktop-1440.png`
+  - narrow viewport check captured in the in-app browser: `.artifacts/playlist-rail-redesign/narrow-viewport.png`
+  - result: desktop rail now reads as a deliberate visual module; narrow viewport still stays clean without the rail

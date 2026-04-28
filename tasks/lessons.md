@@ -15,3 +15,5 @@
 - When footer or header links target reveal articles, add explicit `id` anchors on the article wrappers. Do not assume `data-section` names or comments are navigable anchors.
 - Do not promote internal voice DNA into public contributor credit. If a name came from tone/persona calibration, verify it separately before placing it in lineage or authorship copy.
 - When reader-facing copy starts describing the page, route, node, or funnel more than the subject itself, rewrite it into first-order claims. Interface self-commentary is usually a drift signal.
+- For decorative flares, placeholder copy and generic CSS loops read unfinished immediately. Use real source metadata, stronger typography, and a proper motion system or do not ship the flourish.
+- Never present a polished public CTA for a channel that is not actually live. If email, subscription, or intake wiring is pending, the interface must say so plainly and point to the implementation tracker instead.

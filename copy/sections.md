@@ -54,7 +54,7 @@ References:
 | 14 | `Short turns tick daily.` | `Transits are the near-field weather. They do not replace the long arc; they show what is active against it today.` | `engine-14-transits` |
 | 15 | `The field keeps a signature.` | `Biofield names distributed signal: charge, depletion, coherence, and where the hum holds or fractures.` | `engine-15-biofield` |
 | 16 | `The face records the pattern.` | `Face reading treats structure as memory. Tension, asymmetry, and proportion show how a life keeps meeting force.` | `engine-16-face-reading` |
-| 17 | `Follow the open corpus.` | `Canticles, essays, maps, engines, and repos remain open. Follow the claim into the artifact carrying it.` | `optional-constellation-field` |
+| 17 | `Follow the open corpus.` | `Canticles, essays, maps, engines, and repos are open. Read the claim beside the text, code, or map carrying it.` | `optional-constellation-field` |
 | 18 | `Doors do not open. They are crossed.` | `Read. Inspect. Write. Leave if the signal does not hold.` | `optional-threshold-ouroboros` |
 
 ## Why Section
@@ -64,7 +64,7 @@ References:
 - Card 1: `Retention logic.` / `If a system needs your ongoing confusion, it has already failed. The point is transfer of capacity, not managed recurrence.`
 - Card 2: `Single-lens authority.` / `Observation, embodiment, and friction stay in argument. No one register gets sovereignty for free.`
 - Card 3: `Source-less mystique.` / `The public work should name its influences, show its code, and leave a trail you can inspect.`
-- Card 4: `Invented access.` / `Nothing hidden is being implied here. What exists is readable: essays, maps, code, and direct correspondence.`
+- Card 4: `Invented access.` / `Nothing hidden is being implied here. What exists is readable: essays, maps, code, and other public artifacts.`
 
 ## Delta Section
 
@@ -77,12 +77,12 @@ References:
 - 1319: `Read the canticle.` / `Twenty-seven chapters of narrative calibration.`
 - Research: `Read the essays.` / `Essays, maps, and working notes across the field.`
 - Selemene: `Inspect the engines.` / `Live surface, open repos, and claims carried in code.`
-- Correspond: `Write directly.` / `When the corpus stops short, write.`
+- Channel: `Track the missing channel.` / `Direct email and subscription intake are still being wired.`
 
 ## Lineage
 
 - H2: `Who wrote the source.`
-- Lede: `The essay names the relational conditions first. This grid names the thinkers whose work became load-bearing architecture here.`
+- Lede: `The essay names the relational conditions first. This grid names the thinkers whose work became structural here.`
 - Card 1: `Michael Tsarion` / `Installed symbolic literacy: symbols as states of consciousness rather than ornament.` / `→ used here · symbolic lens`
 - Card 2: `James True` / `Proved that cosmology and the enteric body are substrate, not background.` / `→ used here · somatic substrate`
 - Card 3: `Jean Gebser` / `Gave the consciousness structures later rendered here as levels, not ladders.` / `→ used here · consciousness architecture`
@@ -91,15 +91,15 @@ References:
 - Card 6: `Mark Passio` / `Forced the hidden runtime into view and set the register for clear disclosure.` / `→ used here · disclosure impulse`
 - Card 7: `Keelen / The Whole Critter` / `Synthesized Whitehead, Gebser, Sheldrake, Bergson, and Bohm into one workable field.` / `→ used here · multi-engine synthesis`
 - Card 8: `Slick Dissident` / `Taught the weave: symbolic craft, media literacy, etymology, and spell detection.` / `→ used here · pattern-craft`
-- Caption: `The full credit roll also names relational conditions: partner, collaborator, parents, and the ground that made the work compilable. Read The Source Code Has Authors.`
+- Caption: `The full credit roll also names the partner, collaborator, parents, and ground that made the work compilable. Read The Source Code Has Authors.`
 
 ## FAQ
 
 - H2: `Questions worth asking first.`
 - Q1: `What is the difference between consciousness and self-consciousness?`
   - `Consciousness is the fact of experience. Self-consciousness is the capacity to inspect the structure doing the experiencing.`
-- Q2: `What is public here, and what is not?`
-  - `Public: canticles, research essays, maps, Selemene, and the repos. Not public: admin surfaces, implied access, or promises this page cannot prove.`
+- Q2: `What is open now, and what is still pending?`
+  - `Open now: canticles, research essays, maps, Selemene, and the repos. Still pending: direct email, subscription intake, admin surfaces, or any access this page cannot prove.`
 - Q3: `What does "113" mean?`
   - `113 is a compressed gate, not a secret tier. It folds 1319, 19910813, and 432 into a smaller mnemonic entry point.`
 - Q4: `Why keep the dyad language at all?`
@@ -113,14 +113,17 @@ References:
 - Q8: `Why insist on independence?`
   - `Because permanent mediation is a design failure. The work should sharpen your reading, not train your dependence.`
 
-## Direct Correspondence
+## Channel Status
 
-- H2: `Write when the corpus stops short.`
-- Lede: `If the essays, maps, and code still leave a precise question, send it plainly.`
-- CTA: `Write directly`
-- Small note: `Opens your local mail client with your reply-to address prefilled in the message body.`
+- H2: `What is still being wired.`
+- Lede: `The public corpus is live. Direct email and subscription intake are not.`
+- Item 1: `Subscription intake` / `The subscription mailer and capture flow are not wired yet.`
+- Item 2: `hello@tryambakam.space` / `This inbox is not active. Do not rely on it for contact.`
+- Item 3: `Until then` / `Use the essays, maps, engines, and repos. Each public claim should still land in something you can inspect.`
+- CTA: `Track implementation`
+- Small note: `Working mail and subscription intake return only after the underlying pipeline is live.`
 
 ## Footer Labels
 
-- Practice links: `Invariants / The Witness Poles / Open Corpus / Threshold / Questions`
-- Source link to keep visible: `The Source Code Has Authors`
+- Practice links: `Invariants / The Witness Poles / Open Corpus / Threshold / Questions / Channel Status`
+- Source links to keep visible: `Implementation Issues / The Source Code Has Authors`

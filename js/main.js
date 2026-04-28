@@ -21,8 +21,8 @@ import initThreshold from './sections-special/threshold.js';
 import initHero from './sections-special/hero.js';
 import initWhy from './sections-special/why.js';
 import initFAQ from './sections-special/faq.js';
-import initNewsletter from './sections-special/newsletter.js';
 import initMagnetic from './sections-special/magnetic.js';
+import initPlaylistRail from './sections-special/playlistRail.js';
 import initScrollProgress from './sections-special/scrollProgress.js';
 
 const reduced = isReducedMotion();
@@ -76,8 +76,8 @@ const boot = async () => {
   initTapestry({ gsap, ScrollTrigger, reduced, lenis });
   initThreshold({ gsap, ScrollTrigger, reduced });
   initFAQ({ gsap, ScrollTrigger, reduced });
-  initNewsletter();
   initMagnetic({ reduced });
+  initPlaylistRail({ gsap, reduced });
   initScrollProgress({ reduced });
 
   // Easter eggs

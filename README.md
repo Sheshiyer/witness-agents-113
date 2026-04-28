@@ -28,7 +28,7 @@ inspectable field for self-consciousness.
 
 ## What this is
 
-A standalone research-facing orientation page for the **Witness Agents** surface of
+A standalone public intro site for **Witness Agents** within
 [Tryambakam Noesis](https://tryambakam.space).
 
 The site fuses two design grammars:
@@ -37,8 +37,8 @@ The site fuses two design grammars:
   per section, scroll-triggered Flip animations that expand each image inline
   within the typography it lives inside.
 - **A research-interface architecture** — hero with dual CTAs, "Why" bento,
-  comparison strip, lineage credibility, FAQ accordion, direct
-  correspondence, sitemap footer.
+  comparison strip, lineage credibility, FAQ accordion, channel-status block,
+  sitemap footer.
 
 Section H2s spell **`WITNESSED`** as a hidden acrostic. Type the word anywhere on
 the page to trigger the L2 reveal.
@@ -157,7 +157,7 @@ bun run preview
     ├── lib/                       # gsap, lenis, breath, splitText, seed, ...
     ├── motion/                    # reusable motion primitives
     ├── sections-special/          # hero, why, tapestry, threshold, faq,
-    │                              # signal, magnetic, scrollProgress
+    │                              # signal, magnetic, playlistRail, scrollProgress
     ├── easter-eggs/               # manifest, acrostic, l2-konami, l3-fragment,
     │                              # numerology, console
     └── integrations/linkMap.js
