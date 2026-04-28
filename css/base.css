@@ -1,0 +1,217 @@
+/*
+ * base.css — Witness Agents Landing
+ * Reset + typography defaults. No layout. No section styles.
+ */
+
+@import url('./tokens.css');
+
+/* ─── Reset ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: auto;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
+
+body {
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--type-body);
+  line-height: var(--lh-body);
+  color: var(--parchment);
+  background-color: var(--void);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'ss01' on, 'ss02' on;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Film grain — fixed, pointer-events-none, single layer */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-grain);
+  background-image: url('/images/noise.png');
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  opacity: 0.04;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* ─── Typography defaults ──────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--lh-display);
+  letter-spacing: var(--ls-display);
+  color: var(--parchment);
+}
+
+h1 {
+  font-size: var(--type-hero);
+  line-height: var(--lh-hero);
+  letter-spacing: var(--ls-hero);
+  font-weight: 700;
+  max-width: 18ch;
+}
+
+h2 { font-size: var(--type-display); max-width: 22ch; }
+h3 { font-size: var(--type-h3); }
+
+p {
+  font-size: var(--type-body);
+  line-height: var(--lh-body);
+  max-width: 65ch;
+  color: var(--parchment);
+}
+
+p + p { margin-top: var(--space-md); }
+
+.lede {
+  font-size: var(--type-body-lg);
+  color: var(--parchment);
+  max-width: 60ch;
+}
+
+em, i {
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--muted-silver);
+}
+
+strong, b { font-weight: 600; color: var(--parchment); }
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+/* ─── Mono meta labels (per-section eyebrows) ─────────── */
+.meta-label {
+  font-family: var(--font-mono);
+  font-size: var(--type-meta);
+  font-weight: 400;
+  letter-spacing: var(--ls-meta);
+  color: var(--sacred-gold);
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* ─── Links ────────────────────────────────────────────── */
+a {
+  color: var(--parchment);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--t-fast) ease, color var(--t-fast) ease;
+}
+
+a:hover {
+  border-bottom: var(--border-link-hover);
+  color: var(--sacred-gold);
+}
+
+a:focus { outline: none; }
+a:focus-visible {
+  outline: 2px solid var(--sacred-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* External links (funnel destinations) get a tiny mono signal */
+a[data-external="true"]::after {
+  content: ' →';
+  font-family: var(--font-mono);
+  opacity: 0.6;
+  margin-left: 0.15em;
+}
+
+/* ─── Buttons ──────────────────────────────────────────── */
+button,
+.btn {
+  font-family: var(--font-mono);
+  font-size: var(--type-meta);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--sacred-gold);
+  border: 1px solid var(--sacred-gold);
+  padding: var(--space-sm) var(--space-lg);
+  cursor: pointer;
+  transition: background var(--t-fast) ease, color var(--t-fast) ease, transform var(--t-fast) ease;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+button:hover,
+.btn:hover {
+  background: var(--sacred-gold);
+  color: var(--void);
+}
+
+button:active,
+.btn:active { transform: translateY(1px); }
+
+button:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--sacred-gold);
+  outline-offset: 3px;
+}
+
+/* ─── Lists ────────────────────────────────────────────── */
+ul, ol {
+  list-style: none;
+}
+
+/* ─── Selection ────────────────────────────────────────── */
+::selection {
+  background: var(--sacred-gold);
+  color: var(--void);
+}
+
+/* ─── Reduced motion ─────────────────────────────────────
+ * Per DESIGN.md §6 — both system pref AND manual data attr.
+ * Section modules check via reducedMotion.js; CSS gates here.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+[data-motion="reduced"] *,
+[data-motion="reduced"] *::before,
+[data-motion="reduced"] *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}

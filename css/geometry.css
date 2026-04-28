@@ -1,0 +1,100 @@
+/*
+ * geometry.css — sacred geometry positioning + layering
+ * SVG symbols defined inline in index.html <defs>; this file styles their <use> instances.
+ */
+
+/* ─── Generic SVG defaults for inline geometry ─── */
+.section svg use {
+  pointer-events: none;
+}
+
+/* ─── Section 01 · sigil ─── */
+.sigil-frame {
+  position: relative;
+}
+
+/* ─── Section 03 · pillars connector ─── */
+.pillars__connector path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 2s var(--ease-growth);
+}
+
+.pillars__connector.is-revealed path { stroke-dashoffset: 0; }
+
+/* ─── Section 04 · arcs framing dyad blocks ─── */
+.dyad__arc {
+  pointer-events: none;
+}
+
+.dyad__arc path {
+  pathLength: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 2.4s var(--ease-growth);
+}
+
+.dyad__block.is-revealed .dyad__arc path { stroke-dashoffset: 0; }
+
+/* ─── Section 05 · mandala ─── */
+.mandala {
+  filter: drop-shadow(0 0 24px rgba(197, 160, 23, 0.05));
+}
+
+/* ─── Section 06 · faint Ouroboros + gold line ─── */
+.ouroboros-faint circle {
+  pathLength: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0.7;
+  animation: ouroboros-faint-drift 80s linear infinite;
+}
+
+@keyframes ouroboros-faint-drift {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ─── Section 07 · waveform ─── */
+.waveform path {
+  pathLength: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 2.4s var(--ease-growth);
+}
+
+.waveform.is-revealed path { stroke-dashoffset: 0; }
+
+/* ─── Section 09 · ouroboros final ─── */
+.ouroboros-final circle {
+  pathLength: 1;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 3s var(--ease-growth);
+}
+
+.ouroboros-final.is-revealed circle { stroke-dashoffset: 0; }
+
+/* ─── Reduced-motion: pre-draw geometry ─── */
+@media (prefers-reduced-motion: reduce) {
+  .pillars__connector path,
+  .dyad__arc path,
+  .mandala circle,
+  .waveform path,
+  .ouroboros-final circle {
+    stroke-dashoffset: 0 !important;
+  }
+
+  .ouroboros-faint circle {
+    animation: none;
+  }
+}
+
+[data-motion="reduced"] .pillars__connector path,
+[data-motion="reduced"] .dyad__arc path,
+[data-motion="reduced"] .mandala circle,
+[data-motion="reduced"] .waveform path,
+[data-motion="reduced"] .ouroboros-final circle {
+  stroke-dashoffset: 0 !important;
+}
+
+[data-motion="reduced"] .ouroboros-faint circle { animation: none !important; }

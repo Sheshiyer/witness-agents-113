@@ -1,0 +1,131 @@
+/*
+ * tokens.css — Witness Agents Landing
+ * Source of truth: DESIGN.md §2-4
+ * Edit DESIGN.md first, then mirror here.
+ *
+ * 113.tryambakam.space
+ */
+
+@font-face {
+  font-family: 'Panchang';
+  src: url('/assets/fonts/Panchang-Variable.woff2') format('woff2-variations');
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi-Variable.woff2') format('woff2-variations');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/assets/fonts/Satoshi-VariableItalic.woff2') format('woff2-variations');
+  font-weight: 300 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* ─── Consciousness Color Spectrum (Goethe) ─────────────── */
+  --void: #070B1D;              /* La · canvas · Pre-chromatic */
+  --witness-violet: #2D0050;    /* Kha · observer · Steigerung culmination */
+  --flow-indigo: #0B50FB;       /* Kha→Ba · transition · Deep minus */
+  --sacred-gold: #C5A017;       /* Ba · activation · Plus apex (single accent) */
+  --coherence-emerald: #10B5A7; /* Ba↔La · resolution */
+
+  /* ─── Functional surfaces ─────────────────────────────────
+   * Contrast on --void:
+   *   parchment        15:1  AAA
+   *   muted-silver      7:1  AA
+   *   sacred-gold     6.7:1  AA
+   *   coherence-em    6.3:1  AA
+   *   terracotta      4.7:1  AA-large
+   */
+  --parchment: #F0EDE3;
+  --muted-silver: #8A9BA8;
+  --deep-surface: #0E1428;
+  --terracotta: #C65D3B;
+
+  /* ─── Three gradient arcs ─────────────────────────────────
+   * Composition rule: never equal weight.
+   * Kha dominates (backgrounds), Ba is sparse (interactive),
+   * La is rarest (Section 09 Ouroboros only).
+   */
+  --grad-kha: linear-gradient(180deg, #070B1D 0%, #2D0050 60%, #0B50FB 100%);
+  --grad-ba: linear-gradient(135deg, #10B5A7 0%, #C5A017 100%);
+  --grad-la: linear-gradient(225deg, #C5A017 0%, #2D0050 50%, #070B1D 100%);
+
+  /* ─── Numerical token (easter — discoverable in DevTools) ─ */
+  --113: 113;
+
+  /* ─── Type stack ──────────────────────────────────────────── */
+  --font-display: 'Panchang', 'Times New Roman', serif;
+  --font-body: 'Satoshi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', ui-monospace, 'Menlo', 'Consolas', monospace;
+
+  /* ─── Type scale (φ = 1.618), fluid via clamp() ─────────── */
+  --type-hero:    clamp(48px, 9vw, 110px);
+  --type-display: clamp(36px, 6vw, 68px);
+  --type-h2:      clamp(28px, 4.2vw, 42px);
+  --type-h3:      26px;
+  --type-body-lg: 18px;
+  --type-body:    16px;
+  --type-meta:    13px;
+  --type-xs:      10px;
+
+  /* ─── Line heights ───────────────────────────────────────── */
+  --lh-hero: 1.05;
+  --lh-display: 1.15;
+  --lh-body: 1.55;
+
+  /* ─── Letter spacing ─────────────────────────────────────── */
+  --ls-hero: -0.02em;
+  --ls-display: -0.015em;
+  --ls-meta: 0.12em;
+
+  /* ─── Space tokens (φ-derived) ──────────────────────────── */
+  --space-2xs: 4px;
+  --space-xs:  8px;
+  --space-sm:  13px;
+  --space-md:  21px;
+  --space-lg:  34px;
+  --space-xl:  55px;
+  --space-2xl: 89px;
+  --space-3xl: 144px;
+  --space-4xl: 233px;
+
+  /* ─── Layout ────────────────────────────────────────────── */
+  --container-max: 1400px;
+  --container-pad: clamp(20px, 5vw, 80px);
+
+  /* ─── Motion timing ─────────────────────────────────────── */
+  --t-fast:   200ms;
+  --t-medium: 480ms;
+  --t-slow:   1200ms;
+  --t-breath: 19s;     /* 4+7+8 sec scaled */
+  --t-drift:  60s;
+  --ease-growth: cubic-bezier(0.2, 0, 0.6, 0.5);  /* approximation; GSAP uses CustomEase 'growth' */
+
+  /* ─── Borders ────────────────────────────────────────────── */
+  --border-hairline: 0.5px solid rgba(197, 160, 23, 0.3);
+  --border-link-hover: 1px dotted rgba(240, 237, 227, 0.6);
+
+  /* ─── Z-layers (restraint) ──────────────────────────────── */
+  --z-grain: -1;
+  --z-base: 0;
+  --z-pillar: 1;
+  --z-nav: 50;
+  --z-modal: 100;
+  --z-cursor: 200;
+}
+
+/* Reduced-motion gate (manual override + system preference) */
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-breath: 0s; --t-drift: 0s; }
+}
+[data-motion="reduced"] { --t-breath: 0s; --t-drift: 0s; }

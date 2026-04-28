@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "checkJs": false,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["js/*"],
+      "@lib/*": ["js/lib/*"],
+      "@motion/*": ["js/motion/*"],
+      "@sections/*": ["js/sections/*"],
+      "@eggs/*": ["js/easter-eggs/*"],
+      "@integrations/*": ["js/integrations/*"]
+    }
+  },
+  "include": ["js/**/*", "vite.config.js"],
+  "exclude": ["node_modules", "dist"]
+}

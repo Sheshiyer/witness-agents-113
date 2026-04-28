@@ -1,0 +1,92 @@
+/*
+ * utilities.css — visually-hidden, focus, skip-link
+ */
+
+.visually-hidden,
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: var(--sacred-gold);
+  color: var(--void);
+  padding: var(--space-xs) var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--type-meta);
+  letter-spacing: var(--ls-meta);
+  text-transform: uppercase;
+  z-index: var(--z-modal);
+  transition: top var(--t-fast) ease;
+}
+
+.skip-link:focus {
+  top: 8px;
+  outline: 2px solid var(--parchment);
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.no-wrap { white-space: nowrap; }
+.text-mono { font-family: var(--font-mono); letter-spacing: var(--ls-meta); }
+.text-muted { color: var(--muted-silver); }
+.text-gold { color: var(--sacred-gold); }
+.text-violet { color: var(--witness-violet); }
+.text-emerald { color: var(--coherence-emerald); }
+
+/* Stacked vertical rhythm */
+.stack > * + * { margin-top: var(--stack, var(--space-md)); }
+.stack-lg > * + * { margin-top: var(--space-lg); }
+.stack-xl > * + * { margin-top: var(--space-xl); }
+
+/* Hairline divider */
+.divider {
+  height: 0.5px;
+  background: rgba(197, 160, 23, 0.3);
+  margin-block: var(--space-xl);
+  width: 100%;
+}
+
+/* Cursor halo (L1 atmospheric egg) — JS toggles class to enable */
+.cursor-halo {
+  pointer-events: none;
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45, 0, 80, 0.18) 0%, transparent 70%);
+  z-index: var(--z-cursor);
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  transition: opacity var(--t-fast) ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-halo { display: none; }
+}
+
+/* L1 hover-link signal (used per DESIGN.md §8) */
+.link-tapestry {
+  border-bottom: 1px dashed transparent;
+  transition: border-color var(--t-fast) ease;
+}
+
+.link-tapestry:hover {
+  border-bottom-color: var(--sacred-gold);
+  color: var(--sacred-gold);
+}
