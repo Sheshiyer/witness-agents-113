@@ -1,45 +1,157 @@
 export default function initPlaylistRail({ gsap, reduced }) {
   const rail = document.querySelector('[data-playlist-rail]');
-  if (!rail || !gsap) return;
+  const shell = rail?.querySelector('[data-playlist-shell]');
+  const toggle = rail?.querySelector('[data-playlist-toggle]');
+  const panel = rail?.querySelector('.playlist-rail__panel');
+  const marquee = rail?.querySelector('[data-playlist-marquee]');
+  const halo = rail?.querySelector('.playlist-rail__halo');
+  const ctaArrow = rail?.querySelector('.playlist-rail__cta-arrow');
+
+  if (!rail || !shell || !toggle || !panel) return;
 
   const titleLines = rail.querySelectorAll('.playlist-rail__title-line');
   const pills = rail.querySelectorAll('.playlist-rail__pill');
   const tags = rail.querySelectorAll('.playlist-rail__tag');
   const rows = rail.querySelectorAll('.playlist-rail__row');
-  const marquee = rail.querySelector('[data-playlist-marquee]');
-  const halo = rail.querySelector('.playlist-rail__halo');
-  const ctaArrow = rail.querySelector('.playlist-rail__cta-arrow');
+  const summaryBits = rail.querySelectorAll(
+    '.playlist-rail__summary-kicker, .playlist-rail__summary-title, .playlist-rail__summary-spine, .playlist-rail__summary-arrow'
+  );
+
+  const collapsedLabel = 'Expand Spotify playlist panel';
+  const expandedLabel = 'Collapse Spotify playlist panel';
 
   let marqueeTween = null;
   let floatTween = null;
   let haloTween = null;
+  let ctaArrowTween = null;
+  let openTimeline = null;
+  let motionReady = false;
 
-  if (!reduced && marquee && marquee.children.length) {
-    marquee.innerHTML += marquee.innerHTML;
-    const originalHeight = marquee.scrollHeight / 2;
-    marqueeTween = gsap.fromTo(
-      marquee,
-      { y: 0 },
-      {
-        y: -originalHeight,
-        duration: 22,
-        ease: 'none',
-        repeat: -1
+  const syncExpandedState = () => {
+    const expanded = shell.open;
+    rail.dataset.expanded = expanded ? 'true' : 'false';
+    toggle.setAttribute('aria-expanded', String(expanded));
+    toggle.setAttribute('aria-label', expanded ? expandedLabel : collapsedLabel);
+  };
+
+  const syncAnimatedState = (expanded) => {
+    marqueeTween?.paused(!expanded);
+    haloTween?.paused(!expanded);
+    ctaArrowTween?.paused(!expanded);
+  };
+
+  const setupExpandedMotion = () => {
+    if (reduced || !gsap || motionReady || !shell.open) return;
+
+    if (marquee && marquee.children.length) {
+      if (!marquee.dataset.looped) {
+        marquee.innerHTML += marquee.innerHTML;
+        marquee.dataset.looped = 'true';
       }
-    );
-  }
 
-  if (reduced) return;
+      const originalHeight = marquee.scrollHeight / 2;
+      if (originalHeight > 0) {
+        marqueeTween = gsap.fromTo(
+          marquee,
+          { y: 0 },
+          {
+            y: -originalHeight,
+            duration: 22,
+            ease: 'none',
+            repeat: -1,
+            paused: true
+          }
+        );
+      }
+    }
 
-  gsap.set(titleLines, { transformOrigin: '0% 100%' });
+    haloTween = halo
+      ? gsap.to(halo, {
+          scale: 1.08,
+          opacity: 0.84,
+          duration: 3.2,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1,
+          paused: true
+        })
+      : null;
+
+    ctaArrowTween = ctaArrow
+      ? gsap.to(ctaArrow, {
+          x: 4,
+          duration: 0.9,
+          ease: 'sine.inOut',
+          yoyo: true,
+          repeat: -1,
+          paused: true
+        })
+      : null;
+
+    motionReady = true;
+  };
+
+  const animateOpen = () => {
+    if (reduced || !gsap || !shell.open) return;
+
+    setupExpandedMotion();
+    if (!motionReady) return;
+
+    openTimeline?.kill();
+    gsap.killTweensOf([panel, titleLines, pills, rows, tags]);
+    gsap.set(titleLines, { transformOrigin: '0% 100%' });
+
+    openTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    openTimeline
+      .fromTo(panel, { autoAlpha: 0, x: 18 }, { autoAlpha: 1, x: 0, duration: 0.38, clearProps: 'opacity,visibility,transform' }, 0)
+      .from(titleLines, { yPercent: 120, rotateX: -48, opacity: 0, stagger: 0.08, duration: 0.82 }, 0.04)
+      .from(pills, { y: 12, opacity: 0, stagger: 0.04, duration: 0.42 }, 0.16)
+      .from(rows, { x: 18, opacity: 0, stagger: 0.04, duration: 0.42 }, 0.22)
+      .from(tags, { scale: 0.88, opacity: 0, stagger: 0.03, duration: 0.34 }, 0.28);
+  };
+
+  const closeRail = () => {
+    if (!shell.open) return;
+    shell.open = false;
+  };
+
+  shell.addEventListener('toggle', () => {
+    syncExpandedState();
+
+    if (reduced || !gsap) return;
+
+    if (shell.open) {
+      requestAnimationFrame(() => {
+        setupExpandedMotion();
+        syncAnimatedState(true);
+        animateOpen();
+      });
+      return;
+    }
+
+    openTimeline?.kill();
+    syncAnimatedState(false);
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!shell.open) return;
+    if (rail.contains(event.target)) return;
+    closeRail();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape' || !shell.open) return;
+    closeRail();
+  });
+
+  syncExpandedState();
+
+  if (!gsap || reduced) return;
 
   const intro = gsap.timeline({ defaults: { ease: 'power3.out' } });
   intro
     .from(rail, { autoAlpha: 0, x: 36, duration: 1.1 })
-    .from(titleLines, { yPercent: 120, rotateX: -48, opacity: 0, stagger: 0.08, duration: 0.9 }, '-=0.76')
-    .from(pills, { y: 16, opacity: 0, stagger: 0.05, duration: 0.48 }, '-=0.55')
-    .from(rows, { x: 18, opacity: 0, stagger: 0.05, duration: 0.48 }, '-=0.45')
-    .from(tags, { scale: 0.88, opacity: 0, stagger: 0.04, duration: 0.4 }, '-=0.35');
+    .from(summaryBits, { y: 14, opacity: 0, stagger: 0.05, duration: 0.48 }, '-=0.72');
 
   floatTween = gsap.to(rail, {
     y: '+=10',
@@ -49,30 +161,11 @@ export default function initPlaylistRail({ gsap, reduced }) {
     repeat: -1
   });
 
-  haloTween = halo
-    ? gsap.to(halo, {
-        scale: 1.08,
-        opacity: 0.84,
-        duration: 3.2,
-        ease: 'sine.inOut',
-        yoyo: true,
-        repeat: -1
-      })
-    : null;
-
-  if (ctaArrow) {
-    gsap.to(ctaArrow, {
-      x: 4,
-      duration: 0.9,
-      ease: 'sine.inOut',
-      yoyo: true,
-      repeat: -1
-    });
-  }
-
   rail.addEventListener('mouseenter', () => {
-    marqueeTween?.timeScale(1.9);
     floatTween?.timeScale(1.25);
+    if (!shell.open || !motionReady) return;
+
+    marqueeTween?.timeScale(1.9);
     haloTween?.timeScale(1.4);
     gsap.to(tags, {
       y: -2,
@@ -92,8 +185,10 @@ export default function initPlaylistRail({ gsap, reduced }) {
   });
 
   rail.addEventListener('mouseleave', () => {
-    marqueeTween?.timeScale(1);
     floatTween?.timeScale(1);
+    if (!shell.open || !motionReady) return;
+
+    marqueeTween?.timeScale(1);
     haloTween?.timeScale(1);
     gsap.to(tags, {
       y: 0,

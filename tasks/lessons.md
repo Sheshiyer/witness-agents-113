@@ -17,3 +17,7 @@
 - When reader-facing copy starts describing the page, route, node, or funnel more than the subject itself, rewrite it into first-order claims. Interface self-commentary is usually a drift signal.
 - For decorative flares, placeholder copy and generic CSS loops read unfinished immediately. Use real source metadata, stronger typography, and a proper motion system or do not ship the flourish.
 - Never present a polished public CTA for a channel that is not actually live. If email, subscription, or intake wiring is pending, the interface must say so plainly and point to the implementation tracker instead.
+- Before tuning any reveal image system, audit the real asset dimensions first. A generic `16:9` container against portrait posters will force cropping and make every later mobile fix look random.
+- When verifying GSAP Flip layouts from DOM clones, strip transient inline transform/size styles but preserve intentional inline data like `background-image`. Otherwise full-width reveal sections can look broken in measurement even when the CSS is correct.
+- When a real brand asset pack already exists, replace placeholder glyphs in footer/favicon surfaces with the shipped mark before calling the branding pass complete.
+- When the user separates asset roles explicitly, keep those roles separate. A theme-specific favicon pack is not permission to reuse those files as the footer or primary brand mark.

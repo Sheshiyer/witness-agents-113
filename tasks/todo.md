@@ -365,3 +365,91 @@
   - desktop render captured with local Chrome headless at `1440x2200`: `.artifacts/playlist-rail-redesign/desktop-1440.png`
   - narrow viewport check captured in the in-app browser: `.artifacts/playlist-rail-redesign/narrow-viewport.png`
   - result: desktop rail now reads as a deliberate visual module; narrow viewport still stays clean without the rail
+
+## 2026-04-29 Poster Reveal Sizing Pass
+
+### Plan
+- [x] Inspect the scroll-expand implementation, current open-state sizing rules, and section layout constraints.
+- [x] Audit the actual poster assets to confirm their native dimensions and aspect ratio.
+- [x] Replace the generic reveal sizing with poster-native aspect ratios and viewport-aware max sizes.
+- [x] Map the final open-state sizes across the existing breakpoints so mobile sections can finish their reveal before the next section enters.
+- [x] Verify with build plus browser measurements/screenshots at desktop, tablet, and mobile widths.
+
+### Review
+- Investigation finding:
+  - all 16 FAL engine posters are `768×1024` (`3:4` portrait)
+  - current reveal CSS forces them into `16/9` containers and paints them with `background-size: cover`
+  - that guarantees destructive cropping, especially on mobile, before the section completes its scroll cycle
+- Implementation result:
+  - the reveal system now uses the native poster ratio in the open state
+  - final reveal cards are capped by both viewport width and viewport height
+  - view-type defaults are now only the base layer; mobile, tablet (`768–847px`), and desktop all have section-level poster caps where the composition needs it
+  - larger anchor reveals are intentionally biased toward `03`, `08`, and `15`
+  - tighter pauses are intentionally biased toward `04`, `09`, `11`, and `16`
+- Representative final poster sizes after section tuning:
+  - `03 / Tarot`: `360×480` on `430px`, `392×523` on `768px`, `432×576` on `1440px`
+  - `08 / I Ching`: `361×482` on `430px`, `392×523` on `768px`, `432×576` on `1440px`
+  - `09 / Enneagram`: `276×368` on `430px`, `276×368` on `768px`, `243×324` on `1440px`
+  - `15 / Biofield`: `348×464` on `430px`, `372×496` on `768px`, `336×448` on `1440px`
+  - `16 / Face Reading`: `264×352` on `430px`, `276×368` on `768px`, `284×378` on `1440px`
+- Reference:
+  - `tasks/poster-sizing-map.md`
+- Verification:
+  - `npm run build` passed on 2026-04-29
+  - measured clean static open-state clones at `430×932`, `768×1024`, and `1440×900`
+  - clean-clone verification strips transient GSAP Flip inline styles before measuring, otherwise full-width sections report false `0×0` poster sizes
+  - visual artifacts captured in `.artifacts/poster-sizing-pass/`
+  - note: the Flip end-state is still captured at page init, so breakpoint changes after load are best treated as a separate follow-up if we want rotation/resize-perfect behavior
+
+## 2026-04-29 Playlist Rail Collapse Pass
+
+### Plan
+- [x] Inspect the existing playlist rail markup, animation hooks, and the provided reference state to confirm the intended closed/open interaction.
+- [x] Restructure the rail so it has a compact default footprint and an explicit click target that expands into the current richer panel.
+- [x] Update the rail motion and interaction logic to support expand, collapse, and reduced-motion-safe behavior without breaking the outbound Spotify link.
+- [x] Build and visually verify the rail in its collapsed and expanded states, then document the result.
+
+### Review
+- Implementation result:
+  - replaced the always-open playlist anchor with a `details/summary` rail shell that defaults to a slim vertical tab
+  - kept the richer playlist card as the expanded state, with the outbound Spotify link still living on the open panel
+  - added close affordances beyond a second click: outside-click dismissal and `Escape`
+- Motion/result details:
+  - the collapsed rail now gets its own intro reveal and keeps the existing floating drift
+  - marquee, halo pulse, CTA arrow motion, and the dense content reveal only spin up once the rail is actually opened
+  - reduced motion still preserves the interaction, but skips the GSAP-driven flourish
+- Verification:
+  - `npm run build` passed on 2026-04-29
+  - live Chrome check on `http://127.0.0.1:5113/` confirmed the default collapsed tab, click-to-expand behavior, and retained Spotify link in the open state
+
+## 2026-04-29 Brand Mark + Reveal Lifecycle Pass
+
+### Plan
+- [x] Inspect the provided gold/white logo packs, current footer markup, favicon links, and current Flip effect lifecycle.
+- [x] Import the selected logo pack assets into `public/` and replace the footer glyph with the generated 3D mark.
+- [x] Update favicon, touch icon, and manifest references to the selected favicon pack.
+- [x] Rebuild the reveal effect lifecycle so breakpoint/orientation changes recreate the Flip states instead of stretching the original load-time geometry.
+- [x] Verify in the browser plus production build, then document the result and any new regression rules.
+
+### Review
+- Correction:
+  - the previous pass misused the provided gold/white image packs as general brand assets
+  - footer brand now uses the generated GLB mark instead
+  - the provided gold/white image packs are now limited to light/dark favicon duties only
+- Implementation result:
+  - replaced the placeholder footer glyph and interim static image with a framed `model-viewer` instance using `/models/sigil-foil-hero.glb`
+  - tuned the footer viewer to a fixed, flattering 3D orbit so the mark does not spin into an unreadable edge
+  - reduced favicon wiring to a gold fallback `.ico` plus theme-specific light/dark PNG favicons
+  - expand-image reveals now rebuild after resize/orientation changes by killing section-scoped ScrollTriggers, clearing transient Flip inline state, and re-instantiating the effects against the new viewport geometry
+- Verification:
+  - `npm run build` passed on 2026-04-29
+  - browser check confirmed the corrected GLB footer render:
+    - `.artifacts/brand-pass/footer-glb-desktop-corrected-v2.png`
+  - live head verification confirmed the favicon set is now limited to:
+    - `/favicon.ico`
+    - `/favicon-light-32x32.png`, `/favicon-light-16x16.png`
+    - `/favicon-dark-32x32.png`, `/favicon-dark-16x16.png`
+  - resize-without-reload verification confirmed the reveal geometry actually rebinds:
+    - desktop `1440px`: `08` `432×576`, `09` `243×324`, `15` `336×448`
+    - mobile `430px`: `08` `361×482`, `09` `276×368`, `15` `348×464`
+    - return to desktop `1440px`: `08` `432×576`, `09` `243×324`, `15` `336×448`

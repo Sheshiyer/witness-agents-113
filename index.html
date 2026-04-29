@@ -42,6 +42,10 @@
     <meta name="composite-seed" content="19912564" />
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-light-32x32.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-light-16x16.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-dark-32x32.png" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-dark-16x16.png" media="(prefers-color-scheme: dark)" />
     <link rel="canonical" href="https://113.tryambakam.space/" />
 
     <script type="application/ld+json">
@@ -51,6 +55,7 @@
         "name": "Witness Agents",
         "url": "https://113.tryambakam.space/",
         "description": "Witness Agents gathers sixteen engines, Somatic Canticles, research essays, maps, and open code for self-consciousness.",
+        "image": "https://113.tryambakam.space/android-chrome-512x512.png",
         "about": [
           { "@type": "Thing", "name": "Self-consciousness" },
           { "@type": "Thing", "name": "Kha-Ba-La" },
@@ -189,77 +194,87 @@
       </div>
     </header>
 
-    <aside class="playlist-rail" data-playlist-rail aria-label="Spotify playlist flare">
-      <a
-        class="playlist-rail__link"
-        href="https://open.spotify.com/playlist/07lU36yjxZipzGie9Y35lk?si=d5c8680615234f5a"
-        rel="noopener"
-        aria-label="Open the Spotify playlist begin_journey by Mage Narayan">
-        <span class="playlist-rail__spine">vibe coded to</span>
+    <aside class="playlist-rail" data-playlist-rail data-expanded="false" aria-label="Spotify playlist flare">
+      <details class="playlist-rail__shell" data-playlist-shell>
+        <summary class="playlist-rail__summary" data-playlist-toggle aria-controls="playlist-rail-panel" aria-label="Expand Spotify playlist panel">
+          <span class="playlist-rail__summary-kicker">spotify playlist</span>
+          <span class="playlist-rail__summary-title" aria-hidden="true">begin journey</span>
+          <span class="playlist-rail__summary-spine">vibe coded to</span>
+          <span class="playlist-rail__summary-arrow" aria-hidden="true">↗</span>
+        </summary>
+
         <span class="playlist-rail__halo" aria-hidden="true"></span>
         <span class="playlist-rail__scan" aria-hidden="true"></span>
 
-        <span class="playlist-rail__content">
-          <span class="playlist-rail__topline">
-            <span class="playlist-rail__kicker">spotify playlist</span>
-            <span class="playlist-rail__owner">curated by Mage Narayan</span>
-          </span>
+        <div class="playlist-rail__panel" id="playlist-rail-panel">
+          <a
+            class="playlist-rail__link"
+            href="https://open.spotify.com/playlist/07lU36yjxZipzGie9Y35lk?si=d5c8680615234f5a"
+            rel="noopener"
+            aria-label="Open the Spotify playlist begin_journey by Mage Narayan">
+            <span class="playlist-rail__content">
+              <span class="playlist-rail__topline">
+                <span class="playlist-rail__kicker">spotify playlist</span>
+                <span class="playlist-rail__owner">curated by Mage Narayan</span>
+              </span>
 
-          <span class="playlist-rail__title" aria-label="begin_journey">
-            <span class="playlist-rail__title-line">begin</span>
-            <span class="playlist-rail__title-line"><em>journey</em></span>
-          </span>
+              <span class="playlist-rail__title" aria-label="begin_journey">
+                <span class="playlist-rail__title-line">begin</span>
+                <span class="playlist-rail__title-line"><em>journey</em></span>
+              </span>
 
-          <span class="playlist-rail__meta" aria-label="Playlist tags">
-            <span class="playlist-rail__pill">100 tracks</span>
-            <span class="playlist-rail__pill">Mage Narayan</span>
-            <span class="playlist-rail__pill">playlist signal</span>
-          </span>
+              <span class="playlist-rail__meta" aria-label="Playlist tags">
+                <span class="playlist-rail__pill">100 tracks</span>
+                <span class="playlist-rail__pill">Mage Narayan</span>
+                <span class="playlist-rail__pill">playlist signal</span>
+              </span>
 
-          <span class="playlist-rail__window" aria-hidden="true">
-            <span class="playlist-rail__marquee" data-playlist-marquee>
-              <span class="playlist-rail__row">
-                <span class="playlist-rail__track-title">Underwater Cities</span>
-                <span class="playlist-rail__track-artist">Bluetech</span>
+              <span class="playlist-rail__window" aria-hidden="true">
+                <span class="playlist-rail__marquee" data-playlist-marquee>
+                  <span class="playlist-rail__row">
+                    <span class="playlist-rail__track-title">Underwater Cities</span>
+                    <span class="playlist-rail__track-artist">Bluetech</span>
+                  </span>
+                  <span class="playlist-rail__row">
+                    <span class="playlist-rail__track-title">Calling Spirits</span>
+                    <span class="playlist-rail__track-artist">Shaman&apos;s Dream · Bluetech</span>
+                  </span>
+                  <span class="playlist-rail__row">
+                    <span class="playlist-rail__track-title">The Reveal</span>
+                    <span class="playlist-rail__track-artist">Sensient</span>
+                  </span>
+                  <span class="playlist-rail__row">
+                    <span class="playlist-rail__track-title">Drp (Remastered)</span>
+                    <span class="playlist-rail__track-artist">Plastikman · Richie Hawtin</span>
+                  </span>
+                  <span class="playlist-rail__row">
+                    <span class="playlist-rail__track-title">Gutter Talk</span>
+                    <span class="playlist-rail__track-artist">Steve Moore</span>
+                  </span>
+                  <span class="playlist-rail__row">
+                    <span class="playlist-rail__track-title">Into the Timeless</span>
+                    <span class="playlist-rail__track-artist">Shaman&apos;s Dream · Bluetech</span>
+                  </span>
+                </span>
               </span>
-              <span class="playlist-rail__row">
-                <span class="playlist-rail__track-title">Calling Spirits</span>
-                <span class="playlist-rail__track-artist">Shaman&apos;s Dream · Bluetech</span>
+
+              <span class="playlist-rail__tags" aria-label="Featured artists">
+                <span class="playlist-rail__tag">Bluetech</span>
+                <span class="playlist-rail__tag">Shaman&apos;s Dream</span>
+                <span class="playlist-rail__tag">Sensient</span>
+                <span class="playlist-rail__tag">Plastikman</span>
+                <span class="playlist-rail__tag">Richie Hawtin</span>
+                <span class="playlist-rail__tag">Steve Moore</span>
               </span>
-              <span class="playlist-rail__row">
-                <span class="playlist-rail__track-title">The Reveal</span>
-                <span class="playlist-rail__track-artist">Sensient</span>
-              </span>
-              <span class="playlist-rail__row">
-                <span class="playlist-rail__track-title">Drp (Remastered)</span>
-                <span class="playlist-rail__track-artist">Plastikman · Richie Hawtin</span>
-              </span>
-              <span class="playlist-rail__row">
-                <span class="playlist-rail__track-title">Gutter Talk</span>
-                <span class="playlist-rail__track-artist">Steve Moore</span>
-              </span>
-              <span class="playlist-rail__row">
-                <span class="playlist-rail__track-title">Into the Timeless</span>
-                <span class="playlist-rail__track-artist">Shaman&apos;s Dream · Bluetech</span>
+
+              <span class="playlist-rail__cta">
+                <span class="playlist-rail__cta-label">open playlist</span>
+                <span class="playlist-rail__cta-arrow" aria-hidden="true">↗</span>
               </span>
             </span>
-          </span>
-
-          <span class="playlist-rail__tags" aria-label="Featured artists">
-            <span class="playlist-rail__tag">Bluetech</span>
-            <span class="playlist-rail__tag">Shaman&apos;s Dream</span>
-            <span class="playlist-rail__tag">Sensient</span>
-            <span class="playlist-rail__tag">Plastikman</span>
-            <span class="playlist-rail__tag">Richie Hawtin</span>
-            <span class="playlist-rail__tag">Steve Moore</span>
-          </span>
-
-          <span class="playlist-rail__cta">
-            <span class="playlist-rail__cta-label">open playlist</span>
-            <span class="playlist-rail__cta-arrow" aria-hidden="true">↗</span>
-          </span>
-        </span>
-      </a>
+          </a>
+        </div>
+      </details>
     </aside>
 
     <main id="main">
@@ -1111,14 +1126,26 @@
     <footer class="footer">
       <div class="footer__inner">
         <div class="footer__brand">
-          <svg viewBox="0 0 80 80" class="footer__glyph" role="img" aria-label="113 glyph">
-            <use href="#glyph-113"></use>
-          </svg>
-          <p class="footer__wordmark">TRYAMBAKAM NOESIS</p>
-          <p class="footer__seed">19912564 · ✶</p>
-          <p class="footer__motto">
-            <em>The work succeeds when the user no longer needs the work.</em>
-          </p>
+          <div class="footer__mark-frame" aria-hidden="true">
+            <model-viewer
+              class="footer__mark-viewer"
+              src="/models/sigil-foil-hero.glb"
+              poster="/models/sigil-foil-preview.png"
+              interaction-prompt="none"
+              shadow-intensity="0"
+              exposure="1.12"
+              camera-orbit="-18deg 74deg 112%"
+              field-of-view="22deg"
+              alt="Tryambakam Noesis sigil rendered as a three-dimensional metallic mark."
+            ></model-viewer>
+          </div>
+          <div class="footer__brand-copy">
+            <p class="footer__wordmark">TRYAMBAKAM NOESIS</p>
+            <p class="footer__seed">19912564 · ✶</p>
+            <p class="footer__motto">
+              <em>The work succeeds when the user no longer needs the work.</em>
+            </p>
+          </div>
         </div>
 
         <nav class="footer__nav" aria-label="Tapestry">
