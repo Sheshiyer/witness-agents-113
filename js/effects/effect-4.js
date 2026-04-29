@@ -1,4 +1,5 @@
 import { gsap, Flip } from '../lib/gsapSetup.js';
+import { getRevealBlockFadeOpacity } from './effect-config.js';
 
 export class ExpandImageEffect {
   constructor(el) {
@@ -14,6 +15,7 @@ export class ExpandImageEffect {
     this.expandTexts = this.wrapElement.querySelectorAll('.anim');
     
     this.textBlock = this.wrapElement.nextElementSibling;
+    this.textFadeOpacity = getRevealBlockFadeOpacity(this.wrapElement);
 
     // Calls the method to set up the initial effect.
     this.initializeEffect(this.wrapElement);
@@ -56,7 +58,7 @@ export class ExpandImageEffect {
       yPercent: -50,
       skewX: -4,
       rotation: 2,
-      opacity: 0.2,
+      opacity: this.textFadeOpacity,
       scrollTrigger: {
         trigger: this.textBlock,
         start: 'top bottom',

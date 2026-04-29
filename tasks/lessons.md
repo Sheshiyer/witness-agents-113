@@ -21,3 +21,8 @@
 - When verifying GSAP Flip layouts from DOM clones, strip transient inline transform/size styles but preserve intentional inline data like `background-image`. Otherwise full-width reveal sections can look broken in measurement even when the CSS is correct.
 - When a real brand asset pack already exists, replace placeholder glyphs in footer/favicon surfaces with the shipped mark before calling the branding pass complete.
 - When the user separates asset roles explicitly, keep those roles separate. A theme-specific favicon pack is not permission to reuse those files as the footer or primary brand mark.
+- When reveal prose sits on a dark field, never hard-code a deep fade like `opacity: 0.2` into the scroll effects. Keep paragraph fade floors responsive and verify them in-browser while the effect is active, not only at rest.
+- For final copy passes, update `copy/sections.md`, live metadata in `index.html`, and `tasks/seo-brief.md` in one pass. If one source lags, stale titles, descriptions, and CTA labels drift back into the shipped page.
+- CTA labels on this site should name the exact public surface they open. Generic verbs like `open`, `track`, or `see` weaken trust faster than the body copy does.
+- On multi-surface pages, the primary CTA has to match the unfinished or decisive action on that page itself. Do not let a strong adjacent asset like the canticle replace the real object of the page, especially when the missing piece is an unwired access flow.
+- After any generation pass, produce an explicit live-vs-retained asset map before pushing. “Not forgotten” is different from “currently live,” and the repo should state that distinction concretely.

@@ -13,14 +13,14 @@ References:
 - Anatomical but visionary.
 - No product-launch theater.
 - No private endpoints, invented access, or claims the page cannot prove.
-- Public positioning: this site gathers the inspectable corpus into one surface without implying hidden access or product theater.
+- Public positioning: this page names the public surfaces without implying hidden access or product theater.
 
 ## Site Meta
 
-- Title: `Witness Agents | Tryambakam Noesis`
-- Meta description: `Witness Agents gathers sixteen engines, Somatic Canticles, research essays, maps, and open code for self-consciousness.`
-- OG title: `Witness Agents | Tryambakam Noesis`
-- OG description: `Sixteen engines. Somatic Canticles. Research essays, maps, and open code for self-consciousness.`
+- Title: `Witness Agents | Sixteen Engines for Self-Consciousness | Tryambakam Noesis`
+- Meta description: `Tryambakam Noesis trains self-consciousness through sixteen engines, Somatic Canticles, essays, maps, and open code you can inspect.`
+- OG title: `Witness Agents | Sixteen Engines for Self-Consciousness | Tryambakam Noesis`
+- OG description: `Tryambakam Noesis trains self-consciousness through sixteen engines, Somatic Canticles, essays, maps, and open code you can inspect.`
 - OG image alt: `Tryambakam Noesis sigil rendered as nested sacred geometry in Witness Violet and Sacred Gold on Void Black.`
 
 ## Hero
@@ -28,9 +28,9 @@ References:
 - Meta line: `WITNESS AGENTS · TRYAMBAKAM NOESIS`
 - H1 line 1: `Self-consciousness`
 - H1 line 2: `as technology.`
-- Tagline: `Body as medium. Breath as interface. Sixteen engines for reading inherited pattern at source.`
-- Primary CTA: `Enter the canticle`
-- Secondary CTA: `See the architecture`
+- Tagline: `Body as medium. Breath as interface. Sixteen engines for examining inherited pattern at source.`
+- Primary CTA: `Track agent access`
+- Secondary CTA: `Inspect the engines`
 - Stats: `16 engines / 02 poles / 05 koshas / Cl(0-7) algebras`
 - Hero image prompt ref: `hero-sigil-3d`
 
@@ -54,8 +54,8 @@ References:
 | 14 | `Short turns tick daily.` | `Transits are the near-field weather. They do not replace the long arc; they show what is active against it today.` | `engine-14-transits` |
 | 15 | `The field keeps a signature.` | `Biofield names distributed signal: charge, depletion, coherence, and where the hum holds or fractures.` | `engine-15-biofield` |
 | 16 | `The face records the pattern.` | `Face reading treats structure as memory. Tension, asymmetry, and proportion show how a life keeps meeting force.` | `engine-16-face-reading` |
-| 17 | `Follow the open corpus.` | `Canticles, essays, maps, engines, and repos are open. Read the claim beside the text, code, or map carrying it.` | `optional-constellation-field` |
-| 18 | `Doors do not open. They are crossed.` | `Read. Inspect. Write. Leave if the signal does not hold.` | `optional-threshold-ouroboros` |
+| 17 | `Read the open record.` | `Canticles, essays, maps, engines, and repos stay public. Read the claim beside the text, code, or map carrying it.` | `optional-constellation-field` |
+| 18 | `Doors do not open. They are crossed.` | `Read. Inspect. Verify. Leave if the claim does not hold.` | `optional-threshold-ouroboros` |
 
 ## Why Section
 
@@ -75,14 +75,14 @@ References:
 ## Threshold Cards
 
 - 1319: `Read the canticle.` / `Twenty-seven chapters of narrative calibration.`
-- Research: `Read the essays.` / `Essays, maps, and working notes across the field.`
+- Research: `Read the essays.` / `Essays, maps, and working notes.`
 - Selemene: `Inspect the engines.` / `Live surface, open repos, and claims carried in code.`
-- Channel: `Track the missing channel.` / `Direct email and subscription intake are still being wired.`
+- Channel: `Track contact status.` / `Mailer and direct contact are not live yet.`
 
 ## Lineage
 
-- H2: `Who wrote the source.`
-- Lede: `The essay names the relational conditions first. This grid names the thinkers whose work became structural here.`
+- H2: `Which sources became structural.`
+- Lede: `The essay names the people and conditions first. This grid names the thinkers whose work became load-bearing here.`
 - Card 1: `Michael Tsarion` / `Installed symbolic literacy: symbols as states of consciousness rather than ornament.` / `→ used here · symbolic lens`
 - Card 2: `James True` / `Proved that cosmology and the enteric body are substrate, not background.` / `→ used here · somatic substrate`
 - Card 3: `Jean Gebser` / `Gave the consciousness structures later rendered here as levels, not ladders.` / `→ used here · consciousness architecture`
@@ -91,7 +91,7 @@ References:
 - Card 6: `Mark Passio` / `Forced the hidden runtime into view and set the register for clear disclosure.` / `→ used here · disclosure impulse`
 - Card 7: `Keelen / The Whole Critter` / `Synthesized Whitehead, Gebser, Sheldrake, Bergson, and Bohm into one workable field.` / `→ used here · multi-engine synthesis`
 - Card 8: `Slick Dissident` / `Taught the weave: symbolic craft, media literacy, etymology, and spell detection.` / `→ used here · pattern-craft`
-- Caption: `The full credit roll also names the partner, collaborator, parents, and ground that made the work compilable. Read The Source Code Has Authors.`
+- Caption: `For the full authorship account, read The Source Code Has Authors.`
 
 ## FAQ
 
@@ -99,15 +99,15 @@ References:
 - Q1: `What is the difference between consciousness and self-consciousness?`
   - `Consciousness is the fact of experience. Self-consciousness is the capacity to inspect the structure doing the experiencing.`
 - Q2: `What is open now, and what is still pending?`
-  - `Open now: canticles, research essays, maps, Selemene, and the repos. Still pending: direct email, subscription intake, admin surfaces, or any access this page cannot prove.`
+  - `Open now: canticles, essays, maps, Selemene, and the repos. Still pending: direct email, subscription intake, admin surfaces, or any route this page cannot prove.`
 - Q3: `What does "113" mean?`
   - `113 is a compressed gate, not a secret tier. It folds 1319, 19910813, and 432 into a smaller mnemonic entry point.`
 - Q4: `Why keep the dyad language at all?`
   - `Because observation and embodiment do different work. Kha names. Ba tests. Without the distinction, one register fakes total authority.`
 - Q5: `What holds the different parts of the field together?`
-  - `Kha-Ba-La, the corpus, and the open artifacts. Coherence has to survive across surfaces or it is only atmosphere.`
+  - `Kha-Ba-La, the cross-check between engines, and the public artifacts. If coherence breaks across surfaces, it does not count.`
 - Q6: `Where should I start if I want proof, not atmosphere?`
-  - `Start with the essays, maps, canticles, and repos. Read the claim beside the surface carrying it.`
+  - `Start with the essays, maps, canticles, and repos. Read the claim beside the surface carrying it, then inspect the code where it exists.`
 - Q7: `Do I need to install anything to begin?`
   - `To read: a browser. To inspect or run locally: a terminal.`
 - Q8: `Why insist on independence?`
@@ -115,15 +115,16 @@ References:
 
 ## Channel Status
 
-- H2: `What is still being wired.`
-- Lede: `The public corpus is live. Direct email and subscription intake are not.`
-- Item 1: `Subscription intake` / `The subscription mailer and capture flow are not wired yet.`
-- Item 2: `hello@tryambakam.space` / `This inbox is not active. Do not rely on it for contact.`
-- Item 3: `Until then` / `Use the essays, maps, engines, and repos. Each public claim should still land in something you can inspect.`
-- CTA: `Track implementation`
-- Small note: `Working mail and subscription intake return only after the underlying pipeline is live.`
+- H2: `What is not live yet.`
+- Lede: `The public work is live. Direct mail and subscription intake are not.`
+- Item 1: `Agent access UI` / `The frontend interaction flow for Witness Agents is not wired yet.`
+- Item 2: `Subscription intake` / `The mailer, capture flow, and handoff are not wired yet.`
+- Item 3: `hello@tryambakam.space` / `This inbox is not live yet.`
+- Item 4: `Until then` / `Use the essays, maps, engines, and repos. Each public claim should still land in something inspectable.`
+- CTA: `Read the issue log`
+- Small note: `Mail goes live only after the pipeline does.`
 
 ## Footer Labels
 
-- Practice links: `Invariants / The Witness Poles / Open Corpus / Threshold / Questions / Channel Status`
+- Practice links: `Invariants / The Witness Poles / Open Record / Threshold / Questions / Channel Status`
 - Source links to keep visible: `Implementation Issues / The Source Code Has Authors`

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070B1D" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>404 | Witness Agents | Tryambakam Noesis</title>
+    <meta name="description" content="This route is not public. Return to Witness Agents or read the current access status." />
+    <style>
+      :root {
+        --void: #070b1d;
+        --void-soft: rgba(7, 11, 29, 0.78);
+        --gold: #c5a017;
+        --gold-soft: rgba(197, 160, 23, 0.18);
+        --ink: #f1ece2;
+        --muted: #aab6c4;
+        --line: rgba(197, 160, 23, 0.2);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+        color: var(--ink);
+        background:
+          linear-gradient(180deg, rgba(7, 11, 29, 0.74) 0%, rgba(7, 11, 29, 0.9) 100%),
+          radial-gradient(circle at 50% 38%, rgba(197, 160, 23, 0.14) 0%, rgba(197, 160, 23, 0) 32%),
+          url('/images/hero/hero-bg-fal-v1-still.png') center/cover no-repeat fixed;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .shell {
+        width: min(1040px, 100%);
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, rgba(7, 11, 29, 0.78), rgba(7, 11, 29, 0.62));
+        backdrop-filter: blur(14px);
+        box-shadow: 0 40px 120px rgba(0, 0, 0, 0.34);
+      }
+
+      .topline {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 22px;
+        border-bottom: 1px solid var(--line);
+        text-transform: uppercase;
+        letter-spacing: 0.22em;
+        font-size: 12px;
+        color: var(--gold);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+        gap: 32px;
+        padding: 32px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(46px, 7vw, 96px);
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+      }
+
+      h1 em {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      .lede {
+        margin: 20px 0 0;
+        max-width: 32rem;
+        font-size: clamp(18px, 2vw, 24px);
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      .meta {
+        margin: 0 0 18px;
+        color: var(--gold);
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 20px;
+        border: 1px solid var(--line);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 12px;
+        color: var(--ink);
+        background: rgba(7, 11, 29, 0.38);
+      }
+
+      .cta--primary {
+        color: #070b1d;
+        background: var(--gold);
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        background: rgba(7, 11, 29, 0.42);
+        padding: 20px;
+      }
+
+      .panel img {
+        display: block;
+        width: min(220px, 100%);
+        margin: 0 auto 20px;
+        filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.36));
+      }
+
+      .panel h2 {
+        margin: 0 0 10px;
+        font-size: 16px;
+        line-height: 1.3;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: var(--gold);
+      }
+
+      .panel p,
+      .panel li {
+        color: var(--muted);
+        line-height: 1.55;
+        font-size: 15px;
+      }
+
+      .panel ul {
+        margin: 14px 0 0;
+        padding-left: 18px;
+      }
+
+      @media (max-width: 860px) {
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="topline">
+        <span>Witness Agents · 404</span>
+        <span>Tryambakam Noesis</span>
+      </div>
+      <div class="grid">
+        <section>
+          <p class="meta">Route not public</p>
+          <h1>This route is <em>not</em> live.</h1>
+          <p class="lede">
+            The page you asked for is either missing or not public yet. Witness Agents only points at surfaces that can be inspected.
+          </p>
+          <div class="actions">
+            <a class="cta cta--primary" href="/">Return to Witness Agents</a>
+            <a class="cta" href="/#signal">See agent access status</a>
+            <a class="cta" href="https://github.com/Sheshiyer/witness-agents-113/issues" rel="noopener">Read the issue log</a>
+          </div>
+        </section>
+        <aside class="panel" aria-label="Current fallback state">
+          <img src="/models/sigil-foil-preview.png" alt="Tryambakam Noesis sigil rendered as a metallic mark." />
+          <h2>What is available</h2>
+          <p>The public work is still reachable even when a route is not.</p>
+          <ul>
+            <li>Read the essays and maps</li>
+            <li>Inspect the Selemene engine surface</li>
+            <li>Track access and mail status in the issue log</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

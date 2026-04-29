@@ -2,17 +2,17 @@
 
 ## Final Metadata
 
-- Title: `Witness Agents Research Interface | Tryambakam Noesis`
-- Meta description: `Witness Agents is the public orientation node for Tryambakam Noesis: sixteen engines, Somatic Canticles, research maps, and open-source code for self-consciousness.`
+- Title: `Witness Agents | Sixteen Engines for Self-Consciousness | Tryambakam Noesis`
+- Meta description: `Tryambakam Noesis trains self-consciousness through sixteen engines, Somatic Canticles, essays, maps, and open code you can inspect.`
 - Canonical: `https://113.tryambakam.space/`
 - Robots: `index, follow, max-image-preview:large`
-- OG title: `Witness Agents Research Interface | Tryambakam Noesis`
-- OG description: `Sixteen engines. Public research routes. Somatic Canticles. Open code. Read first, then decide what deserves your attention.`
+- OG title: `Witness Agents | Sixteen Engines for Self-Consciousness | Tryambakam Noesis`
+- OG description: `Tryambakam Noesis trains self-consciousness through sixteen engines, Somatic Canticles, essays, maps, and open code you can inspect.`
 - OG image: `/og-image.png`
 - OG image alt: `Tryambakam Noesis sigil rendered as nested sacred geometry in Witness Violet and Sacred Gold on Void Black.`
 - Twitter card: `summary_large_image`
-- Twitter title: `Witness Agents Research Interface | Tryambakam Noesis`
-- Twitter description: `Sixteen engines. Public research routes. Somatic Canticles. Open code. Read first, then decide what deserves your attention.`
+- Twitter title: `Witness Agents | Sixteen Engines for Self-Consciousness | Tryambakam Noesis`
+- Twitter description: `Tryambakam Noesis trains self-consciousness through sixteen engines, Somatic Canticles, essays, maps, and open code you can inspect.`
 - Twitter image: `/og-image.png`
 - Twitter image alt: `Tryambakam Noesis sigil rendered as nested sacred geometry in Witness Violet and Sacred Gold on Void Black.`
 
@@ -32,7 +32,7 @@ A `WebPage` JSON-LD block is now embedded in `index.html` with:
 - H2 strategy:
   - explain what the page refuses
   - distinguish the field from adjacent systems
-  - move from architecture to routes rather than from hype to conversion
+  - name actual surfaces rather than generic funnels
 - Copy target: recognition, rigor, inspectability.
 
 ## Term Clusters Worth Reinforcing
@@ -46,7 +46,7 @@ Use in visible copy, link labels, and supporting text when true:
 - `Selemene`
 - `research`
 - `open source`
-- `public routes`
+- `open record`
 
 ## Image Alt Strategy
 
@@ -61,5 +61,5 @@ Use in visible copy, link labels, and supporting text when true:
 
 - Do not reintroduce private endpoints or pre-public nodes.
 - Do not imply product availability that the public surface cannot prove.
-- Keep correspondence honest: direct email, no waitlist theater.
+- Keep correspondence honest: no direct mail until the channel is live.
 - Attribute lineage explicitly where influence is material.

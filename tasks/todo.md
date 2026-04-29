@@ -453,3 +453,92 @@
     - desktop `1440px`: `08` `432×576`, `09` `243×324`, `15` `336×448`
     - mobile `430px`: `08` `361×482`, `09` `276×368`, `15` `348×464`
     - return to desktop `1440px`: `08` `432×576`, `09` `243×324`, `15` `336×448`
+
+## 2026-04-29 Reveal Copy Readability Pass
+
+### Plan
+- [x] Inspect the reveal paragraph base color and the scroll-fade targets together.
+- [x] Replace the hard-coded paragraph fade floor with responsive section-level tokens.
+- [x] Verify the paragraph readability on mobile and desktop while the reveal effects are active.
+- [x] Run a production build and record the regression rule in `tasks/lessons.md`.
+
+### Review
+- Investigation finding:
+  - every reveal effect class was hard-coding the body paragraph fade target to `opacity: 0.2`
+  - on this dark background, that effectively erased the paragraphs during the active scroll window, especially on mobile
+  - the base paragraph ink was also slightly too muted to survive such a low fade floor
+- Implementation result:
+  - moved the fade floor into a reusable effect config helper instead of repeating `0.2` across five effect classes
+  - added responsive reveal paragraph tokens on `.content`:
+    - desktop fade floor `0.82`
+    - tablet fade floor `0.88`
+    - mobile fade floor `0.92`
+  - brightened reveal paragraph ink from the shared muted-silver token to a dedicated reveal-copy tone
+- Verification:
+  - browser check at `430px` confirmed active reveal paragraphs at `opacity: 0.92` with color `rgb(179, 192, 202)`
+  - browser check at `1440px` confirmed reveal paragraph ink stays visibly present during scroll instead of collapsing toward invisibility
+  - visual artifacts:
+    - `.artifacts/readability-pass/section-08-mobile-readable.png`
+    - `.artifacts/readability-pass/section-03-desktop-readable.png`
+
+## 2026-04-29 Final Editorial Copy Pass
+
+### Plan
+- [x] Audit the remaining live metadata, CTA labels, footer/source labels, and channel-status language against the Noesis voice contract.
+- [x] Rewrite the canonical copy in `copy/sections.md` first so hero, threshold, lineage, FAQ, and channel copy all use the same register.
+- [x] Sync the approved copy into `index.html` and `tasks/seo-brief.md`, including the stale JSON-LD image path.
+- [x] Verify the revised copy in-browser and with a production build, then record the result and any new regression rule.
+
+### Review
+- Editorial result:
+  - replaced the stale metadata set with a direct self-consciousness description and synchronized title/OG/Twitter variants
+  - corrected the stale JSON-LD image path from the removed Android icon to the live OG image
+  - rewrote the hero CTA pair so both buttons name the actual destination they open: `Read the canticle` and `Inspect the engines`
+  - tightened the lower-page CTA language so threshold, FAQ, lineage, and channel-status copy use factual labels instead of generic route language
+  - reframed the lineage section from implied authorship to structural sources so it matches the actual credit object on the page
+- Verification:
+  - `npm run build` passed on `2026-04-29`
+  - live Playwright review on `http://127.0.0.1:5113/` confirmed the updated title, hero copy, threshold CTA labels, lineage heading, and channel-status block
+  - review artifacts:
+    - `.artifacts/final-copy-pass/desktop-hero.png`
+    - `.artifacts/final-copy-pass/mobile-hero.png`
+    - `.artifacts/final-copy-pass/desktop-full.png`
+    - `.artifacts/final-copy-pass/mobile-full.png`
+
+## 2026-04-29 Access CTA + 404 Pass
+
+### Plan
+- [x] Audit which current CTA surfaces imply a finished agent interaction flow that does not exist yet.
+- [x] Reframe the header and hero CTAs so the primary path speaks honestly about agent-access status instead of pointing at unrelated public reading surfaces.
+- [x] Add a branded `404.html` using existing shipped assets so the site has a coherent fallback state without requiring new generated artwork.
+- [x] Verify the updated CTAs and 404 page in-browser and with a production build, then document whether any new visual-generation work is still actually needed.
+
+### Review
+- Investigation result:
+  - the requested Higgsfield MCP surface is not available in this session, so no direct Higgsfield generation could be run from here
+  - the actual gap was not missing OG artwork; `/og-image.png` is already adequate and wired
+  - the real mismatch was UX truthfulness: the Witness Agents page was still pushing the canticle as the primary CTA even though the unfinished part is the agent-access flow itself
+- Implementation result:
+  - changed the header CTA from `Read the canticle` to `Agent access status`, targeting `#signal`
+  - changed the hero primary CTA from `Read the canticle` to `Track agent access`, also targeting `#signal`
+  - kept `Inspect the engines` as the secondary hero action because that surface is actually live
+  - expanded the channel-status panel to state the missing frontend interaction flow explicitly
+  - added `public/404.html` as a branded fallback page using the existing hero background and sigil preview assets
+- Asset decision:
+  - no new OG or 404-specific generated asset is required right now
+  - the 404 surface is visually coherent with shipped assets, so generation can wait until there is a stronger art-direction need
+  - generated asset usage is now explicitly accounted for in `tasks/asset-utilization.md`
+  - all 16 FAL engine posters are live
+  - retained Meshy/FAL source variants are documented as intentional non-live assets rather than forgotten files
+- Verification:
+  - `npm run build` passed on `2026-04-29`
+  - `http://127.0.0.1:5113/404.html` returned `200`
+  - live Playwright review confirmed:
+    - hero CTA state on desktop and mobile
+    - explicit `Agent access UI` note in the channel-status section
+    - branded desktop and mobile 404 surfaces
+  - review artifacts:
+    - `.artifacts/access-404-pass/desktop-hero-access.png`
+    - `.artifacts/access-404-pass/mobile-hero-access-corrected.png`
+    - `.artifacts/access-404-pass/404-desktop.png`
+    - `.artifacts/access-404-pass/404-mobile.png`
