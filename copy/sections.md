@@ -29,7 +29,7 @@ References:
 - H1 line 1: `Self-consciousness`
 - H1 line 2: `as technology.`
 - Tagline: `Body as medium. Breath as interface. Sixteen engines for examining inherited pattern at source.`
-- Primary CTA: `Track agent access`
+- Primary CTA: `Run Daily Witness`
 - Secondary CTA: `Inspect the engines`
 - Stats: `16 engines / 02 poles / 05 koshas / Cl(0-7) algebras`
 - Hero image prompt ref: `hero-sigil-3d`
@@ -77,7 +77,7 @@ References:
 - 1319: `Read the canticle.` / `Twenty-seven chapters of narrative calibration.`
 - Research: `Read the essays.` / `Essays, maps, and working notes.`
 - Selemene: `Inspect the engines.` / `Live surface, open repos, and claims carried in code.`
-- Channel: `Track contact status.` / `Mailer and direct contact are not live yet.`
+- Channel: `Run Daily Witness.` / `Public browser flow on 48.tryambakam.space.`
 
 ## Lineage
 
@@ -98,8 +98,8 @@ References:
 - H2: `Questions worth asking first.`
 - Q1: `What is the difference between consciousness and self-consciousness?`
   - `Consciousness is the fact of experience. Self-consciousness is the capacity to inspect the structure doing the experiencing.`
-- Q2: `What is open now, and what is still pending?`
-  - `Open now: canticles, essays, maps, Selemene, and the repos. Still pending: direct email, subscription intake, admin surfaces, or any route this page cannot prove.`
+- Q2: `Which route should I use first?`
+  - `Start with Daily Witness. Move to Raycast when the browser route stops being enough. Move to Selemene when you want the engine contract under the surface.`
 - Q3: `What does "113" mean?`
   - `113 is a compressed gate, not a secret tier. It folds 1319, 19910813, and 432 into a smaller mnemonic entry point.`
 - Q4: `Why keep the dyad language at all?`
@@ -109,22 +109,21 @@ References:
 - Q6: `Where should I start if I want proof, not atmosphere?`
   - `Start with the essays, maps, canticles, and repos. Read the claim beside the surface carrying it, then inspect the code where it exists.`
 - Q7: `Do I need to install anything to begin?`
-  - `To read: a browser. To inspect or run locally: a terminal.`
+  - `To begin in browser: no. To run the native console: Raycast, a Selemene key, and local install.`
 - Q8: `Why insist on independence?`
   - `Because permanent mediation is a design failure. The work should sharpen your reading, not train your dependence.`
 
-## Channel Status
+## Live Entry
 
-- H2: `What is not live yet.`
-- Lede: `The public work is live. Direct mail and subscription intake are not.`
-- Item 1: `Agent access UI` / `The frontend interaction flow for Witness Agents is not wired yet.`
-- Item 2: `Subscription intake` / `The mailer, capture flow, and handoff are not wired yet.`
-- Item 3: `hello@tryambakam.space` / `This inbox is not live yet.`
-- Item 4: `Until then` / `Use the essays, maps, engines, and repos. Each public claim should still land in something inspectable.`
-- CTA: `Read the issue log`
-- Small note: `Mail goes live only after the pipeline does.`
+- H2: `Begin with a live route.`
+- Lede: `Daily Witness already runs in the browser. The full operator surface lives in Raycast. Selemene remains the direct engine layer beneath both.`
+- Status pills: `browser · live` / `raycast · native` / `selemene · direct`
+- Daily Witness: `Run the Daily Witness now.` / `Public browser flow with four mirrors and no key required.`
+- Raycast: `Use the Noesis Raycast extension.` / `Onboarding, local SQLite cache, execution flows, Daily Witness, and a live pulse menu bar inside Raycast.`
+- Selemene: `Inspect Selemene directly.` / `Direct engine layer with sixteen engines, six workflows, and live API docs.`
+- Small note: `Start with Daily Witness. Move to Raycast for the operator surface. Move to Selemene for the contract under it.`
 
 ## Footer Labels
 
-- Practice links: `Invariants / The Witness Poles / Open Record / Threshold / Questions / Channel Status`
-- Source links to keep visible: `Implementation Issues / The Source Code Has Authors`
+- Practice links: `Invariants / The Witness Poles / Open Record / Threshold / Questions / Live Entry`
+- Source links to keep visible: `Noesis Raycast / The Source Code Has Authors`

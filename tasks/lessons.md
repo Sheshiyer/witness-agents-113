@@ -26,3 +26,7 @@
 - CTA labels on this site should name the exact public surface they open. Generic verbs like `open`, `track`, or `see` weaken trust faster than the body copy does.
 - On multi-surface pages, the primary CTA has to match the unfinished or decisive action on that page itself. Do not let a strong adjacent asset like the canticle replace the real object of the page, especially when the missing piece is an unwired access flow.
 - After any generation pass, produce an explicit live-vs-retained asset map before pushing. “Not forgotten” is different from “currently live,” and the repo should state that distinction concretely.
+- Before calling a product flow unwired, inspect sibling repos and deployed surfaces in the same system. A missing UI in one repo does not mean the real runtime path does not already exist elsewhere.
+- When tab UI state matters across breakpoints, style the selected state from the accessibility contract (`aria-selected`) as well as any helper class. Visual state should not depend on JS class order alone.
+- Do not put implementation backlog, pending channels, or issue-tracker language into live page copy. Public copy should describe the route that exists, not the work still underway behind it.
+- When a stronger live distribution surface exists, link to that surface directly. For Raycast here, GitHub install beats vague “inspect” language and beats mentioning a store route that is not public yet.

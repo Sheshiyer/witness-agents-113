@@ -180,8 +180,8 @@
         <a href="#faq">faq</a>
       </nav>
       <div class="frame__actions">
-        <a class="frame__cta" href="#signal">
-          <span>Agent access status</span>
+        <a class="frame__cta" href="#signal" data-agent-access-trigger="daily">
+          <span>Run Daily Witness</span>
           <span class="frame__cta-arrow" aria-hidden="true">→</span>
         </a>
         <button type="button" class="frame__motion" data-motion-toggle aria-label="Toggle reduced motion">
@@ -303,8 +303,8 @@
             </p>
 
             <div class="hero__cta">
-              <a class="cta cta--primary" href="#signal" data-magnetic>
-                <span class="cta__label">Track agent access</span>
+              <a class="cta cta--primary" href="#signal" data-agent-access-trigger="daily" data-magnetic>
+                <span class="cta__label">Run Daily Witness</span>
                 <span class="cta__arrow" aria-hidden="true">→</span>
               </a>
               <a class="cta cta--secondary" href="https://selemene.tryambakam.space" rel="noopener">
@@ -875,10 +875,10 @@
           </article>
 
           <article class="vow vow--initiate" data-tier="initiate">
-            <p class="vow__tier vow__tier--quiet">CHANNEL · PENDING</p>
-            <h3 class="vow__h vow__h--quiet"><em>Track contact status.</em></h3>
-            <p class="vow__body vow__body--quiet"><em>Mailer and direct contact are not live yet.</em></p>
-            <a class="vow__cta" href="https://github.com/Sheshiyer/witness-agents-113/issues" rel="noopener">TRACK ISSUES →</a>
+            <p class="vow__tier vow__tier--quiet">DAILY WITNESS · 48</p>
+            <h3 class="vow__h vow__h--quiet"><em>Run Daily Witness.</em></h3>
+            <p class="vow__body vow__body--quiet"><em>Public browser flow. Four mirrors. No key required.</em></p>
+            <a class="vow__cta" href="#signal" data-agent-access-trigger="daily">OPEN WITNESS →</a>
           </article>
         </div>
 
@@ -999,11 +999,11 @@
             <details class="faq__item" data-faq>
               <summary class="faq__q">
                 <span class="faq__q-num">Q.02</span>
-                <span class="faq__q-text">What is open now, and what is still pending?</span>
+                <span class="faq__q-text">Which route should I use first?</span>
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>Open now: canticles, essays, maps, Selemene, and the repos. Still pending: direct email, subscription intake, admin surfaces, or any route this page cannot prove.</p>
+                <p>Start with Daily Witness. Move to Raycast when the browser route stops being enough. Move to Selemene when you want the engine contract under the surface.</p>
               </div>
             </details>
 
@@ -1058,7 +1058,7 @@
                 <span class="faq__q-mark" aria-hidden="true"></span>
               </summary>
               <div class="faq__a">
-                <p>To read: a browser. To inspect or run locally: a terminal.</p>
+                <p>To begin in browser: no. To run the native console: Raycast, a Selemene key, and local install.</p>
               </div>
             </details>
 
@@ -1075,52 +1075,244 @@
           </div>
 
           <p class="faq__more">
-            Need a contact path before mail is live?
-            <a href="https://github.com/Sheshiyer/witness-agents-113/issues" rel="noopener">Read the issue log.</a>
+            When the browser route stops being enough, continue into
+            <a href="https://selemene.tryambakam.space" rel="noopener">Selemene</a>
+            or the
+            <a href="https://18765.tryambakam.space/research" rel="noopener">open record</a>.
           </p>
         </div>
       </section>
 
-      <!-- ═══════════ CHANNEL STATUS ═══════════ -->
+      <!-- ═══════════ LIVE ENTRY ═══════════ -->
       <section id="signal" class="signal" data-section="signal" aria-labelledby="signal-h">
         <div class="signal__inner">
           <div class="signal__copy">
-            <p class="meta-label">— CHANNEL STATUS</p>
+            <p class="meta-label">— LIVE ENTRY</p>
             <h2 id="signal-h" class="signal__h">
-              What is not live<br />
-              <em>yet.</em>
+              Begin with a live<br />
+              <em>route.</em>
             </h2>
             <p class="signal__lede">
-              The public work is live. Direct mail and subscription intake are not.
+              Daily Witness already runs in the browser. The full operator surface lives in Raycast. Selemene remains the direct engine layer beneath both.
+            </p>
+            <div class="signal__status" aria-label="Current route status">
+              <span class="signal__status-pill">browser · live</span>
+              <span class="signal__status-pill">raycast · native</span>
+              <span class="signal__status-pill">selemene · direct</span>
+            </div>
+            <p class="signal__small">
+              Start with Daily Witness. Move to Raycast for the operator surface. Move to Selemene for the contract under it.
             </p>
           </div>
 
-          <div class="signal__panel" aria-label="Channel status">
-            <ul class="signal__list" role="list">
-              <li class="signal__item">
-                <p class="signal__label">Agent access UI</p>
-                <p class="signal__body">The frontend interaction flow for Witness Agents is not wired yet.</p>
-              </li>
-              <li class="signal__item">
-                <p class="signal__label">Subscription intake</p>
-                <p class="signal__body">The mailer, capture flow, and handoff are not wired yet.</p>
-              </li>
-              <li class="signal__item">
-                <p class="signal__label">hello@tryambakam.space</p>
-                <p class="signal__body">This inbox is not live yet.</p>
-              </li>
-              <li class="signal__item">
-                <p class="signal__label">Until then</p>
-                <p class="signal__body">Use the essays, maps, engines, and repos. Each public claim should still land in something inspectable.</p>
-              </li>
-            </ul>
-            <a class="cta cta--primary signal__submit" href="https://github.com/Sheshiyer/witness-agents-113/issues" rel="noopener" data-magnetic>
-              <span class="cta__label">Read the issue log</span>
-              <span class="cta__arrow" aria-hidden="true">→</span>
-            </a>
-            <p class="signal__small">
-              Mail goes live only after the pipeline does.
-            </p>
+          <div class="signal__workspace" data-agent-access aria-label="Witness access routes">
+            <div class="signal__tabs" role="tablist" aria-label="Witness routes">
+              <button
+                type="button"
+                class="signal__tab is-active"
+                id="signal-tab-daily"
+                role="tab"
+                aria-selected="true"
+                aria-controls="signal-panel-daily"
+                data-signal-tab="daily">
+                Daily Witness
+              </button>
+              <button
+                type="button"
+                class="signal__tab"
+                id="signal-tab-raycast"
+                role="tab"
+                aria-selected="false"
+                aria-controls="signal-panel-raycast"
+                data-signal-tab="raycast"
+                tabindex="-1">
+                Raycast Console
+              </button>
+              <button
+                type="button"
+                class="signal__tab"
+                id="signal-tab-selemene"
+                role="tab"
+                aria-selected="false"
+                aria-controls="signal-panel-selemene"
+                data-signal-tab="selemene"
+                tabindex="-1">
+                Selemene Direct
+              </button>
+            </div>
+
+            <section class="signal__panel" id="signal-panel-daily" role="tabpanel" aria-labelledby="signal-tab-daily" data-signal-panel="daily">
+              <div class="signal__route-head">
+                <p class="signal__label">Public browser flow · no key</p>
+                <h3 class="signal__route-title">Run the Daily Witness now.</h3>
+                <p class="signal__body">
+                  Four mirrors. Three layers. The live witness workflow now returns the interpreted dyad response from <code>48.tryambakam.space</code>.
+                </p>
+              </div>
+
+              <form class="signal__form" data-witness-form novalidate>
+                <div class="signal__form-grid">
+                  <label class="signal__field">
+                    <span class="signal__field-label">Birth date</span>
+                    <input type="date" name="birth_date" required />
+                  </label>
+
+                  <label class="signal__field">
+                    <span class="signal__field-label">Birth time</span>
+                    <input type="time" name="birth_time" step="60" />
+                  </label>
+
+                  <label class="signal__field">
+                    <span class="signal__field-label">Name</span>
+                    <input type="text" name="name" placeholder="Optional" autocomplete="name" />
+                  </label>
+
+                  <label class="signal__field">
+                    <span class="signal__field-label">Timezone</span>
+                    <input type="text" name="timezone" placeholder="Asia/Kolkata" autocomplete="off" />
+                  </label>
+                </div>
+
+                <details class="signal__advanced" open>
+                  <summary>Location required for the live witness route</summary>
+                  <p class="signal__small">
+                    The interpreted witness workflow currently requires latitude and longitude.
+                  </p>
+                  <div class="signal__form-grid signal__form-grid--compact">
+                    <label class="signal__field">
+                      <span class="signal__field-label">Latitude</span>
+                      <input type="number" name="latitude" step="any" placeholder="12.9716" inputmode="decimal" />
+                    </label>
+
+                    <label class="signal__field">
+                      <span class="signal__field-label">Longitude</span>
+                      <input type="number" name="longitude" step="any" placeholder="77.5946" inputmode="decimal" />
+                    </label>
+                  </div>
+                </details>
+
+                <div class="signal__actions">
+                  <button type="submit" class="cta cta--primary signal__submit" data-magnetic>
+                    <span class="cta__label">Run Daily Witness</span>
+                    <span class="cta__arrow" aria-hidden="true">→</span>
+                  </button>
+                  <a class="cta cta--secondary" href="https://48.tryambakam.space" rel="noopener">
+                    <span class="cta__label">Inspect the 48 service</span>
+                    <span class="cta__arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+
+                <p class="signal__micro" data-witness-status aria-live="polite">
+                  Public workflow route. Timezone, latitude, and longitude are required for the interpreted response.
+                </p>
+              </form>
+
+              <div class="signal__result" data-witness-result hidden>
+                <div class="signal__result-head">
+                  <div>
+                    <p class="signal__label" data-witness-engine>Primary engine</p>
+                    <h4 class="signal__result-title" data-witness-headline>Reading ready.</h4>
+                  </div>
+                  <p class="signal__result-next" data-witness-next></p>
+                </div>
+
+                <div class="signal__result-grid">
+                  <div class="signal__result-stat">
+                    <span class="signal__result-num" data-witness-layer>0</span>
+                    <span class="signal__result-label">layers unlocked</span>
+                  </div>
+                  <div class="signal__result-stat">
+                    <span class="signal__result-num" data-witness-visits>0</span>
+                    <span class="signal__result-label">total visits</span>
+                  </div>
+                  <div class="signal__result-stat">
+                    <span class="signal__result-num" data-witness-streak>0</span>
+                    <span class="signal__result-label">day streak</span>
+                  </div>
+                  <div class="signal__result-stat">
+                    <span class="signal__result-num" data-witness-latency>0ms</span>
+                    <span class="signal__result-label">latency</span>
+                  </div>
+                </div>
+
+                <p class="signal__question" data-witness-question hidden></p>
+                <div class="signal__points" data-witness-points></div>
+                <p class="signal__engines" data-witness-engines></p>
+
+                <div class="signal__actions">
+                  <a class="cta cta--secondary" href="https://tryambakam.space" rel="noopener" data-witness-platform>
+                    <span class="cta__label">Open the full field</span>
+                    <span class="cta__arrow" aria-hidden="true">↗</span>
+                  </a>
+                  <a class="cta cta--secondary" href="https://github.com/Sheshiyer/witness-agents" rel="noopener">
+                    <span class="cta__label">Inspect the witness repo</span>
+                    <span class="cta__arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </section>
+
+            <section class="signal__panel" id="signal-panel-raycast" role="tabpanel" aria-labelledby="signal-tab-raycast" data-signal-panel="raycast" hidden>
+              <div class="signal__route-head">
+                <p class="signal__label">Raycast extension · GitHub install</p>
+                <h3 class="signal__route-title">Use the Noesis Raycast extension.</h3>
+                <p class="signal__body">
+                  Noesis runs in Raycast: onboarding, local SQLite cache, execution flows, Daily Witness, and a live pulse menu bar without turning the work into a browser dashboard.
+                </p>
+              </div>
+
+              <ul class="signal__facts" role="list">
+                <li>Commands: Dashboard, Engines, Workflows, Readings, Profile, API Key, Daily Witness, Pulse.</li>
+                <li>Execution routes stay explicit: <code>Selemene Direct</code> or <code>Witness Gateway</code>.</li>
+                <li>Local memory lives in SQLite; secrets stay in Raycast secure preferences.</li>
+              </ul>
+
+              <div class="signal__actions">
+                <a class="cta cta--primary signal__submit" href="https://github.com/Sheshiyer/noesis" rel="noopener" data-magnetic>
+                  <span class="cta__label">Install from GitHub</span>
+                  <span class="cta__arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="cta cta--secondary" href="https://github.com/Sheshiyer/noesis/blob/main/QUICKSTART.md" rel="noopener">
+                  <span class="cta__label">Read setup guide</span>
+                  <span class="cta__arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <p class="signal__micro">
+                Install the extension, add your Selemene key, and run the field from Raycast.
+              </p>
+            </section>
+
+            <section class="signal__panel" id="signal-panel-selemene" role="tabpanel" aria-labelledby="signal-tab-selemene" data-signal-panel="selemene" hidden>
+              <div class="signal__route-head">
+                <p class="signal__label">Direct engine layer · key required</p>
+                <h3 class="signal__route-title">Inspect Selemene directly.</h3>
+                <p class="signal__body">
+                  Sixteen engines, six workflows, auth routes, and the live OpenAPI surface remain public. This is the computational layer beneath the Raycast console and the witness route.
+                </p>
+              </div>
+
+              <ul class="signal__facts" role="list">
+                <li>Live base: <code>https://selemene.tryambakam.space</code></li>
+                <li>Auth model: <code>X-API-Key: nk_...</code> or JWT login flow.</li>
+                <li>Docs, SDK, and bridge generators already exist for direct integration.</li>
+              </ul>
+
+              <div class="signal__actions">
+                <a class="cta cta--primary signal__submit" href="https://selemene.tryambakam.space/api/docs" rel="noopener" data-magnetic>
+                  <span class="cta__label">Open API docs</span>
+                  <span class="cta__arrow" aria-hidden="true">↗</span>
+                </a>
+                <a class="cta cta--secondary" href="https://github.com/Sheshiyer/Selemene-engine" rel="noopener">
+                  <span class="cta__label">Inspect Selemene</span>
+                  <span class="cta__arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+
+              <p class="signal__micro">
+                Use this route when you want the engine contract itself instead of the public witness wrapper.
+              </p>
+            </section>
           </div>
         </div>
       </section>
@@ -1171,7 +1363,7 @@
             <li><a href="#section-17">Open Record</a></li>
             <li><a href="#section-18">Threshold</a></li>
             <li><a href="#faq">Questions</a></li>
-            <li><a href="#signal">Channel Status</a></li>
+            <li><a href="#signal">Live Entry</a></li>
           </ul>
         </nav>
 
@@ -1180,7 +1372,7 @@
           <ul>
             <li><a href="https://github.com/Sheshiyer/Selemene-engine" rel="noopener">Selemene-engine</a></li>
             <li><a href="https://github.com/Sheshiyer/Somatic-Canticles" rel="noopener">Somatic-Canticles</a></li>
-            <li><a href="https://github.com/Sheshiyer/witness-agents-113/issues" rel="noopener">Implementation Issues</a></li>
+            <li><a href="https://github.com/Sheshiyer/noesis" rel="noopener">Noesis Raycast</a></li>
             <li><a href="https://18765.tryambakam.space/posts/the-source-code-has-authors" rel="noopener">The Source Code Has Authors</a></li>
           </ul>
         </nav>

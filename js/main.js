@@ -22,6 +22,7 @@ import initHero from './sections-special/hero.js';
 import initWhy from './sections-special/why.js';
 import initFAQ from './sections-special/faq.js';
 import initMagnetic from './sections-special/magnetic.js';
+import initAgentAccess from './sections-special/agentAccess.js';
 import initPlaylistRail from './sections-special/playlistRail.js';
 import initScrollProgress from './sections-special/scrollProgress.js';
 
@@ -125,6 +126,7 @@ const boot = async () => {
   initThreshold({ gsap, ScrollTrigger, reduced });
   initFAQ({ gsap, ScrollTrigger, reduced });
   initMagnetic({ reduced });
+  initAgentAccess({ reduced, lenis });
   initPlaylistRail({ gsap, reduced });
   initScrollProgress({ reduced });
 

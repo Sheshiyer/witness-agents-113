@@ -1,3 +1,40 @@
+## 2026-05-01 Website Witness Contract Repair
+
+### Plan
+- [x] Re-audit the website Daily Witness client and the live witness service contracts before changing any frontend routing.
+- [x] Switch the website browser flow off the legacy `/reading` contract and onto the witness-enriched workflow contract exposed by `48.tryambakam.space`.
+- [x] Update the form validation and payload adapter so the browser route sends the `birth_data` shape the workflow endpoint actually requires.
+- [x] Render `witness_layer.response` as the primary website result, with sane fallbacks only where the workflow contract omits specific fields.
+- [x] Build and live-verify the website flow against production, then record the final behavior and any residual constraints.
+
+### Review
+- Root cause:
+  - the website was still calling the legacy `POST /reading` route
+  - that route currently returns raw engine `headline` data but does not return `witness_layer.response`
+  - the browser UI therefore promoted raw engine output because `primary_reading.witness_question` is now absent in the live payload
+- Implementation result:
+  - switched `js/sections-special/agentAccess.js` from `POST /reading` to `POST /api/v1/workflows/daily-practice/execute`
+  - adapted the browser payload to the live workflow contract: `birth_data.date`, optional `time`, required `timezone`, required `latitude`, required `longitude`, optional `name`
+  - changed the result rendering so the website now shows the workflow `witness_layer.response` body as the primary witness text
+  - repurposed the result metadata for workflow output: workflow label, mirror count, routing/cadence/tier/kosha/clifford points, and interpreted engine list
+  - made the location requirement explicit in the page copy instead of silently degrading to raw `/reading` output
+  - fixed a stale-result UX bug by re-hiding the result card whenever validation or request errors occur
+- Verification:
+  - `npm run build` passed on `2026-05-01`
+  - local preview served at `http://127.0.0.1:4173/`
+  - browser verification against live `48.tryambakam.space` confirmed a successful Daily Witness submission returns:
+    - status: `Witness workflow returned from 48.tryambakam.space.`
+    - headline: `Full symbolic portrait across 3 engines. 1 cross-patterns identified across the full spectrum.`
+    - body text from `witness_layer.response`, not the raw engine headline
+    - mirrors summary: `Mirrors interpreted: Panchanga · Biorhythm · Vedic Clock.`
+  - negative-path browser verification confirmed that omitting latitude/longitude now:
+    - shows `Latitude and longitude are required for the interpreted witness route.`
+    - keeps the location panel open
+    - keeps the result card hidden on a fresh load
+- Residual constraint:
+  - the website now depends on the live workflow contract, which currently requires coordinates for interpreted witness output
+  - if the backend relaxes that requirement later, the form can be simplified again without reverting to `/reading`
+
 # Copy Audit Plan
 
 ## Scope
@@ -542,3 +579,73 @@
     - `.artifacts/access-404-pass/mobile-hero-access-corrected.png`
     - `.artifacts/access-404-pass/404-desktop.png`
     - `.artifacts/access-404-pass/404-mobile.png`
+
+## 2026-04-29 Witness Agents Access Flow
+
+### Plan
+- [x] Audit the current CTA surfaces, status section, and JS boot path to determine where a real frontend access flow can live without inventing a backend.
+- [x] Inspect the live Raycast extension and Selemene / Daily Witness surfaces so the new flow is grounded in what already works.
+- [x] Replace the static channel-status block with a real access surface: live Daily Witness in-browser, Raycast field console entry, and Selemene Direct entry.
+- [x] Wire the header CTA, hero primary CTA, and threshold/supporting actions into that real access surface instead of generic status copy.
+- [x] Allow the page to call `https://48.tryambakam.space/reading` directly, render the returned witness reading, and keep the copy honest about what still remains pending.
+- [x] Verify the flow on desktop and mobile, then document any remaining backend gaps separately from the frontend interaction now being live.
+
+### Review
+- Architecture result:
+  - the Witness Agents page now points at the real system instead of a placeholder status panel
+  - the browser route is `48.tryambakam.space/reading`
+  - the native operator route is the Raycast extension in `/Users/sheshnarayaniyer/raycast-extensions/noesis/`
+  - the engine-contract route is `https://selemene.tryambakam.space`
+- Implementation result:
+  - replaced the old `Agent access status` / `Track agent access` placeholder framing with a real `Live Entry` workspace
+  - added a tabbed surface for `Daily Witness`, `Raycast Console`, and `Selemene Direct`
+  - added a browser form that POSTs directly to `https://48.tryambakam.space/reading`, persists recent inputs in `localStorage`, and renders the returned headline, stats, data points, and engine list
+  - updated the header CTA, hero primary CTA, and threshold route CTA to drive into the live witness flow
+  - updated CSP in `public/_headers` so production can reach `48.tryambakam.space`
+  - kept pending channels explicit: direct mail, subscription intake, and `hello@tryambakam.space`
+- Verification:
+  - `curl https://48.tryambakam.space` confirmed the public contract: `The Daily Witness`, 4 engines, 3 layers, public docs/repo links
+  - `curl -X POST https://48.tryambakam.space/reading ...` returned a live reading payload with `reading`, `next_reading_available`, and `full_platform_url`
+  - `npm run build` passed on `2026-04-29`
+  - live browser verification in Chrome confirmed:
+    - desktop: `Run Daily Witness` CTA opens the live-entry section
+    - desktop: valid birth date submission returns a reading from `48.tryambakam.space`
+    - desktop: `Raycast Console` and `Selemene Direct` tabs switch correctly and show the right route details
+  - mobile verification at `430x932` confirmed:
+    - the live-entry stack is readable
+    - the form holds the smaller breakpoint
+    - tab state is now styled from `aria-selected`, preventing false-active visual states
+- Review artifacts:
+  - `.artifacts/witness-access-pass/signal-mobile-anchored.png`
+  - `.artifacts/witness-access-pass/signal-mobile-fixed.png`
+
+## 2026-04-29 Live Copy De-Meta Pass
+
+### Plan
+- [x] Remove implementation-status commentary from the live-entry copy.
+- [x] Replace backlog-oriented FAQ and support copy with route guidance.
+- [x] Sync the same wording into `copy/sections.md` so the old phrasing does not return.
+
+### Review
+- Replaced the live-entry small note with direct route guidance.
+- Rewrote FAQ `Q.02` around route choice instead of `open now / pending`.
+- Removed the issue-log support line from the live page and replaced it with forward navigation into Selemene and the open record.
+- Replaced the footer `Implementation Issues` source link with the public `Witness Agents` repo.
+
+## 2026-04-29 Raycast Repo Link Pass
+
+### Plan
+- [x] Verify the actual public GitHub repo for the Raycast extension under `Sheshiyer`.
+- [x] Update the Raycast route copy so the public action is installation/use from GitHub, not generic inspection language.
+- [x] Update the footer source link so the public Raycast repo is visible there too.
+
+### Review
+- Verified the public repo via GitHub API: `Sheshiyer/noesis`
+- Verified both live URLs respond:
+  - `https://github.com/Sheshiyer/noesis`
+  - `https://github.com/Sheshiyer/noesis/blob/main/QUICKSTART.md`
+- Reframed the Raycast panel around the real public install path:
+  - primary CTA is now `Install from GitHub`
+  - secondary CTA is now `Read setup guide`
+  - panel copy now names onboarding, local SQLite cache, execution flows, Daily Witness, and the pulse menu bar
+- Replaced the footer source repo from `Witness Agents` to `Noesis Raycast` for stronger public route clarity.
