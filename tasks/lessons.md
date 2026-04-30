@@ -2,6 +2,8 @@
 
 ## 2026-04-28
 
+- When a user says the reading feels like marketing copy, verify whether the UI is inventing tone or merely echoing the API payload. Do not keep polishing presentation around a hidden payload mismatch.
+- For witness output, do not collapse the workflow result into a single landing-page card. Expose synthesis, Aletheios, Pichet, and engine voices on a dedicated reading surface so the actual dyad can be inspected.
 - After any broad copy replacement pass, run a link sanity check on every edited `href`. Text substitutions can silently corrupt URLs.
 - When the worktree is already dirty, restate and enforce the allowed write scope before editing. Do not let a content pass drift into adjacent files.
 - In this environment, prefer checking `~/.claude/.env` for generation credentials before trusting session-level API key exports. The session key can be stale while the local config is current.

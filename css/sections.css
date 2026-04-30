@@ -2156,7 +2156,8 @@
   margin: 0;
 }
 
-.signal__field input {
+.signal__field input,
+.signal__field select {
   appearance: none;
   width: 100%;
   min-height: 52px;
@@ -2173,11 +2174,24 @@
     background 220ms ease;
 }
 
+.signal__field select {
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--sacred-gold) 50%),
+    linear-gradient(135deg, var(--sacred-gold) 50%, transparent 50%);
+  background-position:
+    calc(100% - 22px) calc(50% - 3px),
+    calc(100% - 16px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 42px;
+}
+
 .signal__field input::placeholder {
   color: rgba(179, 192, 202, 0.62);
 }
 
-.signal__field input:focus {
+.signal__field input:focus,
+.signal__field select:focus {
   outline: none;
   border-color: rgba(197, 160, 23, 0.44);
   background: rgba(255, 245, 214, 0.05);
@@ -2189,20 +2203,6 @@
   gap: 14px;
   padding-top: var(--space-sm);
   border-top: 0.5px solid rgba(197, 160, 23, 0.14);
-}
-
-.signal__advanced summary {
-  cursor: pointer;
-  font-family: var(--font-mono);
-  font-size: var(--type-xs);
-  letter-spacing: var(--ls-meta);
-  text-transform: uppercase;
-  color: var(--muted-silver);
-  list-style: none;
-}
-
-.signal__advanced summary::-webkit-details-marker {
-  display: none;
 }
 
 .signal__actions {
@@ -2244,6 +2244,14 @@
 
 .signal__micro.is-error {
   color: #f0b59f;
+}
+
+.signal__handoff {
+  display: grid;
+  gap: var(--space-sm);
+  padding: clamp(18px, 2.4vw, 24px);
+  border: 0.5px solid rgba(197, 160, 23, 0.16);
+  background: rgba(255, 245, 214, 0.02);
 }
 
 .signal__facts {

@@ -1146,7 +1146,7 @@
                 <p class="signal__label">Public browser flow · no key</p>
                 <h3 class="signal__route-title">Run the Daily Witness now.</h3>
                 <p class="signal__body">
-                  Four mirrors. Three layers. The live witness workflow now returns the interpreted dyad response from <code>48.tryambakam.space</code>.
+                  Four mirrors. Three layers. The live witness workflow opens a dedicated reading page that exposes synthesis, Aletheios, Pichet, and per-engine voices from <code>48.tryambakam.space</code>.
                 </p>
               </div>
 
@@ -1168,32 +1168,22 @@
                   </label>
 
                   <label class="signal__field">
-                    <span class="signal__field-label">Timezone</span>
-                    <input type="text" name="timezone" placeholder="Asia/Kolkata" autocomplete="off" />
+                    <span class="signal__field-label">Birth location</span>
+                    <select name="location_key" data-witness-location required>
+                      <option value="">Select a city</option>
+                    </select>
                   </label>
                 </div>
 
-                <details class="signal__advanced" open>
-                  <summary>Location required for the live witness route</summary>
-                  <p class="signal__small">
-                    The interpreted witness workflow currently requires latitude and longitude.
+                <div class="signal__advanced">
+                  <p class="signal__small" data-witness-location-meta>
+                    Choose the closest city. The site maps timezone and coordinates to the witness API for you.
                   </p>
-                  <div class="signal__form-grid signal__form-grid--compact">
-                    <label class="signal__field">
-                      <span class="signal__field-label">Latitude</span>
-                      <input type="number" name="latitude" step="any" placeholder="12.9716" inputmode="decimal" />
-                    </label>
-
-                    <label class="signal__field">
-                      <span class="signal__field-label">Longitude</span>
-                      <input type="number" name="longitude" step="any" placeholder="77.5946" inputmode="decimal" />
-                    </label>
-                  </div>
-                </details>
+                </div>
 
                 <div class="signal__actions">
                   <button type="submit" class="cta cta--primary signal__submit" data-magnetic>
-                    <span class="cta__label">Run Daily Witness</span>
+                    <span class="cta__label">Open dedicated reading</span>
                     <span class="cta__arrow" aria-hidden="true">→</span>
                   </button>
                   <a class="cta cta--secondary" href="https://48.tryambakam.space" rel="noopener">
@@ -1203,45 +1193,18 @@
                 </div>
 
                 <p class="signal__micro" data-witness-status aria-live="polite">
-                  Public workflow route. Timezone, latitude, and longitude are required for the interpreted response.
+                  Dedicated reading page. The selected city maps to timezone and coordinates automatically before the API call.
                 </p>
               </form>
 
-              <div class="signal__result" data-witness-result hidden>
-                <div class="signal__result-head">
-                  <div>
-                    <p class="signal__label" data-witness-engine>Primary engine</p>
-                    <h4 class="signal__result-title" data-witness-headline>Reading ready.</h4>
-                  </div>
-                  <p class="signal__result-next" data-witness-next></p>
-                </div>
-
-                <div class="signal__result-grid">
-                  <div class="signal__result-stat">
-                    <span class="signal__result-num" data-witness-layer>0</span>
-                    <span class="signal__result-label">layers unlocked</span>
-                  </div>
-                  <div class="signal__result-stat">
-                    <span class="signal__result-num" data-witness-visits>0</span>
-                    <span class="signal__result-label">total visits</span>
-                  </div>
-                  <div class="signal__result-stat">
-                    <span class="signal__result-num" data-witness-streak>0</span>
-                    <span class="signal__result-label">day streak</span>
-                  </div>
-                  <div class="signal__result-stat">
-                    <span class="signal__result-num" data-witness-latency>0ms</span>
-                    <span class="signal__result-label">latency</span>
-                  </div>
-                </div>
-
-                <p class="signal__question" data-witness-question hidden></p>
-                <div class="signal__points" data-witness-points></div>
-                <p class="signal__engines" data-witness-engines></p>
-
+              <div class="signal__handoff">
+                <p class="signal__label">Dedicated reading page</p>
+                <p class="signal__body">
+                  The landing page now hands the full payload to a separate reading route so workflow synthesis, Aletheios, Pichet, and engine-level voices stay legible instead of being collapsed into one promo card.
+                </p>
                 <div class="signal__actions">
-                  <a class="cta cta--secondary" href="https://tryambakam.space" rel="noopener" data-witness-platform>
-                    <span class="cta__label">Open the full field</span>
+                  <a class="cta cta--secondary" href="/reading.html">
+                    <span class="cta__label">Open latest reading page</span>
                     <span class="cta__arrow" aria-hidden="true">↗</span>
                   </a>
                   <a class="cta cta--secondary" href="https://github.com/Sheshiyer/witness-agents" rel="noopener">

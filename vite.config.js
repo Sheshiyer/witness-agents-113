@@ -9,6 +9,10 @@ export default defineConfig({
     sourcemap: false,
     assetsInlineLimit: 4096,
     rollupOptions: {
+      input: {
+        main: new URL('./index.html', import.meta.url).pathname,
+        reading: new URL('./reading.html', import.meta.url).pathname
+      },
       output: {
         manualChunks: {
           gsap: ['gsap', 'gsap/ScrollTrigger', 'gsap/Flip', 'gsap/CustomEase'],

@@ -1,3 +1,42 @@
+## 2026-05-01 Dedicated Witness Reading Page + Location Selector
+
+### Plan
+- [x] Confirm whether the current website output is UI-authored copy or the raw workflow dyad payload.
+- [x] Replace manual latitude/longitude entry with a friendlier birth-location selector that maps to timezone and coordinates for the live witness API.
+- [x] Move witness output off the landing-page result card and onto a dedicated reading page that exposes synthesis, Aletheios, Pichet, and per-engine voices separately.
+- [x] Update the build so the new `reading.html` route ships as a real page entry, then verify the full flow in-browser.
+
+### Review
+- Payload diagnosis:
+  - the landing page was not inventing the “marketing copy” tone
+  - it was rendering the live workflow `witness_layer.response`
+  - in the sampled live payload, workflow `witness_layer.response` and `witness_layer.synthesis` are identical
+  - the real dyad detail lives in `witness_layer.aletheios.perspective` and `witness_layer.pichet.perspective`, which the old UI never exposed
+- Frontend result:
+  - added shared witness helpers and a curated birth-location map in `js/lib/witnessAccess.js`
+  - replaced timezone + latitude + longitude entry on the landing page with a city selector that resolves timezone and coordinates automatically
+  - changed the landing flow so a successful witness request stores the payload and opens `/reading.html`
+  - added `reading.html` plus `js/reading.js` and `css/reading.css`
+  - the dedicated page now renders:
+    - workflow synthesis
+    - workflow response only when it differs from synthesis
+    - explicit parity notice when response and synthesis are the same
+    - separate Aletheios and Pichet sections
+    - per-engine cards with synthesis, dyad voices, and raw prompts
+  - updated `vite.config.js` so `reading.html` is emitted as a second build entry instead of falling back to `index.html`
+- Verification:
+  - `npm run build` passed on `2026-05-01`
+  - build output now includes `dist/reading.html`
+  - browser verification on `http://127.0.0.1:4173/` confirmed:
+    - selecting `Bengaluru, India` and submitting opens `http://127.0.0.1:4173/reading.html`
+    - the reading page title is `Daily Witness Reading | Tryambakam Noesis`
+    - the page renders the workflow heading from the payload
+    - the parity banner explicitly says workflow response currently matches synthesis in the API payload
+    - separate Aletheios and Pichet sections render from the stored payload
+    - three engine cards render for the sample workflow payload
+- Residual constraint:
+  - the workflow-level synthesis copy is still the upstream API payload, so if it remains too generic the next fix belongs in witness-agents, not this frontend repo
+
 ## 2026-05-01 Website Witness Contract Repair
 
 ### Plan

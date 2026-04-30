@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070B1D" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>Daily Witness Reading | Tryambakam Noesis</title>
+    <meta
+      name="description"
+      content="Dedicated Daily Witness reading page showing workflow synthesis, Aletheios, Pichet, and engine-level voices from the latest witness payload." />
+
+    <link rel="preload" href="/assets/fonts/Panchang-Variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/utilities.css" />
+    <link rel="stylesheet" href="/css/reading.css" />
+  </head>
+
+  <body class="reading-page">
+    <main class="reading-shell">
+      <header class="reading-frame">
+        <a class="reading-frame__brand" href="/">
+          <span class="reading-frame__mark">113</span>
+          <span>Tryambakam Noesis</span>
+        </a>
+        <div class="reading-frame__actions">
+          <a class="reading-frame__link" href="/#signal">Run another witness</a>
+          <a class="reading-frame__link" href="https://48.tryambakam.space" rel="noopener">Inspect API</a>
+        </div>
+      </header>
+
+      <section class="reading-hero">
+        <p class="reading-kicker" data-reading-kicker>Latest reading · Daily Practice</p>
+        <h1 class="reading-title" data-reading-title>Dedicated witness reading</h1>
+        <p class="reading-intro" data-reading-intro>Latest workflow payload</p>
+        <p class="reading-status" data-reading-status>Loading latest reading</p>
+        <div class="reading-meta" data-reading-meta></div>
+      </section>
+
+      <section class="reading-empty" data-reading-shell-empty hidden>
+        <p class="reading-label">No reading yet</p>
+        <h2 class="reading-empty__title">Run Daily Witness from the home page first.</h2>
+        <p class="reading-empty__body">
+          This page renders the latest workflow payload after submission, including synthesis, Aletheios, Pichet, and engine-level voices.
+        </p>
+        <a class="reading-empty__cta" href="/#signal">Open the Daily Witness form</a>
+      </section>
+
+      <div class="reading-stack" data-reading-shell-ready>
+        <section class="reading-banner" data-reading-parity hidden>
+          <p data-reading-parity-text></p>
+        </section>
+
+        <div class="reading-grid reading-grid--primary">
+          <section class="reading-panel">
+            <p class="reading-label">Workflow Synthesis</p>
+            <div class="reading-prose" data-reading-synthesis></div>
+          </section>
+
+          <section class="reading-panel" data-reading-response-panel>
+            <p class="reading-label">Workflow Response</p>
+            <div class="reading-prose" data-reading-response></div>
+          </section>
+        </div>
+
+        <div class="reading-grid reading-grid--voices">
+          <section class="reading-panel">
+            <p class="reading-label">Dyad Left Pillar</p>
+            <h2 class="reading-panel__title">Aletheios</h2>
+            <div class="reading-prose" data-reading-aletheios></div>
+          </section>
+
+          <section class="reading-panel">
+            <p class="reading-label">Dyad Right Pillar</p>
+            <h2 class="reading-panel__title">Pichet</h2>
+            <div class="reading-prose" data-reading-pichet></div>
+          </section>
+        </div>
+
+        <section class="reading-panel">
+          <div class="reading-panel__head">
+            <div>
+              <p class="reading-label">Engine Chorus</p>
+              <h2 class="reading-panel__title">Per-engine voices</h2>
+            </div>
+            <p class="reading-panel__meta" data-reading-engine-count></p>
+          </div>
+          <div class="reading-engine-list" data-reading-engines></div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="/js/reading.js"></script>
+  </body>
+</html>
