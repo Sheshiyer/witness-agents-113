@@ -1,0 +1,37 @@
+{
+  "id": "019dfe88-100b-7b2f-998e-1ddb0cb367f9",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2170359657,
+  "art_style": "realistic",
+  "texture_richness": "high",
+  "prompt": "Observatory reliquary named Aletheios, upright non-human witness instrument with concentric brass rings, dark bronze armatures, amber-glass insets, black structural core, sacred-gold index marks, calendrical divisions, sparse exact silhouette, no face, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "Aged brass rings, dark bronze armatures, amber-glass insets, black ceramic core, sacred-gold index marks, restrained witness-violet depth in recesses, minimal emerald activation cues, archival patina, clean instrument finish.",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778091824456,
+  "progress": 100,
+  "started_at": 1778091824509,
+  "finished_at": 1778091952205,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe88-100b-7b2f-998e-1ddb0cb367f9/output/model.glb?Expires=4931625600&Signature=RRxvH48g3I~pFU5D8BNOATZf7q1FmU0ER4xCuDDqppIokej7faE4zd74pA0VHjm2zIvkrS8JbgsAcjErsg~Cmyz8rM1o8S1A~a~KhoSwViSs4-3TkIz3fno8NTqT~VgzK~~IrvZUdXnIZs-RuYN3AvFuC1zrN7Aj6IXF3STXqq9OlVKjyt4Rj8l8BvOGFsK1Xpl-PZLYOXg8P6GQXAAYRL-ZodQHZjHP7-InzOHdOr5vFYDjdjEwcJw2YsrzlfrTkzBZiE6MlFOykBQaw3p3Iu5o3bzSkaFztkOUGe2dheoC08ZIUOzpYw49sNfwadV3u95a9UYvGF0guOtgE5DruA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe88-100b-7b2f-998e-1ddb0cb367f9/output/preview.png?Expires=4931625600&Signature=YEUAA1P~A331~-arrUCZh5Dk7pXUmL20AxJBFn3cA8lhJZyxsl-yyjcGYdkuqjxkR1zOk3uZ307spxcKHW-YYQoQg-ASLTajjmL-fiSqmJ8D45pUpVNX1HDP8chzsQBA1RBng0TyRQux0qYAtJukl1-Wf14u1KkAWsmRRrTTCmA~SGA6RJVYqiL8rVuVkTPeR~mnZr6kJU5MpyDLCebO~mOoadXoCXn0KhQVkVr9XslX47IBaOhHhS39~CrMqvRBztTKisCN~9nPCzLyxgA88giGtzFlv7sDazt8XubL~pVrIcQsiNgWucJBBSlTHpfghxWV9zEJ7-KsPG5r5F~mZw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe88-100b-7b2f-998e-1ddb0cb367f9/output/texture_0.png?Expires=4931625600&Signature=gRNi7H9hudH8kVX8x4xIWdo9F15bMeI2SEJ0VZicU3tY-4gFCrS8~jyiEgIAuZmoS1vq3WSdyWmnCl4p1f7iHXy15fT4qxsbnhqqSlnIewRJFfg2DMG0fA2EZJgcRspguxAi0scFc7raIesByppo7Yuy5E2z1f7gQLfPWem5WL8kIK9U8cTZapeuX6VpI17Xr1WPbRIppmgF8~xXxrVQ8Qps9au7UG4YuIYmKhcWTMDhhmDSSVZvONMBfwKtb-De70hQYQeAXkC68XzmUEks4BI3d4YQRabqpgYLY8Ney27uaHtEifHaD~kfF~Q20Z3Sgy7lQdYb6piuvFiAyBF19g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe88-100b-7b2f-998e-1ddb0cb367f9/output/texture_0_metallic.png?Expires=4931625600&Signature=ikZjw4h7pSAj49JunXaZF26QMDAzgJgM2KRUv7lHzc1F~vu8H51rjMpm3FTnaagyOtuep4y0nxNT34za5lhSU5RFPoYdjO~CQFwTzTKaNi6IO3SPFadzHdPMriAqT5NrNbubND2AqZN8bJO7LFgbACHEuALV1euuibvVaIBfOU5DyEv7MLC9~P-3wrD~8PcSWPo1CoNObI5tSKDxz7ERtFeLROBg8xnyU6K59UmnmB4Xfue1IsRlm0dW5hAmUAFhjFy36Paj339GSU1OlswdaP2u7T802PzGt2CXk1svokFIY7q9sPcPHa4FrV-XYsq-lDgVDs9NbwKab59H1o1RhA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe88-100b-7b2f-998e-1ddb0cb367f9/output/texture_0_roughness.png?Expires=4931625600&Signature=Z83wHht4IqXbMv3cf9z2MmGuUdwDgCaTvLdlItPJerF1jioH3biLuVeUSx4MKjOggGphpdiMlXncoEkvpU1TTY3kGj8l44TCJoXpkbP0EALCbHZy~5PolKPIJ1v4rzEyCmAykbv8jWQAUJ38VIGwrSFHlHaYNSrqDVDkxlGUzoUj51hf5Q2shFRQRIJ06K1YrqjQQDP2LhHqanFjHSanCmxsLCL3W0KqF5ud6c3YyCfNQ30Z9YPFj3GTE-tU4k3l3E-3PMWQcHwJoDxGVKRsQbILU~QQksfS4f3RkyRqey1mMJ3J0S0Lb-lqzfyB2b~d-NGsuXLZPoTz5VjznNDXiQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe88-100b-7b2f-998e-1ddb0cb367f9/output/texture_0_normal.png?Expires=4931625600&Signature=bCMhO~Bkf4HZXSS8kw8cUiEgTcnv3c~WtSJgL3fBVPb2OpXHS74fAJRe75WV7vEGsb7u8-ggSViDO2Y4Badxw-u42whjURW2~UmDJbF~MIJK06IA9zQ5AEI6CcHOKnIqCT0jqOZMxA-5qw8fe6~Vu4dx7IHo0Fu646IVUQNLZKO5GNxMJqN4AZWXXo9kSPa41Sn2qdjeQTcaQD7K52Kv1HWZHl~Zvmvu-5aNT1vtKrL216FAj7UYOFeS20FNIF1CMvtGNEO3AARh03FxiEe3BG3WQw6dnIBPvC9JRZBkPmLWq6VjPM~vh9QkTZp4H-~KvnUzBTwMqGxdWQX01yoQOA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "emission": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe88-100b-7b2f-998e-1ddb0cb367f9/output/texture_0_emission.png?Expires=4931625600&Signature=o2vx1bGNazP3fd4IakFOKLu6Ebwjzcxy18ovuz-BAJagZRHM1Bhf6BLhOCljNEkxG67vJ7MZhUbZ8UPzxL5JE-EUr0XTMeWS3Zc-q3TnVo0HeqsguepOl1OVAGigT~uL~wyCMa4PiehzLU2ljZip9QhxpO3KlyktYNUPjCvMKCii0p47KA9AtqjGYAnej6dEeLGIl3wEjzNHW83ee77Egg7eeIOM~3Z~wU3~b5Dg8LcQSUg~I-kcrt2Ad3smA-ZbCuRBsK-GEIr5XyT9ldIhhJew8qxXVLctK-mszCZLs1mvBUL2TBQvfYBuSew5LPJcrFhrjglvLZ4F6iVpPFhidA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "remove_lighting": true,
+  "hd_texture": true,
+  "consumed_credits": 10
+}

@@ -1,0 +1,37 @@
+{
+  "id": "019dfe9e-1877-7f26-95e5-8d01a2ea69a5",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 46101132,
+  "art_style": "realistic",
+  "texture_richness": "high",
+  "prompt": "Sealed breath vessel named Pichet, non-human thoracic chamber object built from dark bronze architecture, ceramic-black mass, oxidized-gold joints, pulse cavities and vented chambers, translucent emerald channels, grounded dense silhouette, ritual-scientific instrument for breath and rhythm, no limbs, no hands, no skeleton, no humanoid trunk, no face, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "Dark bronze chamber architecture with subtle wear, ceramic-black body mass, oxidized-gold joints, emerald emissive channels through sealed pulse cavities, sacred-gold pulse traces, restrained indigo cavity depth, grounded matte finish, no plastic shine, no exposed bone anatomy.",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778093268488,
+  "progress": 100,
+  "started_at": 1778093268687,
+  "finished_at": 1778093430004,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9e-1877-7f26-95e5-8d01a2ea69a5/output/model.glb?Expires=4931625600&Signature=mj8Vt88KEOcgpdL9zy9tJBd38U1xahdc7wUxcuHP8LiUBg-tuWGiQ-iISNZWimYmoBX4JGnRhrMLm6DcwkWo570-sTftD1VY8~0yQ2-ykHL9pg27VDcKLD1GcYD6M6Kffb6qFAyVUMXBmVpIX5stOJJrS5qI8Do5OzuCm9C8zG42Kxmmk13LRhRewIm9yxqFcLZ6m9FHjsKYN7elLsgr0voGPScQVMTFN4qF8bEwoQ427BOJoaQYe5EGwDdv9HwQmYfohEwXAmmTEP74P48-soaNpZFSHar6PlPHcd14RkiRNdzZWeIo8MkURaZWr39DSCnFV0oMFZfJTXx3D9NcrA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9e-1877-7f26-95e5-8d01a2ea69a5/output/preview.png?Expires=4931625600&Signature=gZs5usi2dNEi24nHnQYBRsvGBiun1J-YoeyzJg1mkz9OsJk-NaXzMtjr6O89BAk3i-QMvcsqAmHYuKm6KuTbbLHVYoBJDmPWU6MeX44N4l3A3N9BiHssCMNWmk7D-VEMrHGTqfv5rclWBusVsQcY6gOVqbWP1Xed2222FcRxTlYzkWwXJ5afOjg3ISM8DvzUNKI10NU5RjZxjBcuLejwfVr~4eXIjImrRNC5jJe1XIOgY5hOMv3t~r3iovPMCusU7h6r4XC6jPUsa-zUyGhV91kYylaMRsJWk5RXlxnRYEZdz~oJhYsX3N9vbtPqcVLWSSHc4K39EwAclOlBLF1GNw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9e-1877-7f26-95e5-8d01a2ea69a5/output/texture_0.png?Expires=4931625600&Signature=lnHy3AgWi1AV3s~K3zcvj2KJi~0upKadHSNHNgFZCZno0UO7tgQqUTo7ItFGkyy0Es8CxcgjXSwxeZC0gVeC0BN9QUq0jtC200NNANoZfnurXeBZtMFbtUfA8c9gfhzr6V8pL1VxZalUB8FluVVjdTd1I~pEfeAVmj5zssoaoyiNd84vgguoyfJjhWuAIc2l7~LpTW-n29Odh3rla9A13uCU8T-relnMfZjsNTy1l~MsD1v3~Dbb8iAD8mLbYCuovO22G3pAjfisT-Bicy7S2MkenUVgip3TlMoZCujwYgiIV2K4vWAvLL49GHFNSUSseQX~ca3zTPKPyhy-aanFSg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9e-1877-7f26-95e5-8d01a2ea69a5/output/texture_0_metallic.png?Expires=4931625600&Signature=K26x6Sjs4y~40D6SlwH8IE8TN55sgIRInSk0sxAvQsy3T7HQBTbFyEqaptNN7f2eUa716sm0QsdeK7alQl3iJOhaT~LA1jnemUfTSkG8KreIFcaOkVqFQQao58hR5xafWrP235dgH25Tlln0jsow9LC63fbFlrz2RskCKldurqZhfw3cczlKnS6leGTfWswpdxUZfS6sklqXfF4n-5etRwK90O9mOsKjlp3xex8PEVT5EuW21rk6pySLEOr3a9ReaRTTqoeHanSR0zqqzAKzJzaoQ1YU-M4CHpGvZfLPKiekNQlNE08KmNapNGbFEWtA2sC6ca1d6uBQ04KcH5iMWQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9e-1877-7f26-95e5-8d01a2ea69a5/output/texture_0_roughness.png?Expires=4931625600&Signature=apLsYk98-9gCpPySDlLJsmUxhTsim-8H9NItHikd04ojEyLC4X1Pm2Sf1wmwtkfotPUrNdlTNxkgEIo2DqO6jUP33kYuJ8BlGNteGYkpW7h2rVyW0flRY8nAtW7HCXmwjbt7wGzzZpftwCukPkSbfOm6eoF2UfhN1YgT6zsJPRLC2qFvjMOIMKnXd1ZNKwq3vR5aiLNTf9ArD8lkyA7kG9usajlh~MVKh0CLipJf8MkUGsjmh8s9pZBpvmrYF7fNgbfzDpVS2g-ChnbqyiFLBGwlI3K82-FaP3sSe477J3yrWrOR7yotYarYSiQfHZAJgLbgsPh--dw3pm6HqRjjog__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9e-1877-7f26-95e5-8d01a2ea69a5/output/texture_0_normal.png?Expires=4931625600&Signature=eSq-WroIV-UoyEtEs8s7Ba~~DsQzuLaphgWnWJwQGtQ8Apun3iW9J53cNWIDDZJyQX8if9LtwLy~NNQLR-XXNRNFp3eHvCanc2YX2SwDhMWP3zV6ie0CBzH1LFUS7xY804zn5R5e0vHMRa8erdoUCCSt5IBcPs87txWzkzKvX5lg~p93cI8rb1vgKxUmBQVUJC7gTXG3x4AKGzBH5cNFrtsphILd4aozoa72g~1SW8yZo-Zu657n2BelEpNz1jfXQPkIlHSUdSTZoc7S~f2vcvTAJYktTe3Kz0afmQcolNFcCfq1Rp~2pO5M0oe7utnDVRZwQ0LQsjZ0libQE3PvNQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "emission": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9e-1877-7f26-95e5-8d01a2ea69a5/output/texture_0_emission.png?Expires=4931625600&Signature=h0J8DytHV2-C0w3kXDkGmGt6DfCxG8jYoiONow7AYT9brh3i~0HRlQGau5q2WUh0yIwYpiryvnn5whIdxqd8BysFtHPWA-V9d4PMbC36enAdRvfZTwBFEs3v2wTwksu2bAYZgAX3H1wdcFLgoIi1GftbgN6~iBLaIYqPqYWqpWH2KdvXmA5Id5PK7t-U9Wbq-rSte3Ou8GblzrKvZysIlL~DKsToBITloRD5K5E3d0j4dKSmcxaiqt-fGq9bf2j-3uHjG1YpfUL~dlz-wqAmG6X59THveDT3y938Fhtwc6~r4VxGW0EHCd1ir97Xu~BT6BHMMocUNG~bF4OBTR347A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "remove_lighting": true,
+  "hd_texture": true,
+  "consumed_credits": 10
+}

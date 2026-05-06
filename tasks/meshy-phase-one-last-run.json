@@ -1,0 +1,320 @@
+{
+  "date": "2026-05-06T18:50:36.612Z",
+  "runs": [
+    {
+      "startedAt": "2026-05-06T18:04:25.748Z",
+      "finishedAt": "2026-05-06T18:32:03.082Z",
+      "mode": "live",
+      "usedRealKey": true,
+      "order": [
+        "11-nadabrahman",
+        "15-biofield",
+        "02-sigil-forge",
+        "04-aletheios",
+        "05-pichet"
+      ],
+      "objects": [
+        {
+          "key": "11-nadabrahman",
+          "label": "Nada Brahman",
+          "section": "11",
+          "liveAsset": "public/images/engines/fal/9A-09-nadabrahman-poster-fal-v1.png",
+          "mode": "live",
+          "previewTaskId": "019dfe76-69bd-7c19-ada7-ddd92d0449e9",
+          "refineTaskId": "019dfe78-487b-775b-ab45-4bfebbc581dc",
+          "previewPrompt": "Harmonic resolution disc, thin layered bronze and brass rings around a central opening, concentric interference channels, clean front-readable silhouette, contemplative ritual-scientific object, sound resolving into coherence, restrained emerald resonance lines and sacred-gold harmonics, no text.",
+          "texturePrompt": "Bronze and brass laminations, restrained emerald resonance channels, sacred-gold harmonic traces, deep witness-violet recess around the center opening, subtle amber convergence highlights, matte ceremonial finish, no rainbow neon.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/11-nadabrahman-preview.glb",
+              "bytes": 2038488
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/11-nadabrahman-preview.png",
+              "bytes": 148038
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/11-nadabrahman.glb",
+              "bytes": 30491600
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/11-nadabrahman.png",
+              "bytes": 229763
+            }
+          }
+        },
+        {
+          "key": "15-biofield",
+          "label": "Biofield",
+          "section": "15",
+          "liveAsset": "public/images/engines/fal/9A-06-biofield-poster-fal-v1.png",
+          "mode": "live",
+          "previewTaskId": "019dfe7a-17ad-7835-b4cc-39003317c37d",
+          "refineTaskId": "019dfe7d-e002-7d9b-9429-a08cc478c290",
+          "previewPrompt": "Toroidal field apparatus, dark central axis with translucent field shells, circulating emerald current lines, sacred-gold nodal crossings, readable torus silhouette, measurable subtle-anatomy instrument, coherence and fracture made visible, bioluminescent from within, no person, no text.",
+          "texturePrompt": "Dark central axis, translucent toroidal shells, emerald circulating lines, sacred-gold nodal crossings, indigo-violet negative space in recesses, subtle metallic braces only where needed, measured field-instrument finish, no fuzzy aura.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/15-biofield-preview.glb",
+              "bytes": 5995972
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/15-biofield-preview.png",
+              "bytes": 181765
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/15-biofield.glb",
+              "bytes": 51421380
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/15-biofield.png",
+              "bytes": 226696
+            }
+          }
+        },
+        {
+          "key": "02-sigil-forge",
+          "label": "Sigil Forge",
+          "section": "02",
+          "liveAsset": "public/images/engines/fal/9A-16-sigil-forge-poster-fal-v1.png",
+          "mode": "live",
+          "previewTaskId": "019dfe80-0ce4-7908-b900-8fddedb24b2e",
+          "refineTaskId": "019dfe82-42ed-79ea-bdb2-6fb7906ffcc2",
+          "previewPrompt": "Forged sigil chassis, layered brass and dark bronze rings suspended above a dark ceramic anchor plane, clear central cavity, sacred geometry as load-bearing structure, precise observatory instrument, bioluminescent emerald seams and sacred-gold edges, clean silhouette, no text.",
+          "texturePrompt": "Aged brass and dark bronze with subtle patina, dark ceramic anchor plane, engraved channels, emerald emissive seams, sacred-gold edge highlights, faint indigo-violet recess depth, matte ritual-scientific finish, no neon overspray.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/02-sigil-forge-preview.glb",
+              "bytes": 2053084
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/02-sigil-forge-preview.png",
+              "bytes": 146775
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/02-sigil-forge.glb",
+              "bytes": 39850316
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/02-sigil-forge.png",
+              "bytes": 186256
+            }
+          }
+        },
+        {
+          "key": "04-aletheios",
+          "label": "Aletheios",
+          "section": "04",
+          "liveAsset": "public/images/engines/fal/9A-01-panchanga-poster-fal-v1.png",
+          "mode": "live",
+          "previewTaskId": "019dfe84-fbb7-7a3b-9ed4-726a0a084573",
+          "refineTaskId": "019dfe88-100b-7b2f-998e-1ddb0cb367f9",
+          "previewPrompt": "Observatory reliquary named Aletheios, upright non-human witness instrument with concentric brass rings, dark bronze armatures, amber-glass insets, black structural core, sacred-gold index marks, calendrical divisions, sparse exact silhouette, no face, no text.",
+          "texturePrompt": "Aged brass rings, dark bronze armatures, amber-glass insets, black ceramic core, sacred-gold index marks, restrained witness-violet depth in recesses, minimal emerald activation cues, archival patina, clean instrument finish.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/04-aletheios-preview.glb",
+              "bytes": 2581472
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/04-aletheios-preview.png",
+              "bytes": 58449
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/04-aletheios.glb",
+              "bytes": 36348548
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/04-aletheios.png",
+              "bytes": 67853
+            }
+          }
+        },
+        {
+          "key": "05-pichet",
+          "label": "Pichet",
+          "section": "05",
+          "liveAsset": "public/images/engines/fal/9A-07-biorhythm-poster-fal-v1.png",
+          "mode": "live",
+          "previewTaskId": "019dfe8a-2091-7b7b-80f1-3a8c414adb6a",
+          "refineTaskId": "019dfe8d-ce50-7c0d-9ae4-9313c899a7d4",
+          "previewPrompt": "Breath engine torso named Pichet, non-human somatic carrier built from dark bronze rib architecture, ceramic-black mass, oxidized-gold joints, open thoracic chambers, translucent emerald channels, grounded dense silhouette, ritual-scientific instrument for breath and rhythm, no face, no text.",
+          "texturePrompt": "Dark bronze ribs with subtle wear, ceramic-black body mass, oxidized-gold joints, emerald emissive channels through thoracic chambers, sacred-gold pulse traces, restrained indigo cavity depth, grounded matte finish, no plastic shine.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/05-pichet-preview.glb",
+              "bytes": 3315600
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/05-pichet-preview.png",
+              "bytes": 105111
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/05-pichet.glb",
+              "bytes": 35816792
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/05-pichet.png",
+              "bytes": 103654
+            }
+          }
+        }
+      ]
+    },
+    {
+      "startedAt": "2026-05-06T18:36:06.617Z",
+      "finishedAt": "2026-05-06T18:41:09.104Z",
+      "mode": "live",
+      "usedRealKey": true,
+      "tag": "pass2",
+      "order": [
+        "15-biofield"
+      ],
+      "objects": [
+        {
+          "key": "15-biofield",
+          "label": "Biofield",
+          "section": "15",
+          "liveAsset": "public/images/engines/fal/9A-06-biofield-poster-fal-v1.png",
+          "mode": "live",
+          "previewTaskId": "019dfe93-6b48-7d45-878a-1536927820d3",
+          "refineTaskId": "019dfe96-23f3-7dc6-b9b4-cc24dbdcf8d3",
+          "previewPrompt": "Single torus ring around a short central axis, clean donut silhouette, measurable biofield instrument, circulating emerald current lines, sacred-gold nodal crossings, subtle-anatomy object, coherence and fracture made visible, bioluminescent from within, no cage, no spikes, no sphere shell, no person, no text.",
+          "texturePrompt": "Dark short central axis, one translucent torus shell, emerald circulating lines, sacred-gold nodal crossings, indigo-violet recess depth, minimal structural braces, measured field-instrument finish, no fuzzy aura, no lattice cage, no spikes, no spherical enclosure.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/15-biofield-preview.glb",
+              "bytes": 2392008
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/15-biofield-preview.png",
+              "bytes": 83187
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/15-biofield.glb",
+              "bytes": 31011136
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/15-biofield.png",
+              "bytes": 116535
+            }
+          }
+        }
+      ]
+    },
+    {
+      "startedAt": "2026-05-06T18:41:20.220Z",
+      "finishedAt": "2026-05-06T18:45:21.709Z",
+      "mode": "live",
+      "usedRealKey": true,
+      "tag": "pass2",
+      "order": [
+        "02-sigil-forge"
+      ],
+      "objects": [
+        {
+          "key": "02-sigil-forge",
+          "label": "Sigil Forge",
+          "section": "02",
+          "liveAsset": "public/images/engines/fal/9A-16-sigil-forge-poster-fal-v1.png",
+          "mode": "live",
+          "previewTaskId": "019dfe98-33f5-74bb-b899-e6790dc867f7",
+          "refineTaskId": "019dfe9a-12eb-796d-bbf2-d8587b245180",
+          "previewPrompt": "Geometric forge mechanism, partially assembled ring chassis above a dark ceramic anchor plane, open center, misaligned brass and dark bronze ringwork, load-bearing sacred geometry, precise observatory instrument, emerald seams and sacred-gold edges, no icon, no emblem, no anchor, no letter, no religious symbol, no text.",
+          "texturePrompt": "Aged brass and dark bronze with subtle patina, dark ceramic anchor plane, engraved channels, emerald emissive seams, sacred-gold edge highlights, faint indigo-violet recess depth, matte ritual-scientific finish, no iconography, no neon overspray.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/02-sigil-forge-preview.glb",
+              "bytes": 2051984
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/02-sigil-forge-preview.png",
+              "bytes": 130419
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/02-sigil-forge.glb",
+              "bytes": 37910136
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/02-sigil-forge.png",
+              "bytes": 169027
+            }
+          }
+        }
+      ]
+    },
+    {
+      "startedAt": "2026-05-06T18:45:37.244Z",
+      "finishedAt": "2026-05-06T18:50:36.611Z",
+      "mode": "live",
+      "usedRealKey": true,
+      "tag": "pass2",
+      "order": [
+        "05-pichet"
+      ],
+      "objects": [
+        {
+          "key": "05-pichet",
+          "label": "Pichet",
+          "section": "05",
+          "liveAsset": "public/images/engines/fal/9A-07-biorhythm-poster-fal-v1.png",
+          "mode": "live",
+          "previewTaskId": "019dfe9c-2006-7e76-8dad-31ded18694d7",
+          "refineTaskId": "019dfe9e-1877-7f26-95e5-8d01a2ea69a5",
+          "previewPrompt": "Sealed breath vessel named Pichet, non-human thoracic chamber object built from dark bronze architecture, ceramic-black mass, oxidized-gold joints, pulse cavities and vented chambers, translucent emerald channels, grounded dense silhouette, ritual-scientific instrument for breath and rhythm, no limbs, no hands, no skeleton, no humanoid trunk, no face, no text.",
+          "texturePrompt": "Dark bronze chamber architecture with subtle wear, ceramic-black body mass, oxidized-gold joints, emerald emissive channels through sealed pulse cavities, sacred-gold pulse traces, restrained indigo cavity depth, grounded matte finish, no plastic shine, no exposed bone anatomy.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/05-pichet-preview.glb",
+              "bytes": 2008048
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/05-pichet-preview.png",
+              "bytes": 76555
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/05-pichet.glb",
+              "bytes": 36874896
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/engines/pass2/05-pichet.png",
+              "bytes": 86250
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

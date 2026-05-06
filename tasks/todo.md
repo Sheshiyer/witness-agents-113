@@ -1,3 +1,799 @@
+## 2026-05-07 Narrative 3D Controller + Section 02 Wire-Up
+
+### Plan
+- [x] Add a shared narrative-3D controller skeleton that fits the current GSAP / ScrollTrigger boot flow.
+- [x] Convert section `02` Sigil Forge from poster-only to progressive-enhancement poster + `model-viewer` object state.
+- [x] Verify the change in build output and confirm the fallback path still works when the model is unavailable.
+
+### Review
+- Added the shared narrative controller in `js/sections-special/narrativeObjects.js`.
+- Wired the controller into the main boot flow in `js/main.js` using the same `model-viewer` readiness path already used by the hero.
+- Reworked section `02` in `index.html` so the reveal image now contains:
+  - the original poster field
+  - a geometry-object overlay with state variables
+  - a Meshy still fallback
+  - a live `model-viewer` layer for progressive enhancement
+- Added the section-specific object surface and motion variables in `css/sections.css`.
+- Implemented the first preset as `sigil-forge`, with:
+  - scroll-driven state transitions
+  - pointer-driven tilt / parallax / glow drift
+  - camera-orbit and exposure adjustments when the GLB is available
+- Verification:
+  - `npm run build` passed
+  - local preview smoke-tested at `http://127.0.0.1:5114/`
+  - browser screenshot confirmed section `02` now renders the instrument overlay instead of staying poster-only
+- Important first-pass constraint:
+  - the Meshy GLB is still too dark to stand alone in this composition
+  - the current implementation therefore uses the Meshy still as the readable primary surface and the GLB as the live enhancement layer
+- Residual note:
+  - the pre-existing large `model-viewer` bundle warning remains
+  - later passes should likely isolate model-driven sections behind a more selective load path once more than one section is wired
+
+## 2026-05-07 Interactive 3D Narrative System
+
+### Plan
+- [x] Inspect the existing landing-page motion system before proposing another 3D upgrade layer.
+- [x] Define how geometry-driven 3D assets should respond to scroll, pointer, and copy state as one narrative system.
+- [x] Write a concrete implementation brief that fits the current GSAP / ScrollTrigger / `model-viewer` architecture.
+
+### Review
+- Wrote the interaction brief in `tasks/interactive-3d-narrative-system-spec.md`.
+- Confirmed the site already has the right foundation:
+  - `js/main.js` for centralized motion boot
+  - `js/effects/effect-1.js` and siblings for scroll-based reveal structure
+  - `js/sections-special/hero.js` for current `model-viewer` lifecycle
+  - `js/sections-special/why.js`, `tapestry.js`, and `magnetic.js` for pointer-response patterns
+- Most important design conclusion:
+  - the next 3D layer should not be a set of standalone models
+  - it should be a shared narrative interaction system where:
+    - scroll is the primary narrator
+    - pointer input is a secondary perturbation layer
+    - copy and object state change together
+- Defined a shared five-state object grammar:
+  - `Dormant`
+  - `Enter`
+  - `Lock`
+  - `Deepen`
+  - `Handoff`
+- Mapped phase-one section behaviors for:
+  - hero sigil
+  - `02 Sigil Forge`
+  - `04 Aletheios`
+  - `05 Pichet`
+  - `11 Nada Brahman`
+  - `15 Biofield`
+- Strong implementation recommendation:
+  - build one shared narrative-object controller with section presets
+  - do not write isolated one-off model scripts per section
+
+## 2026-05-07 Geometry-Driven 3D Pivot From witnessOS References
+
+### Plan
+- [x] Inspect the supplied witnessOS reference images directly instead of reasoning abstractly about geometry-driven assets.
+- [x] Extract the actual recurring form language, material language, and motion language from those references.
+- [x] Recast the landing-page 3D direction away from characters and toward geometry-native object families.
+
+### Review
+- Wrote the geometry-first brief in `tasks/geometry-driven-3d-asset-brief.md`.
+- Confirmed the witnessOS references consistently point toward:
+  - concentric rings
+  - lotus / petal symmetries
+  - cardinal axes
+  - waveform overlays
+  - node-link fields
+  - etched brass-on-dark panel systems
+- Most important design conclusion:
+  - these references support `2.5D living instruments`
+  - not humanoid or mascot-like 3D beings
+- Reframed the phase-one objects accordingly:
+  - `Sigil Forge` -> `ring assembly forge`
+  - `Aletheios` -> `compass-mandala instrument`
+  - `Pichet` -> `breath chamber dial / coherence gate`
+  - `Nada Brahman` -> `resonance mandala disc`
+  - `Biofield` -> `coherence torus / field ring`
+- Strong product conclusion:
+  - `Aletheios` and `Pichet` can remain distinct poles without becoming characters
+  - the dyad can be expressed through different geometry systems instead:
+    - `Aletheios` = calibrated radial observatory geometry
+    - `Pichet` = breath / waveform / coherence geometry
+
+## 2026-05-07 Meshy Phase 1 Second Pass
+
+### Plan
+- [x] Preserve the first-pass artifacts and rerun only the three failed objects with stronger anti-form constraints.
+- [x] Update the phase-one runner so pass-two outputs are tagged instead of overwriting the earlier batch.
+- [x] Review whether the second-pass prompt changes actually corrected the original failure modes.
+
+### Review
+- Updated `scripts/meshy-phase-one.mjs` so it supports `--tag=<name>` output directories.
+- Rewrote the three failed prompts as planned:
+  - `Biofield`
+    - forced a `single torus ring`
+    - forbade cages, spikes, and sphere shells
+  - `Sigil Forge`
+    - removed `sigil` from the lead phrase
+    - forbade icons, emblems, anchors, letters, and religious symbols
+  - `Pichet`
+    - removed `torso`
+    - forbade limbs, hands, skeleton, and humanoid trunk
+- Ran the second pass into `public/models/engines/pass2/`.
+- Second-pass spend:
+  - `90` credits total
+  - post-run balance `1440`
+- Wrote the review in `tasks/meshy-phase-one-pass2-review.md`.
+- Verdict:
+  - `Biofield` improved materially and is now worth keeping as direction
+  - `Sigil Forge` improved materially and is now worth keeping as direction
+  - `Pichet` still failed and remains too humanoid
+- Important conclusion:
+  - second-pass anti-form constraints were enough for `Biofield` and `Sigil Forge`
+  - they were not enough for `Pichet`, which needs a deeper prompt rewrite away from named/body-adjacent language
+
+## 2026-05-06 Meshy Community-Guided Phase 1 Generation
+
+### Plan
+- [x] Review current Meshy docs and community/discovery prompt patterns before spending credits on phase-one objects.
+- [x] Tighten the phase-one prompts to follow Meshy's current object-first prompt guidance while preserving the brand constraints.
+- [x] Build a dedicated reproducible runner for the five phase-one objects instead of reusing the character pipeline.
+- [x] Run the five phase-one generations and capture outputs, credits, and quality notes.
+
+### Review
+- Reviewed current Meshy guidance from:
+  - the official Text to 3D prompt article
+  - the advanced prompt best-practices help article
+  - the current Meshy community/discover showcase surface
+- Applied the consistent guidance across those sources:
+  - start with the object type
+  - keep the prompt focused on a single object, not a scene
+  - use about `3-5` dominant descriptors
+  - repeat stable style anchors for consistency
+  - avoid non-physical details that become floating mesh junk
+- Added a dedicated phase-one generator in `scripts/meshy-phase-one.mjs`.
+- Added package commands:
+  - `npm run meshy:phase1:plan`
+  - `npm run meshy:phase1:balance`
+  - `npm run meshy:phase1`
+  - `npm run meshy:phase1:test`
+- The new runner targets the five approved objects in order:
+  - `11 Nada Brahman`
+  - `15 Biofield`
+  - `02 Sigil Forge`
+  - `04 Aletheios`
+  - `05 Pichet`
+- Live run completed with manifest in `tasks/meshy-phase-one-last-run.json`.
+- Total spend:
+  - `150` credits
+  - `30` credits per object
+- Quality review written in `tasks/meshy-phase-one-review.md`.
+- First-pass verdict:
+  - `Aletheios` = best in batch, borderline usable as concept reference
+  - `Nada Brahman` = strongest abstract hit, usable as direction
+  - `Biofield` = failed, regenerate
+  - `Sigil Forge` = failed, regenerate
+  - `Pichet` = failed, regenerate
+- Additional implementation note:
+  - the refined GLBs are all still source-sized assets (`30-51 MB`) and are not ready for live embedding without optimization
+
+## 2026-05-06 Phase 1 Asset Production Sheet
+
+### Plan
+- [x] Build a production-ready sheet for the five highest-confidence live asset upgrades.
+- [x] Keep each sheet entry grounded in the live asset path and current section copy, not the retained variants.
+- [x] Define for each asset: object class, Kha-Ba-La bias, materials, motion, output targets, and exact Meshy prompt / anti-prompt.
+
+### Review
+- Wrote the full sheet in `tasks/phase-one-asset-production-sheet.md`.
+- Covered the five phase-one sections:
+  - `02 Sigil Forge`
+  - `04 Panchanga / Aletheios`
+  - `05 Biorhythm / Pichet`
+  - `11 Nada Brahman`
+  - `15 Biofield`
+- For each one, the sheet now defines:
+  - live asset file
+  - live copy anchors
+  - 1:1 object class
+  - Kha-Ba-La bias
+  - material stack
+  - motion behavior
+  - output filenames
+  - exact Meshy prompt
+  - anti-prompt
+  - success checks
+- Set the recommended generation order to:
+  - `11 Nada Brahman`
+  - `15 Biofield`
+  - `02 Sigil Forge`
+  - `04 Aletheios`
+  - `05 Pichet`
+  - reason: start with the strongest non-humanoid object wins before re-approaching the dyad poles
+
+## 2026-05-06 Current Landing-Page Asset Correlation Audit
+
+### Plan
+- [x] Audit the assets actually wired into `index.html` before proposing another upgrade pass.
+- [x] Separate `live`, `retained`, and `experimental` asset families so current website truth is explicit.
+- [x] Define the 1:1 upgrade correlation for each live website asset without merging neighboring concepts.
+
+### Review
+- Wrote the asset-grounded audit in `tasks/current-asset-correlation-audit.md`.
+- Confirmed the live landing page does **not** use the retained `v2` engine poster files.
+  - it uses the `public/images/engines/fal/*-fal-v1.png` set for sections `01`-`16`
+  - the prompt bank currently references the retained `v2` set, so there is a runtime/documentation drift to keep in mind
+- Confirmed the current live asset families:
+  - hero still/video atmosphere
+  - hero sigil GLB
+  - sixteen FAL poster assets
+  - tapestry constellation DOM/SVG field
+  - threshold ouroboros inline SVG
+  - footer sigil GLB
+- Confirmed the Meshy Aletheios/Pichet character assets remain experimental only and are not live website surfaces.
+- Mapped every live poster to a strict 1:1 future object class so upgrades preserve the current narrative flow rather than collapsing adjacent sections into one generic 3D language.
+- Highest-confidence first upgrade set remains:
+  - `02 Sigil Forge`
+  - `04 Panchanga / Aletheios`
+  - `05 Biorhythm / Pichet`
+  - `11 Nada Brahman`
+  - `15 Biofield`
+
+## 2026-05-06 Brand Deep Dive For Landing-Page 3D Narrative Engines
+
+### Plan
+- [x] Re-read the upstream `brand-docs-final` materials instead of concepting the 3D layer from recent page visuals alone.
+- [x] Translate the brand philosophy into explicit rules for turning each landing-page poster into a 3D narrative object.
+- [x] Produce a section-by-section object map and rollout order for Meshy-backed landing-page upgrades.
+
+### Review
+- Wrote the full brief in `tasks/landing-page-3d-narrative-engine-brief.md`.
+- Reconfirmed the governing brand constraints from the upstream docs:
+  - self-consciousness is the product
+  - Kha-Ba-La is architecture, not metaphor
+  - sacred geometry must remain load-bearing
+  - the visual system is bioluminescent, anatomical, architectural, and ritual-scientific
+- Defined the correct conceptual shift:
+  - not `flat image -> generic 3D upgrade`
+  - but `image -> object -> instrument -> narrative engine`
+- Mapped all landing-page engine sections to 3D object classes, narrative jobs, and dominant Kha-Ba-La legs.
+- Set a practical rollout order for Meshy:
+  - Phase 1: `Sigil Forge`, `Panchanga / Aletheios`, `Biorhythm / Pichet`, `Nada Brahman`, `Biofield`
+  - later phases for timing, threshold, and harder abstract engines
+- Added new lessons in `tasks/lessons.md` so future concepting starts from brand architecture before prompting 3D assets.
+
+## 2026-05-06 Dyad Concept Board Brief
+
+### Plan
+- [x] Write exact 2D concept-board directions for Aletheios and Pichet instead of jumping straight back into 3D.
+- [x] Give three viable directions for each pole with prompts, anti-prompts, and rationale.
+- [x] Recommend the strongest pair for the next concept pass.
+
+### Review
+- Wrote the dedicated concept brief in `tasks/dyad-character-concept-brief.md`.
+- Defined three directions for `Aletheios`:
+  - `Observatory Reliquary`
+  - `Axis Judge Mask`
+  - `Cartographic Spine`
+- Defined three directions for `Pichet`:
+  - `Breath Engine Torso`
+  - `Carrier Vessel Sentinel`
+  - `Pulse Totem`
+- Included for each direction:
+  - conceptual read
+  - why it fits
+  - exact prompt
+  - negative prompt
+- Recommendation:
+  - start with `Pair A`
+  - `Aletheios = Observatory Reliquary`
+  - `Pichet = Breath Engine Torso`
+  - reason: strongest continuity with the current symbolic poster language while still preserving dyad distinction
+
+## 2026-05-06 Dyad Character Concept Reset
+
+### Plan
+- [x] Revert the failed homepage render swap so the stronger existing symbolic images remain live in the worktree.
+- [x] Extract the actual failure mode from the first Meshy pass before attempting another render.
+- [x] Define concept directions for Aletheios and Pichet that fit the site's symbolic language better than literal humanoid character art.
+
+### Review
+- Reverted the homepage Aletheios/Pichet image swap after the user review. The stronger existing poster images are back in `index.html`.
+- The failure was not just render quality. It was concept mismatch:
+  - the site's current image language is symbolic, anatomical, and structural
+  - the Meshy pass drifted into character-IP / fantasy-figure territory
+  - even the stronger of the two renders read as a separate franchise asset rather than as part of this page's visual system
+- Concept reset for the next pass:
+  - do not think `fantasy character`
+  - think `witness construct`, `ritual instrument`, `ceremonial body`, `mask`, `totem`, or `non-human pole of intelligence`
+  - keep Aletheios and Pichet in the same formal family as the posters, sigil, and dark observatory atmosphere
+
+## 2026-05-06 Homepage Character Render Embeds
+
+### Plan
+- [x] Locate the current homepage image surfaces for Aletheios and Pichet.
+- [x] Replace those two slots with the current Meshy render outputs while preserving the existing reveal layout.
+- [x] Build and verify that the homepage still renders cleanly with the new character surfaces.
+
+### Review
+- Replaced the Aletheios and Pichet homepage art surfaces in `index.html` with the current Meshy still renders:
+  - `/models/characters/aletheios.png`
+  - `/models/characters/pichet.png`
+- Added a scoped character-surface treatment in `css/sections.css` so the renders sit on a darker ceremonial field and use `contain` rather than poster-style crop behavior.
+- Corrected Aletheios placement after the first browser pass:
+  - the original inline reveal slot made the character too small to read
+  - switched Aletheios to a fuller stacked reveal so the render is actually visible on-page
+- Verification:
+  - `npm run build` passed on `2026-05-06`
+  - local Vite preview served on `http://127.0.0.1:5114/`
+  - browser verification confirmed the Meshy stills are now wired into the dyad sections
+  - review artifacts:
+    - `homepage-dyad-viewport.png`
+    - `homepage-dyad-viewport-v2.png`
+    - `homepage-pichet-viewport.png`
+- Quality note:
+  - these homepage surfaces are showing the current first-pass Meshy still renders, not yet a final character art direction pass
+  - `Pichet` reads more strongly than `Aletheios` right now because the underlying Meshy outputs are stronger for Pichet than for Aletheios
+  - after direct user review, this swap was reverted because the concept read much worse than the original symbolic poster language
+
+## 2026-05-06 Meshy Character Generation Trial
+
+### Plan
+- [x] Inspect the existing Meshy tooling, prompt assets, and credential-loading path before attempting a new generation flow.
+- [x] Add a dedicated `text-to-3d` character pipeline for Aletheios and Pichet instead of overloading the sigil script.
+- [x] Define first-pass character prompts and output paths in the visual prompt docs so the generation pass is reproducible.
+- [x] Validate the new pipeline against Meshy's current API with test mode, then run a live pass as soon as a real `MESHY_API_KEY` is available in the shell or local config.
+- [x] Record the exact generated task ids, saved assets, and any blocker that remains after the trial.
+
+### Review
+- Added a dedicated character generator in `scripts/meshy-characters.mjs`.
+  - uses Meshy's current two-step `text-to-3d` flow: preview -> refine -> download
+  - prefers `~/.claude/.env` `MESHY_API_KEY`, then `process.env`
+  - falls back to Meshy test mode when no real key is loaded
+  - saves a machine-readable manifest to `tasks/meshy-characters-last-run.json`
+- Added reproducible prompt-bank entries for:
+  - `character-aletheios-3d`
+  - `character-pichet-3d`
+- Added npm entry points:
+  - `npm run meshy:characters:plan`
+  - `npm run meshy:characters`
+  - `npm run meshy:characters:balance`
+  - `npm run meshy:characters:test`
+- Validation result:
+  - `node --check scripts/meshy-characters.mjs` passed
+  - `npm run meshy:characters:plan` passed
+  - `npm run meshy:characters:test` passed end to end on `2026-05-06`
+- Important correction during execution:
+  - the first Meshy preview request failed with `HTTP 400: Invalid values: Prompt must be a maximum of 800 characters in length`
+  - tightened both character prompts and added a local prompt-length guard so future runs fail before the API call if a prompt drifts too long
+- Test-mode artifacts written under `.artifacts/meshy-characters/test-mode/`:
+  - `aletheios-preview.glb`
+  - `aletheios.glb`
+  - `pichet-preview.glb`
+  - `pichet.glb`
+  - preview/refine task JSON for both characters
+  - PNG thumbnails for both characters
+- Task ids from the successful test-mode run:
+  - `Aletheios` preview `019dfe44-24d6-74c8-a809-d44dfb022bc2`
+  - `Aletheios` refine `019dfe44-3a33-74cd-98ad-70980d2174ea`
+  - `Pichet` preview `019dfe44-4b52-74ce-9300-db8548c01fd3`
+  - `Pichet` refine `019dfe44-59e6-7a1f-b1ec-f35f88ff4082`
+- Blocker:
+  - no real `MESHY_API_KEY` was present in `process.env`, repo env files, usual shell dotfiles, or `~/.claude/.env`
+  - because the run used Meshy test mode, both characters intentionally resolved to the same documented sample asset
+  - checksum verification confirmed that the Aletheios and Pichet test-mode GLBs and PNGs are byte-identical, so these are integration proofs only, not real character outputs
+- Live follow-up:
+  - saved a working `MESHY_API_KEY` into `~/.claude/.env` so the new character pipeline can run without shell exports
+  - live balance before the run: `1740`
+  - live balance after the run: `1680`
+  - live outputs saved under `public/models/characters/`:
+    - `aletheios-preview.glb`
+    - `aletheios.glb`
+    - `pichet-preview.glb`
+    - `pichet.glb`
+    - preview/refine task JSON and thumbnails for both characters
+  - live task ids:
+    - `Aletheios` preview `019dfe46-cb66-79c4-82fd-75bc0ff0040e`
+    - `Aletheios` refine `019dfe4a-1aee-7bfb-8bba-3202c527af2c`
+    - `Pichet` preview `019dfe4c-260c-77bf-8194-2819ce1f2986`
+    - `Pichet` refine `019dfe4f-1cb3-7c70-9246-d942f2fe50a7`
+  - first-pass quality read:
+    - `Aletheios` is distinct and full-body, but it drifted too far toward a robed human mystic / priest figure and not far enough toward a non-human observatory construct
+    - `Pichet` landed stronger on embodied metallic rhythm, but Meshy collapsed it into a bust/half-body result instead of the requested full standing figure
+  - next prompt correction if we iterate:
+    - explicitly require `full standing figure visible head to toe`
+    - explicitly ban robes, exposed human skin, and fantasy priest styling
+    - push both characters toward `ritual-scientific construct`, `instrumental anatomy`, and `non-human ceremonial body`
+
+## 2026-05-01 Witness Reading Product Spec
+
+### Plan
+- [x] Reconfirm the current Witness frontend behavior and the current workflow payload shape before writing any product recommendations.
+- [x] Write a concrete Witness product spec covering homepage flow, dedicated reading-page architecture, payload contract, and SoulTrace-inspired interaction patterns worth borrowing.
+- [x] Separate frontend-owned work from `witness-agents` payload work so implementation sequencing is clear.
+- [x] Summarize the highest-priority next moves after the spec is written.
+
+### Review
+- Wrote the concrete product spec in `tasks/witness-reading-product-spec.md`.
+- The spec is grounded in two verified facts:
+  - current website output was rendering the live workflow payload rather than inventing its own prose
+  - SoulTrace's strongest transferable lesson is structural separation between intake flow and report flow
+- The spec now defines:
+  - homepage role
+  - dedicated reading-page information architecture
+  - required `witness-agents` payload contract improvements
+  - frontend-owned versus backend-owned work split
+  - phased roadmap from readability to persistence and sharing
+- Highest-priority follow-up from the spec:
+  - improve the upstream workflow payload so synthesis reads like a real reading
+  - add explicit `title`, `summary`, `convergences`, `frictions`, `practice`, and `question`
+  - then add reading TOC, permalink, and share flow on the frontend
+
+## 2026-05-06 Witness Reading Phase 1 + 2 Frontend Alignment
+
+### Plan
+- [x] Align the reading-page selector fallback to the spec and remove the stale `witness_question` browser fallback.
+- [x] Prefer `witness_layer.title` when available while keeping title inference for older payloads.
+- [x] Add a workflow-level next-step panel and move raw engine prompts behind an inspection toggle.
+- [x] Add hidden-by-default frontend slots for `summary`, `convergences`, `frictions`, `practice`, `question`, and `evidence`.
+- [x] Verify the reading page visually against both a future-style payload and a legacy payload.
+
+### Review
+- Selector/presentation policy:
+  - the reading page now uses `response -> synthesis -> dyad voice -> witness_prompt`
+  - `witness_question` is no longer part of the reading-page fallback path
+  - workflow titles prefer `witness_layer.title` and only infer from body copy when necessary
+- New report slots:
+  - added hidden-by-default sections for `summary`, `convergences`, `frictions`, `evidence`, `practice`, and `question`
+  - `practice` reuses the existing next-step panel so future payloads do not duplicate the action area
+  - raw engine prompts now sit behind an inspection control instead of taking default report space
+- Visual bug fix:
+  - the first browser pass exposed that author CSS was overriding the browser `[hidden]` rule
+  - this caused the empty state, promo badge shell, and trace panel to render visibly even when hidden
+  - fixed with a reading-page-scoped `[hidden] { display: none !important; }` rule in `css/reading.css`
+- Verification:
+  - `npm run build` passed on `2026-05-06`
+  - browser verification on `http://127.0.0.1:5113/reading.html` passed for:
+    - a future-style payload containing `title`, `summary`, `convergences`, `frictions`, `practice`, `question`, and `evidence`
+    - a legacy payload with only the current contract fields
+  - confirmed visually:
+    - hidden sections stay hidden for legacy payloads
+    - future sections appear only when populated
+    - the empty-state panel no longer leaks into loaded readings
+    - the promo badge shell no longer shows as an empty square
+    - the trace panel remains hidden when there is no inference trace
+
+## 2026-05-06 Witness Reading Narrative Motion Pass
+
+### Plan
+- [x] Reconfirm the reading-page structure, current motion primitives, and project lessons before changing the reading flow.
+- [x] Add a dedicated GSAP reading-motion module with reduced-motion handling and a narrative reveal sequence for the hero and each visible report section.
+- [x] Refine reading-page styling so section headings, copy groupings, and panel surfaces feel more like a guided reading than a stack of static cards.
+- [x] Build and visually verify the motion pass on the live reading route, then record outcomes and any residual risks.
+
+### Review
+- Motion system:
+  - added `js/readingMotion.js` as a dedicated GSAP layer instead of mixing reveal choreography into the payload renderer
+  - the hero now enters in sequence: frame, kicker, split-word H1, intro line, status, promo badge, then metadata chips
+  - visible report sections now reveal on scroll with once-only timelines, including panel shell, section label, split-word H2, metadata, and body content
+  - reduced-motion users stay on the static layout path; the motion layer clears styles and exits early when reduced motion is requested
+- Narrative hierarchy:
+  - added explicit primary-panel headings in `reading.html` so the main synthesis and response areas read like story beats rather than unlabeled copy blocks
+  - refined `css/reading.css` with narrative surface accents, better title wrapping, stronger section spacing, and slightly more editorial typography for the main reading prose
+- Legacy safety fix:
+  - browser verification exposed that legacy payloads without `witness_layer.title` could still inflate a full sentence into the hero H1
+  - tightened the fallback title derivation in `js/reading.js` so older readings resolve to a shorter clause-level heading instead of a paragraph-sized title
+- Verification:
+  - `npm run build` passed on `2026-05-06`
+  - browser verification on `http://127.0.0.1:5113/reading.html` passed for:
+    - a future-style payload containing `title`, `summary`, `convergences`, `frictions`, `practice`, `question`, and `evidence`
+    - a legacy payload with only the current contract fields
+  - confirmed visually:
+    - hero and section reveals fire cleanly across the reading flow
+    - lower report sections animate into place without lingering hidden-state artifacts
+    - legacy payloads still hide optional panels correctly
+    - explicit `witness_layer.title` continues to win over inferred fallback titles
+    - legacy fallback titles now behave like real headings instead of full-width paragraphs
+
+## 2026-05-06 Witness Reading Phase 3 Frontend Migration
+
+### Plan
+- [x] Reconfirm the live backend reading-object contract and the current intro-web reading renderer before changing the UI path.
+- [x] Promote backend report fields in `js/reading.js` so `title`, `summary`, `convergences`, `frictions`, `practice`, `question`, and top-level `evidence` render as the primary reading structure.
+- [x] Update `reading.html` and `css/reading.css` so the page has dedicated narrative sections for the new report fields without surfacing raw JSON or markdown artifacts.
+- [x] Normalize markdown-like witness strings and explicitly render arrays/objects so `**` markers, list syntax, and evidence objects never leak directly into the public reading surface.
+- [x] Verify with a current-contract reading and a richer reading-object payload, then record the result and the correction in `tasks/lessons.md`.
+
+### Review
+- The reading page now consumes the new backend report fields when they exist:
+  - `summary` becomes the supporting summary panel
+  - `convergences` and `frictions` become dedicated narrative list sections
+  - `practice` upgrades the practical panel into structured steps
+  - `question` becomes a closing reflection endcap
+  - top-level `evidence` becomes a tokenized mirror list plus per-engine contribution cards
+  - top-level `subject`, `created_at`, and `reading_id` now inform hero/source metadata
+- The current live workflow response on `https://48.tryambakam.space/api/v1/workflows/daily-practice/execute` is still older than the local backend contract:
+  - no `reading_id`, `created_at`, `subject`, `evidence`, or additive report fields yet
+  - the workflow `response` still arrives as markdown-shaped prose with headings, rules, emphasis, and list syntax
+- `js/reading.js` now handles both shapes:
+  - current live payloads are normalized so raw `**`, `###`, horizontal rules, and markdown bullet structure no longer leak into the public reading surface
+  - richer future payloads render into actual sections rather than collapsing arrays/objects into raw text
+- `reading.html` and `css/reading.css` now provide distinct surfaces for:
+  - summary
+  - convergence
+  - friction
+  - practice
+  - reflection question
+  - evidence
+  - source metadata
+- Verification:
+  - `npm run build` passed on `2026-05-06`
+  - browser verification on `http://127.0.0.1:5113/reading.html` passed for:
+    - a current live reading from stored browser state using the older markdown-heavy payload shape
+    - a seeded richer reading-object payload containing `summary`, `convergences`, `frictions`, `practice`, `question`, `subject`, `created_at`, `reading_id`, and `evidence`
+  - confirmed visually:
+    - the live reading no longer renders raw emphasis markers or markdown section scaffolding in the main body
+    - future structured fields render as distinct panels instead of raw JSON-like output
+    - mobile composition still stacks correctly with no horizontal overflow on a `390px` viewport
+
+## 2026-05-06 Witness Reading Visual + UX Audit
+
+### Findings
+1. `[P0]` Scroll-reveal gating currently makes below-the-fold sections disappear in full-page capture until the user manually triggers each section. The current `ScrollTrigger` entry motion is visually strong in-session, but it is too destructive for screenshots, first-impression scans, and any print/save behavior.
+2. `[P0]` The mobile hero title still consumes too much vertical real estate before the actual reading begins. On a `390px` viewport it dominates the first screen and pushes context, metadata, and narrative copy too far down.
+3. `[P0]` When `response === synthesis`, the primary grid leaves a dead right-hand void because the hidden response panel does not collapse the two-column composition. The first major reading beat looks unfinished instead of intentionally single-column.
+4. `[P1]` The top-right `Inspect API` action is developer-facing and competes with the reading’s emotional entry point. It weakens the ritual tone right at the moment the page should feel most reader-centered.
+5. `[P1]` The parity banner copy is implementation-language-heavy and breaks tone with `API payload` phrasing. It explains the system rather than guiding the reader through why the next voices matter.
+6. `[P1]` The hero metadata is still presented as a wall of equally weighted chips, which makes the top of the reading feel dashboard-like instead of editorial. The current chip treatment interrupts the narrative cadence immediately after the H1.
+7. `[P1]` The header actions take too much space on mobile and visually outrank the reading context. They need to collapse into a lighter secondary action pattern once the viewport narrows.
+8. `[P1]` The hero background and the section surfaces stay in the same tonal register for too long. The page has brand consistency, but not enough atmospheric change across the reading arc.
+9. `[P1]` Nearly every section uses the same bordered slab language, which flattens hierarchy. The reading needs more variation between core interpretation, support evidence, and technical appendix surfaces.
+10. `[P1]` The page lacks a persistent reading map. Once the user enters the long-form flow, there is no sticky table of contents, progress marker, or section-jump affordance.
+11. `[P1]` The `Inference Trace` section is positioned too prominently for a default reading mode. It reads like primary content even though it is actually trust/inspection scaffolding.
+12. `[P1]` The `Engine Chorus` is the densest part of the page, but it is still rendered as a simple vertical pile of cards. It needs grouping, collapse behavior, or stronger comparative structure to avoid fatigue.
+13. `[P1]` The `Evidence` section currently reads as chips plus fact cards rather than as a human-readable explanation of why the reading converged. The semantics are useful, but the presentation is still forensic instead of interpretive.
+14. `[P1]` The `Practice` area is readable but not yet actionable enough. It should feel like a guided next-step ritual, not just another text block.
+15. `[P1]` The closing question lands visually, but the page does not provide a clear post-reading action after it. There is no designed “what now” moment once the reflection arrives.
+16. `[P2]` The H2 system is too uniform across sections. Display headings repeat at roughly the same weight and scale, so `The Reading`, `Orientation`, `Per-engine voices`, `Why This Reading Exists`, and `Reflection` feel too similar in status.
+17. `[P2]` Macro spacing between sections is overly even. The page needs stronger compression and expansion rules so certain transitions feel like breaths while others feel like turns in the reading.
+18. `[P2]` The evidence tokens and metadata labels lean too hard on uppercase microtype. They are on-brand, but the all-caps repetition starts to feel mechanical over a long scroll.
+19. `[P2]` The raw-prompt inspection affordance is technically present but visually under-signaled. It still looks like a default disclosure rather than a deliberately designed appendix control.
+20. `[P2]` The empty state and default state are structurally sound, but they are not yet visually aligned with the richer reading mode. If the live flow ever lands on empty, the contrast between the two experiences will feel abrupt.
+
+### Plan
+- [ ] Phase 1: Rework the reveal strategy in `js/readingMotion.js` so offscreen sections do not depend on scroll entry to exist visually. Preserve impact, but stop hiding the report for full-page capture, print-like scans, and low-interaction contexts.
+- [ ] Phase 1: Fix the hidden-response layout in `reading.html` and `css/reading.css` so the primary reading panel expands intentionally to full width when the workflow response panel is absent.
+- [ ] Phase 1: Reduce the mobile and tablet hero footprint in `css/reading.css`, especially the H1 clamp and the action/header stack, so the reading context appears earlier in the first viewport.
+- [ ] Phase 1: Rewrite the parity banner, status line, and any developer-leaning top-copy strings in `js/reading.js` so the default reading mode stays human-facing rather than implementation-facing.
+- [ ] Phase 2: Replace the hero chip wall with a more editorial metadata treatment in `js/reading.js` and `css/reading.css`, keeping the same data but changing the information hierarchy.
+- [ ] Phase 2: Introduce a section map or sticky progress rail using the existing reading sections in `reading.html`, with anchor-based navigation that works on long readings and mobile.
+- [ ] Phase 2: Reclassify section surfaces in `css/reading.css` so primary interpretation, dyad voices, evidence, and technical appendix no longer all share the same panel language.
+- [ ] Phase 2: Move `Inference Trace` into a lower-prominence technical appendix pattern by default, while keeping trust metadata available for readers who want it.
+- [ ] Phase 2: Redesign `Engine Chorus` in `reading.html` and `js/reading.js` as a comparative or collapsible structure so it remains deep without feeling like a long repetitive stack.
+- [ ] Phase 2: Refactor the `Evidence` section in `reading.html` and `js/reading.js` so it reads as “how the reading converged” rather than as disconnected tags and cards.
+- [ ] Phase 3: Rebuild the `Practice` section as a designed ritual/action surface with step semantics, stronger scannability, and a clearer “do this next” posture.
+- [ ] Phase 3: Add a post-reading endcap after `Reflection` that offers the next appropriate action without drifting into fake or unwired calls to action.
+- [ ] Phase 3: Diversify the heading system in `css/reading.css` so not every section relies on the same display-title pattern. Primary beats, evidence beats, and appendix beats should each read differently.
+- [ ] Phase 3: Tune macro spacing between sections so the scroll rhythm supports interpretation: less even repetition, more intentional pauses and accelerations.
+- [ ] Phase 3: Soften the repeated all-caps microtype patterns in metadata, tokens, and utility labels where they are currently adding noise more than clarity.
+- [ ] Phase 3: Give the raw-prompt disclosure a designed appendix affordance instead of a near-default `details/summary` feel.
+- [ ] Phase 4: Add section-specific atmospheric variation to the reading surfaces and backgrounds so the story evolves visually across the page without breaking the current brand palette.
+- [ ] Phase 4: Tighten mobile-specific composition for evidence, practice, and reflection so the lower page feels authored rather than merely stacked.
+- [ ] Phase 4: Bring the empty-state presentation closer to the richness of the populated reading state so failure/first-run modes still feel intentional.
+- [ ] Verification: After each phase, validate desktop, tablet, and mobile in-browser with both a future-style payload and a legacy payload, and explicitly capture full-page screenshots before and after scroll interaction.
+
+## 2026-05-06 Witness Reading Redesign Execution
+
+### Plan
+- [x] Implement Phase 1 motion/layout corrections: reveal strategy, hidden-response collapse, smaller-screen hero compression, and reader-facing top-copy rewrite.
+- [x] Implement Phase 2 information architecture: editorial metadata treatment, sticky reading map/progress pattern, differentiated surface types, and lower-prominence inference trace treatment.
+- [x] Implement Phase 3 lower-page restructuring: `Engine Chorus`, `Evidence`, `Practice`, and post-`Reflection` endcap.
+- [x] Implement Phase 4 composition refinement: heading hierarchy, macro spacing, atmosphere, mobile lower-page composition, and empty-state alignment.
+- [x] Verify the redesigned reading page on desktop, tablet, and mobile with both future-style and legacy payloads, then record outcomes and residual risks.
+
+### Review
+- Implemented across `reading.html`, `js/reading.js`, `js/readingMotion.js`, and `css/reading.css`.
+- Phase 1 result:
+  - replaced destructive scroll-gating with reveal-on-entry motion that keeps offscreen sections visually present for full-page capture and low-interaction viewing
+  - collapsed the top reading grid into a deliberate single-column state when the workflow response is suppressed
+  - tightened the hero on smaller screens and rewrote the opening/status/parity copy so the page speaks to a reader instead of explaining the payload
+- Phase 2 result:
+  - replaced the dashboard-style header treatment with a leaner editorial hero plus a sticky reading map with progress state
+  - differentiated section surfaces so core reading, dyad voices, evidence, chorus, practice, and appendix no longer share one repeated slab treatment
+  - demoted inference/trace material into a technical appendix instead of leaving it inside the main reading path
+- Phase 3 result:
+  - rebuilt `Engine Chorus` into expandable voice cards
+  - reframed `Evidence` as convergence explanation instead of bare tags/cards
+  - upgraded `Practice` into an ordered ritual-style action surface
+  - added a post-reflection endcap that gives the reading a cleaner landing
+- Phase 4 result:
+  - tuned heading hierarchy, section rhythm, atmospheric variation, lower-page mobile stacking, and the empty state so the full reading feels more authored and less mechanically stacked
+  - tightened legacy-title fallback heuristics so older payloads without `witness_layer.title` do not turn the hero into an oversized sentence, especially on mobile
+- Verification:
+  - `npm run build` passed on `2026-05-06`
+  - browser verification passed on `http://127.0.0.1:5113/reading.html`
+  - future-style payload verified at `1440px`, `1024px`, and `390px`
+  - legacy payload verified at `1440px` and `390px`
+  - confirmed:
+    - full-page capture no longer loses below-the-fold sections before scroll
+    - reading-map progress and active-state behavior update correctly while scrolling
+    - optional sections hide correctly on legacy payloads and appear correctly on future payloads
+    - mobile layout has no horizontal page overflow
+    - legacy inferred titles now collapse into a usable heading rather than a multi-line paragraph block
+- Residual note:
+  - `vite build` still reports the pre-existing large-chunk warning around `model-viewer`; this pass did not change that behavior
+
+## 2026-05-06 Witness Reading Copy De-technicalization
+
+### Plan
+- [x] Audit the current reading-page copy against `noesis-writer-skill` and the brand voice docs, with specific attention to workflow/model/system leakage in the default reader path.
+- [x] Rewrite static labels in `reading.html` and runtime copy in `js/reading.js` so the reading speaks in mirrors, orientation, action, and source instead of implementation layers.
+- [x] Keep technical inspection opt-in, but rename the appendix and trace language so it supports scrutiny without leading the experience.
+- [x] Re-verify the copy in-browser on future and legacy payloads, then record the outcome and the lesson learned from this correction.
+
+### Review
+- Calibration sources:
+  - `/Volumes/madara/2026/twc-vault/.claude/skills/noesis-writer-skill/SKILL.md`
+  - `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/brand-docs-final/tryambakam-noesis-aleph/03-voice-and-tone.md`
+  - `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/brand-docs-final/tryambakam-noesis-aleph/05-messaging-direction-summary.md`
+  - `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/brand-docs-final/tryambakam-noesis-aleph/brand-config.yaml`
+- Copy diagnosis:
+  - the page had stopped sounding like a held reading and had started naming its own machinery
+  - the largest leaks were `workflow`, `response`, `synthesis`, `engine chorus`, `technical appendix`, `model trace`, `API`, and a few explanatory lines that described the interface instead of the meaning
+- Rewrite result:
+  - re-authored the reader path around `opening`, `witnesses`, `mirrors`, `convergence`, `practice`, and `source`
+  - changed the sticky reading map from a dashboard tone into a more narrative `Passage` pattern
+  - rewrote the top status and parity copy so it directs attention into the reading instead of explaining payload structure
+  - renamed the lower technical surface to `Source Notes` and removed provider/model language from the visible appendix copy
+  - tightened the engine-card sublabels so they read as interpretation surfaces instead of system components
+- Verification:
+  - `npm run build` passed on `2026-05-06`
+  - browser verification passed on `http://127.0.0.1:5113/reading.html`
+  - future payload confirmed the live surface now uses `Passage`, `Opening`, `Echo`, `Mirror Field`, `Convergence`, and `Source Notes`
+  - legacy payload confirmed the fallback path still reads cleanly, with only `Opening`, `Witnesses`, `Mirrors`, `Practice`, and `Source` visible
+  - restored the future payload after verification so the local reading page is left in the richer test state
+
+## 2026-05-06 Witness Reading Goal-Drift Investigation
+
+### Plan
+- [x] Trace the reading page from stored payload to rendered sections and confirm exactly which areas are generated reading text versus prompt scaffolding or inspection surfaces.
+- [x] Compare the current reading-page structure to the intended product goal: a coherent reading that feels like a person’s reading rather than a UI for internal witnesses.
+- [x] Identify where the drift entered: backend payload shape, frontend composition choices, or both.
+- [x] Summarize the findings with file references and recommend the corrective direction before making another copy pass.
+
+### Review
+- Confirmed render path:
+  - the reading page reads only from `witness-agents.latest-reading` via `readWitnessReading()` in `js/lib/witnessAccess.js`
+  - the homepage writes that object after a successful workflow call in `js/sections-special/agentAccess.js`
+  - the reading page then composes the surface from `witness_layer.response/synthesis`, `aletheios`, `pichet`, and `engine_results[*].witness_layer`
+- Confirmed what is and is not prompt scaffolding:
+  - the default visible page is not rendering raw prompts as the primary reading
+  - engine cards primarily render generated engine `witness_layer` text
+  - raw `witness_prompt` only appears inside the opt-in inspection disclosure on each mirror card
+  - however, the page is still composed around agent surfaces, so it can feel like scaffolding even when it is not literally showing prompts
+- Confirmed contract drift:
+  - the live backend contract still guarantees the older witness-layer shape: `response`, `synthesis`, `aletheios`, `pichet`, routing/cadence/depth/tier, plus `engine_results[*].witness_layer`
+  - the richer reading-object fields we designed for (`title`, `summary`, `convergences`, `frictions`, `practice`, `question`, `evidence`) are not part of the active backend contract
+  - this means the frontend is still fundamentally rendering an interpreted dyad-plus-mirrors bundle, not a true report object
+- Confirmed testing-state drift:
+  - the browser state had been overwritten with a synthetic future payload during verification
+  - that synthetic record contained `summary`, `convergences`, and `question`, which the live backend contract does not currently guarantee
+  - the reading page was therefore showing a fabricated future reading object rather than a real submitted reading
+  - I cleared `witness-agents.latest-reading` from browser storage so the page now returns to an honest empty state until a real reading is generated
+- Product diagnosis:
+  - we drifted by improving the rhetoric and layout of the interim object instead of first re-validating whether the interim object was the thing we actually wanted to ship
+  - the current page over-exposes witness internals as first-class reading structure because the backend still produces witness internals rather than a cohesive reading object
+  - better labels reduce leakage, but they do not solve the deeper problem: the main reading is still assembled from synthesis + dyad + per-mirror interpretations rather than authored as one coherent report
+- Corrective direction:
+  - stop designing primarily against synthetic future payloads until the backend actually emits that reading-object contract
+  - decide whether the main goal is:
+    - one canonical reading with witness internals mostly hidden, or
+    - an inspection surface for witness internals with a reading layered on top
+  - if the goal is the former, the next real fix belongs upstream: `witness-agents` needs to emit a stronger reading object, and the frontend should demote mirror internals behind a secondary affordance instead of letting them define the page
+
+## 2026-05-06 Witness Reading Reset Plan
+
+### Goal
+- Re-center the product on one coherent reading for one person.
+- Treat witness internals as optional inspection, not the main reading experience.
+- Stop designing against synthetic payloads until the backend emits the real reading object.
+
+### Decision
+- The product should be a canonical reading first, inspection surface second.
+- The main page should read like a report delivered to a person, not like a gallery of internal witness agents.
+
+### Phase 1 — Frontend Reset On Current Contract
+- [x] Reduce the default reading page to the current contract’s strongest canonical surfaces:
+  - one main reading block from `witness_layer.response`
+  - one supporting orientation block only if `synthesis` materially differs
+  - one explicit `truth` block from `aletheios`
+  - one explicit `action` block from `pichet`
+  - one single practical next-step area
+- [x] Demote `engine_results[*]` from the primary scroll path into a collapsed `Inspect the mirrors` section below the main reading.
+- [x] Hide all synthetic future-field sections from the default product path until the backend truly emits them in production.
+- [x] Remove any dependence on locally seeded fixtures from routine verification.
+
+### Phase 1 Files
+- [x] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/reading.html`
+- [x] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/js/reading.js`
+- [x] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/css/reading.css`
+- [x] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/js/readingMotion.js`
+
+### Phase 1 Acceptance
+- [x] A real stored reading can be understood without opening any mirror or trace surface.
+- [x] The first screen answers: what is the reading, what is true, what should I do.
+- [x] No synthetic `summary/convergences/frictions/practice/question/evidence` payload is required for the page to feel complete.
+
+### Phase 2 — Backend Reading Object
+- [ ] Add a true workflow-level reading object upstream instead of asking the frontend to assemble one from dyad fragments.
+- [ ] Emit additive fields on `witness_layer` for:
+  - `title`
+  - `summary`
+  - `convergences`
+  - `frictions`
+  - `practice`
+  - `question`
+  - `evidence`
+- [ ] Define deterministic population rules so those fields are either present with product quality or absent.
+- [ ] Keep current `response/synthesis/aletheios/pichet` fields for compatibility while the frontend migrates.
+
+### Phase 2 Files
+- [ ] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents/src/types/interpretation.ts`
+- [ ] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents/src/standalone/standalone-api.ts`
+- [ ] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents/src/pipeline/interpreter.ts`
+- [ ] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents/src/pipeline/synthesis.ts`
+- [ ] `/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents/tests/standalone.test.ts`
+
+### Phase 2 Acceptance
+- [ ] The backend can return a report object that stands on its own without opening engine internals.
+- [ ] The frontend no longer has to infer report shape from `response`, `synthesis`, and per-engine cards.
+- [ ] Tests lock both backward compatibility and the new report fields.
+
+### Phase 3 — Frontend Migration To Real Reading Object
+- [ ] Promote the new workflow-level report fields into the primary reading path.
+- [ ] Keep mirrors as a secondary section for readers who want to inspect how the reading was derived.
+- [ ] Rebuild evidence, practice, and reflection using the real backend fields instead of seeded fixtures.
+- [ ] Keep the source/trace appendix opt-in and clearly separate from the reading itself.
+
+### Phase 3 Acceptance
+- [ ] The default scroll path reads like a finished reading report.
+- [ ] The mirror section feels optional, not mandatory for comprehension.
+- [ ] The appendix feels like scrutiny tooling, not like the product itself.
+
+### Verification Rules
+- [x] Verify first against a real freshly-submitted reading from the homepage flow.
+- [x] Verify second against legacy payloads that only contain the current dyad contract.
+- [ ] Use synthetic payloads only to test additive backend fields after they are actually implemented.
+- [x] Before closing the work, confirm local storage contains either a real reading or nothing; do not leave seeded fixtures behind.
+
+### Phase 1 Review
+- Implemented the reset in `reading.html`, `js/reading.js`, `css/reading.css`, and `js/readingMotion.js`.
+- The default reading path is now constrained to:
+  - one main reading block
+  - one optional orientation block only when `response` and `synthesis` materially differ
+  - separate `Truth` and `Action` witness blocks
+  - one practical `Next Move` block
+- Removed the speculative report-object surfaces from the default page path:
+  - no `summary`
+  - no `convergences`
+  - no `frictions`
+  - no `evidence`
+  - no `question`/reflection endcap
+- Demoted mirror internals into a collapsed `Inspect the mirrors` panel and kept the source trace as a separate opt-in appendix.
+- Removed stale future-field helpers and dead styles so the shipped code now matches the current backend contract instead of preserving unused report-object scaffolding.
+- Added witness-markup normalization in `js/reading.js` so real workflow output no longer leaks raw markdown emphasis into the H1 or body copy, and bullet-like witness lines render as readable lists.
+- Verification on `2026-05-06`:
+  - `npm run build` passed
+  - real homepage submission at `http://127.0.0.1:5113/` redirected correctly to `reading.html`
+  - stored payload inspection confirmed the live witness contract only contained the current fields and no synthetic `summary/convergences/frictions/practice/question/evidence`
+  - live reading check confirmed:
+    - map links reduced to `Opening`, `Truth`, `Action`, and `Practice`
+    - orientation stayed hidden when `response` and `synthesis` collapsed to the same material
+    - mirrors were visible but collapsed by default
+    - source trace stayed visible but collapsed by default
+    - markdown emphasis was stripped from the title and reading copy
+  - honest empty-state check confirmed:
+    - both `sessionStorage` and `localStorage` must be cleared because the reader checks both
+    - with both cleared, `reading.html` correctly showed `No witness reading held here yet.`
+  - restored the real submitted reading after verification so browser storage now contains a real reading, not a seeded fixture
+
 ## 2026-05-01 Dedicated Witness Reading Page + Location Selector
 
 ### Plan

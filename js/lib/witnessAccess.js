@@ -67,6 +67,60 @@ export const splitWitnessResponse = (value) => {
   };
 };
 
+export const firstSentence = (value) => {
+  const text = textValue(value);
+  if (!text) return '';
+
+  const [sentence] = text.split(/(?<=[.!?])\s+/).filter(Boolean);
+  return sentence || text;
+};
+
+export const pickWitnessVoiceFallback = (witnessLayer) =>
+  firstFilledText(
+    witnessLayer?.pichet?.perspective,
+    witnessLayer?.aletheios?.perspective
+  );
+
+export const pickWitnessPrimary = (witnessLayer, fallbackPrompt = '') =>
+  firstFilledText(
+    witnessLayer?.response,
+    witnessLayer?.synthesis,
+    pickWitnessVoiceFallback(witnessLayer),
+    fallbackPrompt
+  );
+
+export const pickWitnessPracticalDetail = (witnessLayer, primaryText = '') => {
+  const detail = firstSentence(witnessLayer?.pichet?.perspective);
+  if (!detail) return '';
+
+  const primary = textValue(primaryText);
+  return primary && primary.includes(detail) ? '' : detail;
+};
+
+export const getWitnessInferenceRoles = (witnessLayer) => {
+  const roles = witnessLayer?.inference?.roles;
+  if (!roles || typeof roles !== 'object') return [];
+
+  return Object.entries(roles)
+    .filter(([, value]) => value && typeof value === 'object')
+    .map(([role, value]) => ({ role, ...value }));
+};
+
+export const summarizeWitnessInference = (witnessLayer) => {
+  const provider = textValue(witnessLayer?.inference?.provider);
+  const roles = getWitnessInferenceRoles(witnessLayer);
+  const primaryRole = roles[0] || null;
+
+  return {
+    provider,
+    role_count: roles.length,
+    role_names: roles.map((entry) => entry.role),
+    primary_role: primaryRole?.role || '',
+    primary_model: textValue(primaryRole?.model_used),
+    primary_latency_ms: typeof primaryRole?.latency_ms === 'number' ? primaryRole.latency_ms : null
+  };
+};
+
 export const formatLatency = (value) => {
   const parsed = typeof value === 'number' ? value : Number(value);
 

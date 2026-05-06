@@ -1,0 +1,27 @@
+{
+  "id": "019dfe46-cb66-79c4-82fd-75bc0ff0040e",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 375442958,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "A full-body ceremonial witness character named Aletheios. Tall poised humanoid with a calm faceplate, observatory halo rings, articulated shoulders, and astronomical-instrument detailing. Represents lucid pattern recognition, observer-first intelligence, and truth witness. Materials: aged brass, dark bronze, amber glass, black stone insets. Elegant spare exact silhouette, A-pose for rigging, bioluminescent internal glow in Sacred Gold, Witness Violet, and restrained Coherence Emerald. Serious sacred-technology object, not fantasy armor, not cartoon, no weapon, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778087545910,
+  "progress": 100,
+  "started_at": 1778087546748,
+  "finished_at": 1778087760242,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe46-cb66-79c4-82fd-75bc0ff0040e/output/model.glb?Expires=4931625600&Signature=Vx~6EDiUSrLlgXT~T5FuLXDTxU4J0sKyILTc3JZmPhXEJVhlHUSNr2-~9172sKC4F2FoWOGkkO-XQhmF-iaGpz3u4VvfXP~LjQccoNHZkFXqnlDuMjyRfxGfPJ72dERHJkqoDnQeMOUAQ5MWanSEBGfVE9GQzd1e-goLWKb6Ips9Pgc8yo5DaJPOGx9mQzGbJ-zOA2O95TwJd2N2~TG8UQBjb8YJcMo-kvdgPv-lmEGeuKDy8F6HddHzBhdzrdgBfPUGvEnYTfpf8Lt8Gr3d1CqxS-C9V-pPso5DPXNqTOU1Lrb9mFNQme4NfdLGuzHULqFYG93WzE5ZH9SPwpjiLw__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe46-cb66-79c4-82fd-75bc0ff0040e/output/preview.png?Expires=4931625600&Signature=aGlOFrYlyA5-1yvAP8LkTQSck~sj~o9ln9vx2P402~SSMkY3QTTgZIrTYLUZD4sl9q~IhmP1~iWtKHd0WMFK15ao73BY85pN2859~ansl0PRiRgqtUIF1vWlgzayjwM2U6Up0E6ukLahZa8rCpbUpMhl7L2wNKIQGuCc0HCeAbM7J1Baj~ozW9Lgqc5FEx1wvCq6Nm8hsZF4HFWMTyPbMFA2KzTKavR4IilaBn7C5mWElI8h4mCbs~PXaa85yR8bjiK64OyQ90qgAWKwRNbVlmfICK~O2hFjNxUsCajH4IjDCFkd2y7neFRW6azU~qMpvy6A1qhhwtQFFyYDn59mog__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

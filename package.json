@@ -15,7 +15,15 @@
     "meshy:gen-base": "node ./scripts/meshy.mjs gen-base",
     "meshy:optimize-base": "node ./scripts/optimize-sigil.mjs",
     "meshy:retexture-all": "node ./scripts/meshy.mjs retexture-all",
-    "meshy:status": "node ./scripts/meshy.mjs status"
+    "meshy:status": "node ./scripts/meshy.mjs status",
+    "meshy:characters": "node ./scripts/meshy-characters.mjs generate all",
+    "meshy:characters:plan": "node ./scripts/meshy-characters.mjs plan",
+    "meshy:characters:balance": "node ./scripts/meshy-characters.mjs balance",
+    "meshy:characters:test": "node ./scripts/meshy-characters.mjs generate all --test-mode",
+    "meshy:phase1": "node ./scripts/meshy-phase-one.mjs generate phase1",
+    "meshy:phase1:plan": "node ./scripts/meshy-phase-one.mjs plan",
+    "meshy:phase1:balance": "node ./scripts/meshy-phase-one.mjs balance",
+    "meshy:phase1:test": "node ./scripts/meshy-phase-one.mjs generate phase1 --test-mode"
   },
   "dependencies": {
     "@google/model-viewer": "^4.2.0",

@@ -9,7 +9,7 @@
     <title>Daily Witness Reading | Tryambakam Noesis</title>
     <meta
       name="description"
-      content="Dedicated Daily Witness reading page showing workflow synthesis, Aletheios, Pichet, and engine-level voices from the latest witness payload." />
+      content="Dedicated Daily Witness reading page where the mirrors meet and a reading becomes orientation, action, and reflection." />
 
     <link rel="preload" href="/assets/fonts/Panchang-Variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/assets/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin />
@@ -29,67 +29,218 @@
         </a>
         <div class="reading-frame__actions">
           <a class="reading-frame__link" href="/#signal">Run another witness</a>
-          <a class="reading-frame__link" href="https://48.tryambakam.space" rel="noopener">Inspect API</a>
         </div>
       </header>
 
       <section class="reading-hero">
         <p class="reading-kicker" data-reading-kicker>Latest reading · Daily Practice</p>
-        <h1 class="reading-title" data-reading-title>Dedicated witness reading</h1>
-        <p class="reading-intro" data-reading-intro>Latest workflow payload</p>
-        <p class="reading-status" data-reading-status>Loading latest reading</p>
+        <h1 class="reading-title" data-reading-title>Witness reading</h1>
+        <p class="reading-intro" data-reading-intro>Latest held reading</p>
+        <p class="reading-status" data-reading-status>Opening the latest reading</p>
+        <div class="reading-badges">
+          <span class="reading-promo-badge" data-reading-promo hidden></span>
+        </div>
         <div class="reading-meta" data-reading-meta></div>
       </section>
+
+      <nav class="reading-map" data-reading-map hidden aria-label="Reading map">
+        <div class="reading-map__head">
+          <p class="reading-label">Passage</p>
+          <p class="reading-map__status" data-reading-progress-text>Current turn: Opening</p>
+        </div>
+        <div class="reading-map__progress">
+          <span data-reading-progress-bar></span>
+        </div>
+        <div class="reading-map__links" data-reading-map-links></div>
+      </nav>
 
       <section class="reading-empty" data-reading-shell-empty hidden>
         <p class="reading-label">No reading yet</p>
         <h2 class="reading-empty__title">Run Daily Witness from the home page first.</h2>
         <p class="reading-empty__body">
-          This page renders the latest workflow payload after submission, including synthesis, Aletheios, Pichet, and engine-level voices.
+          When a reading is ready, it opens here as orientation, witness, practice, and reflection.
         </p>
         <a class="reading-empty__cta" href="/#signal">Open the Daily Witness form</a>
       </section>
 
       <div class="reading-stack" data-reading-shell-ready>
-        <section class="reading-banner" data-reading-parity hidden>
-          <p data-reading-parity-text></p>
-        </section>
-
-        <div class="reading-grid reading-grid--primary">
-          <section class="reading-panel">
-            <p class="reading-label">Workflow Synthesis</p>
-            <div class="reading-prose" data-reading-synthesis></div>
+        <div
+          class="reading-grid reading-grid--primary"
+          data-reading-primary-grid
+          id="reading-core"
+          data-reading-section
+          data-reading-section-label="Opening">
+          <section class="reading-panel reading-panel--core">
+            <p class="reading-label">Opening</p>
+            <h2 class="reading-panel__title">The Reading</h2>
+            <div class="reading-prose" data-reading-primary></div>
           </section>
 
-          <section class="reading-panel" data-reading-response-panel>
-            <p class="reading-label">Workflow Response</p>
-            <div class="reading-prose" data-reading-response></div>
+          <section
+            class="reading-panel reading-panel--summary"
+            data-reading-summary-panel
+            id="reading-summary"
+            data-reading-section
+            data-reading-section-label="Summary"
+            hidden>
+            <p class="reading-label" data-reading-summary-label>Bearing</p>
+            <h2 class="reading-panel__title" data-reading-summary-title>What this day is asking</h2>
+            <p class="reading-section__lede" data-reading-summary-lede hidden></p>
+            <div class="reading-prose" data-reading-summary></div>
+          </section>
+        </div>
+
+        <div class="reading-grid reading-grid--insights">
+          <section
+            class="reading-panel reading-panel--signal"
+            data-reading-convergences-panel
+            id="reading-convergences"
+            data-reading-section
+            data-reading-section-label="Convergence"
+            hidden>
+            <p class="reading-label">Convergence</p>
+            <h2 class="reading-panel__title">Where the mirrors agree</h2>
+            <p class="reading-section__lede">
+              These are the places where separate witnesses land on the same meaning.
+            </p>
+            <div data-reading-convergences></div>
+          </section>
+
+          <section
+            class="reading-panel reading-panel--tension"
+            data-reading-frictions-panel
+            id="reading-frictions"
+            data-reading-section
+            data-reading-section-label="Friction"
+            hidden>
+            <p class="reading-label">Friction</p>
+            <h2 class="reading-panel__title">What resists or asks for care</h2>
+            <p class="reading-section__lede">
+              The reading is strongest when it also names the strain, not just the direction.
+            </p>
+            <div data-reading-frictions></div>
           </section>
         </div>
 
         <div class="reading-grid reading-grid--voices">
-          <section class="reading-panel">
-            <p class="reading-label">Dyad Left Pillar</p>
+          <section
+            class="reading-panel reading-panel--voice"
+            id="reading-truth"
+            data-reading-section
+            data-reading-section-label="Truth">
+            <p class="reading-label">Witness of Truth</p>
             <h2 class="reading-panel__title">Aletheios</h2>
             <div class="reading-prose" data-reading-aletheios></div>
           </section>
 
-          <section class="reading-panel">
-            <p class="reading-label">Dyad Right Pillar</p>
+          <section
+            class="reading-panel reading-panel--voice"
+            id="reading-action"
+            data-reading-section
+            data-reading-section-label="Action">
+            <p class="reading-label">Witness of Action</p>
             <h2 class="reading-panel__title">Pichet</h2>
             <div class="reading-prose" data-reading-pichet></div>
           </section>
         </div>
 
-        <section class="reading-panel">
+        <section
+          class="reading-panel reading-panel--practice"
+          data-reading-practical-panel
+          id="reading-practice"
+          data-reading-section
+          data-reading-section-label="Practice"
+          hidden>
+          <p class="reading-label" data-reading-practical-label>Practical Detail</p>
+          <h2 class="reading-panel__title" data-reading-practical-title>Next Move</h2>
+          <p class="reading-section__lede" data-reading-practical-lede></p>
+          <div data-reading-practical></div>
+        </section>
+
+        <section
+          class="reading-panel reading-panel--question"
+          data-reading-question-panel
+          id="reading-question"
+          data-reading-section
+          data-reading-section-label="Reflection"
+          hidden>
+          <p class="reading-label">Reflection</p>
+          <h2 class="reading-panel__title">Question to carry</h2>
+          <p class="reading-section__lede">
+            Let the reading close as a living question, not as a finished verdict.
+          </p>
+          <div class="reading-endcap">
+            <p class="reading-endcap__copy" data-reading-question></p>
+          </div>
+        </section>
+
+        <section
+          class="reading-panel reading-panel--evidence"
+          data-reading-evidence-panel
+          id="reading-evidence"
+          data-reading-section
+          data-reading-section-label="Source"
+          hidden>
           <div class="reading-panel__head">
             <div>
-              <p class="reading-label">Engine Chorus</p>
-              <h2 class="reading-panel__title">Per-engine voices</h2>
+              <p class="reading-label">Why this reading formed</p>
+              <h2 class="reading-panel__title">How the mirrors met</h2>
+            </div>
+            <p class="reading-panel__meta" data-reading-evidence-count></p>
+          </div>
+          <p class="reading-section__lede" data-reading-evidence-lede>
+            This is the convergence beneath the reading: which mirrors were active and what each one contributed.
+          </p>
+          <div class="reading-token-list" data-reading-evidence-engines></div>
+          <div class="reading-evidence-list" data-reading-evidence-contributions></div>
+        </section>
+
+        <section
+          class="reading-panel reading-panel--inspect"
+          data-reading-mirror-panel
+          hidden>
+          <div class="reading-panel__head">
+            <div>
+              <p class="reading-label">Inspection</p>
+              <h2 class="reading-panel__title">Inspect the mirrors</h2>
             </div>
             <p class="reading-panel__meta" data-reading-engine-count></p>
           </div>
-          <div class="reading-engine-list" data-reading-engines></div>
+          <p class="reading-section__lede" data-reading-mirror-lede>
+            Open this only if you want to compare how the supporting mirrors held the same reading.
+          </p>
+          <details class="reading-inspection__details" data-reading-mirror-details>
+            <summary class="reading-inspection__summary">
+              <span>Open the mirror field</span>
+            </summary>
+            <div class="reading-inspection__body">
+              <div class="reading-engine-list" data-reading-engines></div>
+            </div>
+          </details>
+        </section>
+
+        <section class="reading-panel reading-panel--appendix">
+          <div class="reading-panel__head">
+            <div>
+              <p class="reading-label">Source Notes</p>
+              <h2 class="reading-panel__title">Beneath the reading</h2>
+            </div>
+            <a class="reading-panel__link" href="https://48.tryambakam.space" rel="noopener">Open source trace</a>
+          </div>
+          <p class="reading-section__lede" data-reading-appendix-lede>
+            The supporting trace lives here if you want to inspect how the reading was held.
+          </p>
+          <div class="reading-meta reading-meta--appendix" data-reading-source-meta hidden></div>
+          <details class="reading-appendix__details" data-reading-trace-shell hidden>
+            <summary class="reading-appendix__summary">
+              <span>Reveal source trace</span>
+              <span class="reading-appendix__status" data-reading-trace-status></span>
+            </summary>
+            <div class="reading-appendix__body">
+              <div class="reading-meta reading-meta--appendix" data-reading-trace-meta></div>
+              <p class="reading-trace-copy" data-reading-trace-copy></p>
+            </div>
+          </details>
         </section>
       </div>
     </main>

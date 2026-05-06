@@ -1,0 +1,27 @@
+{
+  "id": "019dfe8a-2091-7b7b-80f1-3a8c414adb6a",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2564842076,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "Breath engine torso named Pichet, non-human somatic carrier built from dark bronze rib architecture, ceramic-black mass, oxidized-gold joints, open thoracic chambers, translucent emerald channels, grounded dense silhouette, ritual-scientific instrument for breath and rhythm, no face, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778091959787,
+  "progress": 100,
+  "started_at": 1778091960370,
+  "finished_at": 1778092194220,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe8a-2091-7b7b-80f1-3a8c414adb6a/output/model.glb?Expires=4931625600&Signature=kF1SiFJKEZLBTpgogiNZLKQluyTxHJ3PyWf2vT-LXbjqnOxVjUriBqrmpSRut991buD7z942UWBRqUKQDCx2n6~7f3ifwsjxx4M7m8nZeqBA3yA08eiTgoB3UIO66Qjv9ICKVRlFgjfGcKhg0hZca-PlD8W-g0haPB8PBro9yTFTQL3BB6sf1rtZ1HZBx85roJNXzNGnLwUnes4yFc~pN4Xhq5Dg0TlrmMKNvJmrqCISf3MpcTgqMhEaH73lhebEP4INNQ9cbSI-~Pkhb9b39mIeEbePyt6YDafTgVo4PYPc5svK-aL~RI1oN7ksgP~Bnda0~zWpswaUscoIb2uQ1A__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe8a-2091-7b7b-80f1-3a8c414adb6a/output/preview.png?Expires=4931625600&Signature=epmvpma3T88cVmQ51hnDasjkUZUwZ0fhYdr4Oa5-OrSSE1E~6bY80dxx~wD7Z7HdQzAGzHoDEtTS43TZiMDOtkK-KbyJRSn-3m4eKJjsAK3ZRKmP93vp3IhoVOdtN1lzem464gRFU3TbZr2Px6j6nCVb3IaGX~NZ4Nu1~jIExjRouafnWzbwsIJCPz0m5ze3IXw5hDW3JF1u3ykLzuKuV~aY54Xd-lyBnVNkFIR88pv-Bfs45GHJgdTSiNCAvIPjHd-weKJK1RKruGPtnuetT2LWrcXMAfo~QFfV9OWf-eT0HNb8T7d23QrevsvQ1Z3zkVjjKKCj3GXCVpzdTHmKtA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

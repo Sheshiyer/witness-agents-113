@@ -25,10 +25,11 @@ import initMagnetic from './sections-special/magnetic.js';
 import initAgentAccess from './sections-special/agentAccess.js';
 import initPlaylistRail from './sections-special/playlistRail.js';
 import initScrollProgress from './sections-special/scrollProgress.js';
+import initNarrativeObjects from './sections-special/narrativeObjects.js';
 
 const reduced = isReducedMotion();
 const EFFECTS = { 1: Effect1, 2: Effect2, 3: Effect3, 4: Effect4, 5: Effect5 };
-const heroModelViewer = import('@google/model-viewer');
+const modelViewerReady = import('@google/model-viewer');
 const EXPAND_EFFECT_RESET_PROPS = 'transform,transformOrigin,opacity,width,height,maxWidth,maxHeight,minWidth,minHeight,translate,rotate,scale,x,y,xPercent,yPercent,skewX,rotation,lineHeight,willChange';
 
 const lenis = reduced ? null : initLenis();
@@ -114,7 +115,7 @@ const boot = async () => {
 
   document.body.classList.remove('loading');
 
-  initHero({ gsap, ScrollTrigger, reduced, modelViewerReady: heroModelViewer });
+  initHero({ gsap, ScrollTrigger, reduced, modelViewerReady });
   initExpandEffects();
 
   window.addEventListener('resize', scheduleExpandEffectRefresh, { passive: true });
@@ -129,6 +130,7 @@ const boot = async () => {
   initAgentAccess({ reduced, lenis });
   initPlaylistRail({ gsap, reduced });
   initScrollProgress({ reduced });
+  initNarrativeObjects({ ScrollTrigger, reduced, modelViewerReady });
 
   // Easter eggs
   registerAllEggs({ gsap, ScrollTrigger, lenis });

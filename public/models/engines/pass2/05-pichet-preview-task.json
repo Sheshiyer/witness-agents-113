@@ -1,0 +1,27 @@
+{
+  "id": "019dfe9c-2006-7e76-8dad-31ded18694d7",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 46101132,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "Sealed breath vessel named Pichet, non-human thoracic chamber object built from dark bronze architecture, ceramic-black mass, oxidized-gold joints, pulse cavities and vented chambers, translucent emerald channels, grounded dense silhouette, ritual-scientific instrument for breath and rhythm, no limbs, no hands, no skeleton, no humanoid trunk, no face, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778093139350,
+  "progress": 100,
+  "started_at": 1778093142702,
+  "finished_at": 1778093261578,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9c-2006-7e76-8dad-31ded18694d7/output/model.glb?Expires=4931625600&Signature=Ix7x5tsmq6ED5CiHwzmsSmPAUuCmKlaOrLojofwyObnFInkXXNneRR2eqz10VYqahBShv2uEuXIJkiiXJ3HIWAoFRym4xqqA1kfyrHihZs4ns0iUYIYFUF0zFAJJH~d8DqbC43vbxtRaO9~mqSHg6lea3vvoUbNIyc7USB7-9V1V0G03C1c2rsCxP~~2TrEDi0mmsUbj4Xnp2mrtvMPr5M01V9~5HYPd31hXXBrxdhqoBUON8FICUZLPhq0SVs8sSHah7jqqGnI4vnQxzgg9wEGWzOuJ8m2hu0-QMDOKq7CPhCOFdOq~Zr-2VhrcG179~Js21UIdOnkwtsLt-E5QKg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9c-2006-7e76-8dad-31ded18694d7/output/preview.png?Expires=4931625600&Signature=eSh~blMh9fZnu6Awvf3NCmtYAsQyna1jz5bUWJ6zNUPiuasVowzQ5bnu8ahvsAZB0g22RqJoNgO66Zg0C-X6txJxrARVgZaywwi3jJD0K~zzZjuJWU9HLGA11Rp1S19hz2Ur907kAdirsuznTvcFV0s2S7D-sPdqdeH5KQUmVIiTKl38ZnxkhoGpCv1iERBQoaaqSS~PDKuNbpH8dxtH-Ku1RCM~5FqlDFVX--oZ0DiK9YpkGzudrjlLw8FodYavKOvROna3fU3bteYTgLp-izJCGMEAmyQhkOEMf9rBW6GMRf-H~94KuRNK5PRhpp5PUUTIB0lqUFNpXkvDAHXehg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

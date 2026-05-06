@@ -1,0 +1,27 @@
+{
+  "id": "019dfe93-6b48-7d45-878a-1536927820d3",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 1769605680,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "Single torus ring around a short central axis, clean donut silhouette, measurable biofield instrument, circulating emerald current lines, sacred-gold nodal crossings, subtle-anatomy object, coherence and fracture made visible, bioluminescent from within, no cage, no spikes, no sphere shell, no person, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778092568734,
+  "progress": 100,
+  "started_at": 1778092569100,
+  "finished_at": 1778092744291,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe93-6b48-7d45-878a-1536927820d3/output/model.glb?Expires=4931625600&Signature=MLiWVQfC8~BnnU-FPBjDwNmHCWtUzmpDKf2H-8RxvV7UBgMr870gVawli7GvKXuGsLnzi9HjJ6nG8tOOKZMxJRORWuJ96QTJ55CYgTZ9DXttOKg4mdb6guh2u9RzTODzSZop09DcgKeoRVeDoJPMvNzzx-KbLaxJ2UIW6EYTl2zdig75ye14HdI7G5SzCZHk3TWYW6KU9t-jgQR8JQDDzGxkJaIBOy7h9xE1j6zli-dFYHowIR6gwF~fHluA2JkQH7CI03N8O5TjAWwdnKWiie5wZ7QgK-xzLSxr1N-AZni9Lomm5qSrBiimJLDVOBXxWr32wHEHZFvzMs86fJ3yBg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe93-6b48-7d45-878a-1536927820d3/output/preview.png?Expires=4931625600&Signature=C-ZYwymzmjJkIwFLiNxJww6nfkeYgnoJwhWrA5F5ZPh9rKSVotSIC~jBbwdNJV~ouwE5cFLsaEf2OMxnMZkZncIwAUOlB7MSlPbIWRNsFWOWibIX-ZSx9tCWJAnM0-j1TdPLRYFUZXo~0dfGqq~TxlNop7c3kXBSOoiLBvZQ0YURDzDsZ5qPbmf9uF-zGhMSrhOsTeeTPAsKuGH3JeAuvh6Gr-ZULcxVEKKLw9dz5B~7i0GLX~eAEa5vTXoU9hNrTdyb-Cm-ugTWFaIYhz4~OdEv5wpS9ajJQM5KvSY0gFO48rbY2M4L9Hyz6ihIY3JEPQo-91liKothdV5G3mLDGg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

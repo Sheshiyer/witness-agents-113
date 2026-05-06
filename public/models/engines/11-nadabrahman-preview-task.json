@@ -1,0 +1,27 @@
+{
+  "id": "019dfe76-69bd-7c19-ada7-ddd92d0449e9",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 3828717765,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "Harmonic resolution disc, thin layered bronze and brass rings around a central opening, concentric interference channels, clean front-readable silhouette, contemplative ritual-scientific object, sound resolving into coherence, restrained emerald resonance lines and sacred-gold harmonics, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778090667777,
+  "progress": 100,
+  "started_at": 1778090667996,
+  "finished_at": 1778090786363,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe76-69bd-7c19-ada7-ddd92d0449e9/output/model.glb?Expires=4931625600&Signature=LfaqRcu9qGZQLvUHXXZt4YG7xvAXQV6GWX3EsrXgR~eTiqyxh7y7G1mJGkHhqJdJMnVxiYnAsw1n0pPOWV3jfzBh4kM2O-B4SZ9EQb1opghRtJt3bNEkpgmGAhUyl4vVZIokzu138sCEL2rRkPEGVZmHrAFCf6g8CSsckwCng3QDBYLr8fbKm13I2cvHZCq2eD5v-jMW7amkT2YTFGDpz7zi1QzI9utW3BNRqYJK5tfgzvBwQbujzOzeAal~p1N9AnA0f4ByzN2-8vXKp0drzsBNf874glsKmI~HEENcluIX6YmVDYqYHjvKyFXnWDJgvu9pNIUP52mcCsKcx7YJDg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe76-69bd-7c19-ada7-ddd92d0449e9/output/preview.png?Expires=4931625600&Signature=EAICj-e98qubetr1MfeVOMKvRDjo8mG3K4lam7aFLysx7NWplhkT6-EQdqBKq1ADqYENuFkru1yVE5E6N1sdnpCcQKgoBvr1sSHAvA3InAibpGWve30b3IzRpc~QhHlBV29LoRmP5rvmOh8at71aOPDyATT5YrtLTU3hadwpi3KUm4sGFo7nNZZMVvSDsC7m2eXa41sgWnTKacpIXk6ekgWMftDNwe0xMW5bxXYWVHdZ5770xUJnX1LGwuEF76jXGkuYyRYm60zYaOAfXmYivQoHxeHIGqdO9P0hhZ43yZJEprD~kVrsWKoEiQYdT1eC-G2-LGUh2OJNA5c8r3xGEA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

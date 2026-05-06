@@ -1,0 +1,27 @@
+{
+  "id": "019dfe80-0ce4-7908-b900-8fddedb24b2e",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2798233031,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "Forged sigil chassis, layered brass and dark bronze rings suspended above a dark ceramic anchor plane, clear central cavity, sacred geometry as load-bearing structure, precise observatory instrument, bioluminescent emerald seams and sacred-gold edges, clean silhouette, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778091299372,
+  "progress": 100,
+  "started_at": 1778091299489,
+  "finished_at": 1778091439165,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe80-0ce4-7908-b900-8fddedb24b2e/output/model.glb?Expires=4931625600&Signature=IuEuO~By~X6IW6AOPk88aIZWmEMyKvEzO9wl6ehXygDL36TJ~52oygBLphLZCONtfU49hoG45OWZRUQh6hidE0VtqR4D7yobrc9JF3zpdhC82c1zNOiFTYielBlw6IvovNDHYFsIU1UNvQWKLP1yFKIJtrEBsJUXdk7PpCKY-i2n8Ao~PkHgEaB1stp9NKdGu4L3o9ZhLRSQLImd4RyCeFfzQN-VHnCbj86tHdpnltgX858RSjoR99hFH2f8x3mgPImn2hbtBc36sol~yRj4V6WA-WnYewDXKW~X6GDD25oR~XON-5IOUaM5Vq-Wh~w-S4PT1rYCjnxDWXfi3LKerg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe80-0ce4-7908-b900-8fddedb24b2e/output/preview.png?Expires=4931625600&Signature=cq19MPk9jtHl0CvgeRVSJFq0B3atnapedh9GUJ1R9b-HMdC657-GLwaJB8MeBU1b6HpQgwpSQfAgg1OM3IDAKri27x-0A12VJZqVOsaQLk~IsryZ0FAsl9SWgndCghhulvM3kPXmFpGyd2FWf3HiIGdQUVb8JoVFhSqQO~PmRXNKne-9nVIMdJtgxLz0KpvEcuZ98gfO~s96lFGMO8QsLD~CyQXGc6poNSSGs4PP2K4bEHAil322qhJlQh~u7pW0Pb3HD6r~O5NmBshFMzjiqX~Ie4ovrEMdyqR~FHrAPCAJCGKgwdZorTQOni8VyqcH0PFnmEEeJfoHcVJqS7fU-Q__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

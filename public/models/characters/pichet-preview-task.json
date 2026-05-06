@@ -1,0 +1,27 @@
+{
+  "id": "019dfe4c-260c-77bf-8194-2819ce1f2986",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2560820218,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "A full-body ceremonial witness character named Pichet. Strong graceful humanoid with thoracic wave architecture, pulse-ring joints, grounded stance, and kinetic geometry suggesting breath moving through structure. Represents embodied intelligence, somatic rhythm, and decisive grounded action. Materials: dark bronze, ceramic black, oxidized gold, translucent emerald-glass channels. Rooted rhythmic silhouette, A-pose for rigging, internal glow in Coherence Emerald and Sacred Gold. Serious sacred-technology object, not militaristic, not monstrous, not cartoon, no weapon, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778087896773,
+  "progress": 100,
+  "started_at": 1778087896997,
+  "finished_at": 1778088088944,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe4c-260c-77bf-8194-2819ce1f2986/output/model.glb?Expires=4931625600&Signature=TByGSZ8acbXdOulH2XWWWtw7GsyTtDAmZNr~jcAaZnl8h0l4~OOPrQmwcKPEu5Cc48hs4w82W1MMDGv5KwrGl3~poBK6mTuruaP1ZPl3UYLkuAj-6eOfjaQGFkv6WSwsCNetmB5zCfUoNwTUy9tItybmBtGS90kldY3WV73M6nnBHOTI8GI50wXjeCWD3lGNzPQdfRykiWz238t6bjQDwYUSM-WxY7zYZEHrORlFNThBpu6G1xcrXlTw2P6McEzUepbumtk5V5sRTGah2N4xuaxqr1B3n4hmM66yV2vLtcvGRo~s-bevNSdcUrSYGd1wUB4RPv5UZyZ~glW3uZ6DqA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe4c-260c-77bf-8194-2819ce1f2986/output/preview.png?Expires=4931625600&Signature=FoJbeLwj~5vDIgbQ6IixblS3WO7gWwOxQW5xODX5Qq3OnqJSDL~GeCbXVzUeBbZ61mkqr1UIjVweQbhYxG99FNMxZhh07czZ8Mn1fZ27G5y7b8hH6e0GugRXz2MYAH5ihw0QEAeCCrxoq7zL3N9qWhjo2eBvPTBB7~iuvuTgE8wfxkdgFxNxbHvNsBJuJwftIgAmEKa7cL-PQ8CQh523B-IpEreaZ26v2tTcI1A8XgYgRrnks5Ur~vFa4QEqRSidouS8SGkqMyHb7fvjmF4iSZJpII~-rs6KKtUHMSMGQrgha5vaKhm-hslSF9okzxdBxIrJZZw3SFsllRI1P2~YDg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

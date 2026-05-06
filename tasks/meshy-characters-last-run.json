@@ -1,0 +1,145 @@
+{
+  "date": "2026-05-06T17:23:57.263Z",
+  "runs": [
+    {
+      "startedAt": "2026-05-06T17:09:31.340Z",
+      "finishedAt": "2026-05-06T17:09:49.059Z",
+      "mode": "test",
+      "usedRealKey": false,
+      "characters": [
+        {
+          "key": "aletheios",
+          "label": "Aletheios",
+          "mode": "test",
+          "previewTaskId": "019dfe44-24d6-74c8-a809-d44dfb022bc2",
+          "refineTaskId": "019dfe44-3a33-74cd-98ad-70980d2174ea",
+          "prompt": "A full-body ceremonial witness character named Aletheios. Tall poised humanoid with a calm faceplate, observatory halo rings, articulated shoulders, and astronomical-instrument detailing. Represents lucid pattern recognition, observer-first intelligence, and truth witness. Materials: aged brass, dark bronze, amber glass, black stone insets. Elegant spare exact silhouette, A-pose for rigging, bioluminescent internal glow in Sacred Gold, Witness Violet, and restrained Coherence Emerald. Serious sacred-technology object, not fantasy armor, not cartoon, no weapon, no text.",
+          "texturePrompt": "Texture Aletheios as a lucid witness construct. Sacred Gold should define the instrument geometry. Witness Violet and restrained Coherence Emerald should glow from internal channels and sight lines, never as sprayed neon. Surface wear should be subtle and archival, like a ritual-scientific artifact maintained with care. The face should read as attentive and exact, not emotive or cartoonish.",
+          "consumedCredits": {
+            "preview": 0,
+            "refine": 0
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/.artifacts/meshy-characters/test-mode/aletheios-preview.glb",
+              "bytes": 720836
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/.artifacts/meshy-characters/test-mode/aletheios-preview.png",
+              "bytes": 90981
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/.artifacts/meshy-characters/test-mode/aletheios.glb",
+              "bytes": 1956776
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/.artifacts/meshy-characters/test-mode/aletheios.png",
+              "bytes": 64845
+            }
+          }
+        },
+        {
+          "key": "pichet",
+          "label": "Pichet",
+          "mode": "test",
+          "previewTaskId": "019dfe44-4b52-74ce-9300-db8548c01fd3",
+          "refineTaskId": "019dfe44-59e6-7a1f-b1ec-f35f88ff4082",
+          "prompt": "A full-body ceremonial witness character named Pichet. Strong graceful humanoid with thoracic wave architecture, pulse-ring joints, grounded stance, and kinetic geometry suggesting breath moving through structure. Represents embodied intelligence, somatic rhythm, and decisive grounded action. Materials: dark bronze, ceramic black, oxidized gold, translucent emerald-glass channels. Rooted rhythmic silhouette, A-pose for rigging, internal glow in Coherence Emerald and Sacred Gold. Serious sacred-technology object, not militaristic, not monstrous, not cartoon, no weapon, no text.",
+          "texturePrompt": "Texture Pichet as an embodied witness construct. Coherence Emerald and Sacred Gold should carry the rhythm through pulse channels, chest cavities, and joint lines. Keep the surface grounded and material, with subtle patina and no plastic shine. The face and torso should suggest breath, gravity, and action without becoming a literal anatomical body.",
+          "consumedCredits": {
+            "preview": 0,
+            "refine": 0
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/.artifacts/meshy-characters/test-mode/pichet-preview.glb",
+              "bytes": 720836
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/.artifacts/meshy-characters/test-mode/pichet-preview.png",
+              "bytes": 90981
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/.artifacts/meshy-characters/test-mode/pichet.glb",
+              "bytes": 1956776
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/.artifacts/meshy-characters/test-mode/pichet.png",
+              "bytes": 64845
+            }
+          }
+        }
+      ]
+    },
+    {
+      "startedAt": "2026-05-06T17:12:24.961Z",
+      "finishedAt": "2026-05-06T17:23:57.202Z",
+      "mode": "live",
+      "usedRealKey": true,
+      "characters": [
+        {
+          "key": "aletheios",
+          "label": "Aletheios",
+          "mode": "live",
+          "previewTaskId": "019dfe46-cb66-79c4-82fd-75bc0ff0040e",
+          "refineTaskId": "019dfe4a-1aee-7bfb-8bba-3202c527af2c",
+          "prompt": "A full-body ceremonial witness character named Aletheios. Tall poised humanoid with a calm faceplate, observatory halo rings, articulated shoulders, and astronomical-instrument detailing. Represents lucid pattern recognition, observer-first intelligence, and truth witness. Materials: aged brass, dark bronze, amber glass, black stone insets. Elegant spare exact silhouette, A-pose for rigging, bioluminescent internal glow in Sacred Gold, Witness Violet, and restrained Coherence Emerald. Serious sacred-technology object, not fantasy armor, not cartoon, no weapon, no text.",
+          "texturePrompt": "Texture Aletheios as a lucid witness construct. Sacred Gold should define the instrument geometry. Witness Violet and restrained Coherence Emerald should glow from internal channels and sight lines, never as sprayed neon. Surface wear should be subtle and archival, like a ritual-scientific artifact maintained with care. The face should read as attentive and exact, not emotive or cartoonish.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/characters/aletheios-preview.glb",
+              "bytes": 1939468
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/characters/aletheios-preview.png",
+              "bytes": 58565
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/characters/aletheios.glb",
+              "bytes": 36290948
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/characters/aletheios.png",
+              "bytes": 76417
+            }
+          }
+        },
+        {
+          "key": "pichet",
+          "label": "Pichet",
+          "mode": "live",
+          "previewTaskId": "019dfe4c-260c-77bf-8194-2819ce1f2986",
+          "refineTaskId": "019dfe4f-1cb3-7c70-9246-d942f2fe50a7",
+          "prompt": "A full-body ceremonial witness character named Pichet. Strong graceful humanoid with thoracic wave architecture, pulse-ring joints, grounded stance, and kinetic geometry suggesting breath moving through structure. Represents embodied intelligence, somatic rhythm, and decisive grounded action. Materials: dark bronze, ceramic black, oxidized gold, translucent emerald-glass channels. Rooted rhythmic silhouette, A-pose for rigging, internal glow in Coherence Emerald and Sacred Gold. Serious sacred-technology object, not militaristic, not monstrous, not cartoon, no weapon, no text.",
+          "texturePrompt": "Texture Pichet as an embodied witness construct. Coherence Emerald and Sacred Gold should carry the rhythm through pulse channels, chest cavities, and joint lines. Keep the surface grounded and material, with subtle patina and no plastic shine. The face and torso should suggest breath, gravity, and action without becoming a literal anatomical body.",
+          "consumedCredits": {
+            "preview": 20,
+            "refine": 10
+          },
+          "outputs": {
+            "previewModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/characters/pichet-preview.glb",
+              "bytes": 1795428
+            },
+            "previewThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/characters/pichet-preview.png",
+              "bytes": 106594
+            },
+            "refinedModel": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/characters/pichet.glb",
+              "bytes": 37220232
+            },
+            "refinedThumbnail": {
+              "path": "/Volumes/madara/2026/twc-vault/01-Projects/tryambakam-noesis/witness-agents-intro-web/public/models/characters/pichet.png",
+              "bytes": 167806
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

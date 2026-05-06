@@ -1,0 +1,27 @@
+{
+  "id": "019dfe98-33f5-74bb-b899-e6790dc867f7",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 749780489,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "Geometric forge mechanism, partially assembled ring chassis above a dark ceramic anchor plane, open center, misaligned brass and dark bronze ringwork, load-bearing sacred geometry, precise observatory instrument, emerald seams and sacred-gold edges, no icon, no emblem, no anchor, no letter, no religious symbol, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778092882735,
+  "progress": 100,
+  "started_at": 1778092883675,
+  "finished_at": 1778092998311,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe98-33f5-74bb-b899-e6790dc867f7/output/model.glb?Expires=4931625600&Signature=EP0of8NlJDT14xxvFQa5crP0VR7ItorADP4RtNa8GN8LImSFX3kT2R9NqQrGz9Iq5xoofJYgvUEJF0jMzkJvlbTcw8h6ZeyX1BNNBvJUYQ3T8QERn1V1Qz4C6RPyGTCVvMXtnGV9sx57erfd2cChkgIS7-geCr3SSKdmDn0n8Fpb5XMYcANF6xxgShnKhnWs9zgxTGTgNGffL~fgZsDsiMRmnhvN5vcbk2L2GeFBUAC~sCCMaehqH8yKDJZP5YegFKyrSbse9XTYM9zJVWrOYC3PmbFz~-Q82fGCGRtOIMPGuq8f5Gw9vGnsttI1SePqNnxjWWDBpqjt3XeWKvKxcA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe98-33f5-74bb-b899-e6790dc867f7/output/preview.png?Expires=4931625600&Signature=Y1HhKLOWXUPsQ3I31GstgpnnH5HURRZhs-Kz-K3yunOdBcpC7KKmdfgm3y7l2p12hAVUVzyc0sxBFNCtR3exnx~CcaOOmzmMWUZraZmN0Xmjy-NBb84hk4u3bu8vuQs9kD~Gp4n~z-Ds7L6AP2wlsrTELLh8zT11MWZhmzE6dLwTxOnS5E664i~cx64c61-huEReSQ~xUo3BEW7k8YjooWaEZSOXp1iM0fdRJTmmutPRVbOSPP9JMLP9ntf0uSE5Yzek7vCeEtD9LL7azgA-mYnTFcP10aMMbWH6GSiC00sjU0OC1w-45Nxvq2lXeOvP33eka9BZppvmD0el0wfAUg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

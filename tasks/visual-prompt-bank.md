@@ -49,6 +49,22 @@ Do not generate:
 - Prompt: `Generate a high-detail 3D sigil for Tryambakam Noesis: nested sacred geometry, compass-point outer frame, lotus-form core, concentric rings, precise radial symmetry, brass and bronze construction with subtle wear, amber-glass inserts, deep engraved channels carrying soft bioluminescent Witness Violet and Coherence Emerald light. The object should feel like a ritual-scientific instrument, not jewelry. Clean silhouette, no pedestal, no text, no floating particles, dark neutral studio environment, PBR materials, production-ready topology.`
 - Meshy note: request separate roughness and metallic maps if available. Keep the center cavity readable from a frontal camera orbit.
 
+## Witness Characters
+
+### `character-aletheios-3d`
+- Use: first-pass Meshy text-to-3D generation for the analytic witness pole.
+- Output target: `public/models/characters/aletheios.glb`
+- Prompt: `Generate a full-body ceremonial witness character named Aletheios. Tall poised humanoid with a calm faceplate, observatory halo rings, articulated shoulders, and astronomical-instrument detailing. Represents lucid pattern recognition, observer-first intelligence, and truth witness. Materials: aged brass, dark bronze, amber glass, black stone insets. Elegant spare exact silhouette, A-pose for rigging, bioluminescent internal glow in Sacred Gold, Witness Violet, and restrained Coherence Emerald. Serious sacred-technology object, not fantasy armor, not cartoon, no weapon, no text.`
+- Texture prompt: `Texture Aletheios as a lucid witness construct. Sacred Gold should define the instrument geometry. Witness Violet and restrained Coherence Emerald should glow from internal channels and sight lines, never as sprayed neon. Surface wear should be subtle and archival, like a ritual-scientific artifact maintained with care. The face should read as attentive and exact, not emotive or cartoonish.`
+- Negative prompt: `Not fantasy armor. Not cartoon. No weapon. No floating text. No neon HUD clutter. No horror deformation.`
+
+### `character-pichet-3d`
+- Use: first-pass Meshy text-to-3D generation for the embodied witness pole.
+- Output target: `public/models/characters/pichet.glb`
+- Prompt: `Generate a full-body ceremonial witness character named Pichet. Strong graceful humanoid with thoracic wave architecture, pulse-ring joints, grounded stance, and kinetic geometry suggesting breath moving through structure. Represents embodied intelligence, somatic rhythm, and decisive grounded action. Materials: dark bronze, ceramic black, oxidized gold, translucent emerald-glass channels. Rooted rhythmic silhouette, A-pose for rigging, internal glow in Coherence Emerald and Sacred Gold. Serious sacred-technology object, not militaristic, not monstrous, not cartoon, no weapon, no text.`
+- Texture prompt: `Texture Pichet as an embodied witness construct. Coherence Emerald and Sacred Gold should carry the rhythm through pulse channels, chest cavities, and joint lines. Keep the surface grounded and material, with subtle patina and no plastic shine. The face and torso should suggest breath, gravity, and action without becoming a literal anatomical body.`
+- Negative prompt: `Not militaristic. Not monstrous. Not cartoon. No weapon. No floating text. No neon HUD clutter. No horror deformation.`
+
 ## Hero Background
 
 ### `hero-bg-still`

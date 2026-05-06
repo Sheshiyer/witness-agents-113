@@ -1,0 +1,27 @@
+{
+  "id": "019dfe84-fbb7-7a3b-9ed4-726a0a084573",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 2170359657,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "Observatory reliquary named Aletheios, upright non-human witness instrument with concentric brass rings, dark bronze armatures, amber-glass insets, black structural core, sacred-gold index marks, calendrical divisions, sparse exact silhouette, no face, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778091623206,
+  "progress": 100,
+  "started_at": 1778091623708,
+  "finished_at": 1778091819266,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe84-fbb7-7a3b-9ed4-726a0a084573/output/model.glb?Expires=4931625600&Signature=BYjVDyVstD9n7~I0YeOjINd6DV2Oq0Hpt~PAxnsR9ULxJ1vPH9Ra2uq0ltBKG5XW3FYz5rtteNtwVkZQXAPeFT0ZQjrX2ZmFQIfTEwWmDStMrgUsdtdOaJyqiNe5Ql3XT5oOtTr6vzS9wT~IFqOO1FOOJgpcg8gdNpa2k4KOBOFWmwn7XhnX4Vxuowzxnp~I7ZN6MXCKXiPBo-2nRuY04yAfWI~77HrHy~~OSiPCSerCDAFm4SHB6Fh-VZmIfi-B9pirQLRxR0yNwOUpwdW88smAt5kGSFTPwVIJRVLO1e7ZbS-Ylmd~0GuqfbU2xoEAJ7rOxUSgFZ74KfkVfrXf9w__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe84-fbb7-7a3b-9ed4-726a0a084573/output/preview.png?Expires=4931625600&Signature=eGfsey4TicvmAoKiYkBjmbQkrlR6Lsl64dldN5Hjm3IIT-PzMWzJwvACf1YBxpuuirMm7RuiBbItFxeD~vK52lnUrL93stDGkxXp36d-xJxIB8ybwXitGabGkVNcvHgkOeVG4IiBomcKvHsyyEXW25oW7TsOHKcqoC3Dx9hyP7U~u5Bgs6nez0-FdmTMiHfp5XXeoPpSsZkxeVrvz9LrreDhtr5OhxMA84S1ZLA~gSi5SfbK0orl1oRalC~IWs4LWIJVBtGmVxmq3BDFRwMWRf6V-rVwzaPCjgHFqgxXQAel6n3qYSff8Qr9Uw5NJI9xXoTKYuuRo7r9WBYfYqUfhg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

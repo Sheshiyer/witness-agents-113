@@ -1,0 +1,37 @@
+{
+  "id": "019dfe9a-12eb-796d-bbf2-d8587b245180",
+  "type": "text-to-3d-refine",
+  "mode": "refine",
+  "name": "",
+  "model_type": "standard",
+  "seed": 749780489,
+  "art_style": "realistic",
+  "texture_richness": "high",
+  "prompt": "Geometric forge mechanism, partially assembled ring chassis above a dark ceramic anchor plane, open center, misaligned brass and dark bronze ringwork, load-bearing sacred geometry, precise observatory instrument, emerald seams and sacred-gold edges, no icon, no emblem, no anchor, no letter, no religious symbol, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "Aged brass and dark bronze with subtle patina, dark ceramic anchor plane, engraved channels, emerald emissive seams, sacred-gold edge highlights, faint indigo-violet recess depth, matte ritual-scientific finish, no iconography, no neon overspray.",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778093004888,
+  "progress": 100,
+  "started_at": 1778093005243,
+  "finished_at": 1778093115283,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9a-12eb-796d-bbf2-d8587b245180/output/model.glb?Expires=4931625600&Signature=njDyMGq9tzh12IhtL6~qtt3obdk764hCRGNeupqlia8RWbJdP6zLXZYtdQ-RmK5cvqrj7TZv1rKm0ncNudrhoqHhwajCaHA9bDBGlNzsZv7x6gXWcdSKCU4ua6Qa~nZvIvx6J9U4SPMaAMgu8Rzcm~SOZEoRUWnXynSrRm8xyTyXSes~jYsZEjTycavNpySztUPAmfl5RDiLaKuruJRu0akGWTjDlWnG003CEYXOc0x3Rxa2vOq8aMXF-coptf9t5-jf8UpwTjCqjrq4WjZX5u6A3dJx6DzDkFfkt9tgEiNzh3Evu0VXQx3irE0TkUDqeB4CffuVjSebQLlp2mt3EQ__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9a-12eb-796d-bbf2-d8587b245180/output/preview.png?Expires=4931625600&Signature=Ar-aw~5EDjjoV3n4qC60YtSrGuD7~6fBZGzqMRy-UjpbWlJ8KsEfYbdlbQNFcX1dn-UdO591ZOn-rXF9pZGK7ZgMvBy5z8R4J2CJ15nk4Q5fTUnajAcHvxbdgEEzc8CkZTl52SBajmdaiFGsdjuErS0n46msIUolw35Pr1gW32DS-74Q0usrSlwU5QTF3X8agD2hULSEWf~-yegh1yexwJOZqDDyK6XVB~uDCgDaT9C~131FLfP7iH-ItOOKa2IW3VrEiz2Y~5wXPGrqJA~5Ao7oe7vbR4Sa8boFLCVelzds3kw1WYJETwV~j51g9Ch~r1~7HcF5Xl1xYoetW46c0g__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [
+    {
+      "base_color": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9a-12eb-796d-bbf2-d8587b245180/output/texture_0.png?Expires=4931625600&Signature=h2iVSORvXTLHirOvDT9ICDcvCrNsuTRU0O-TGX6goDxnvU3cAJ4F-hwjRUlB4yx34yTbXIZdLTOyNeFt-DEw4N2bdGFGSOgsoIn8krP85-hTk~-TQ9-wTLAPmV9TWUSNcsXI~MIs0c7pDskxNp1k00isoJT5zzsVb~XMlKFH4FOXGgLXJbdWQuv8l60mL58p~F-cefxFEPB0jjFAdgujrU7X4EjO5RjNd7GrNP~p1DXyKIzibG18o-yYwgLGFe4jACk83ZOpgveu5CgqzObKzvoei6PShoRLz-KL6OmY2mkssR8153G5smf29EDxH-7AgQmdxzVW~C98qhsaUaSXbQ__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "metallic": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9a-12eb-796d-bbf2-d8587b245180/output/texture_0_metallic.png?Expires=4931625600&Signature=Ru8cj55WGa~cUXKxVH0G7jCCIIHmGw9WKsViseS0aMYKxepiyXe2O1Ltj9zO0cTMOt2QvsilHJh~uNkBUwU5ZkllTM7Bemy3FprBDDYAbb8LdTGgOcpo~BFfXGqS4mFpB2ixp80WPyeS1K~YPeSYuk9YG9KkYYIWFAA6rY3J-OaDNS8kG4sFJbbRg8x2fXgEI61P-YJnNGOrW2f~uyRV6Z3BY~i9mTber7YBvAQVFiC7weEOaj3SNxCmRdJPGoEgRognMump6gTPh1DQjrTZgn4eHTEvKrXapOqDCURuKWo5jPT1ExSdu78UUACXzLnx2jZ~0~Vl9w9ruuMQfpilFg__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "roughness": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9a-12eb-796d-bbf2-d8587b245180/output/texture_0_roughness.png?Expires=4931625600&Signature=MGFnziPqUBhvna5PyncUgkwAUgtyoQuywVbe7aCNt7JQg-aCQth2utXknmIDwr4RpHFVb82se7EDK7z8Mtke1GRqO6EoIKInbKLP2ca~xjGF1IBpuupjzFJAg3UWglHqIM2dzaoc3ica9NV3-nE-E2eMVPIB7ZWbyoceCB4Jh4o-94uMftf29D7fcNyjoFjGXeeBXdIs6bWaD-t5WCi6I9uf2syYIkoCXgD~yawxgFiY6yKXiqTPKQHqjNUhIkzA-IvkNNhmEFTx6cdBSV2SrC4NBicsjneP3avWBzkAqQ2SZpr9ywfnpomi3MOAIBNT1MnGeBlb0Njr7ZcRadsiMA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "normal": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9a-12eb-796d-bbf2-d8587b245180/output/texture_0_normal.png?Expires=4931625600&Signature=hGw1TLBcP8eqlXtkCX3sNOSYpaeNLCvrBZF22sjj3Tt3zX-hxIkcOoldUY0SAKopHp4yIAhtoK0I4SYQH7TD6CB-0pCp1ipDXa2k-PTvIqxKjKJTgIzZhZOWlCnfI81BLq9CciptIj9RzPKxLiiTx2E2G5E4rsjtR189N0nlIKNMlf7y1xrEz~2O3vxqm4qVpIP4BrR7ZIghqRE2x~KKgRHhP22EcR492q79Ok5zPgzT6hrcQ6vg1BnqBaO4zo2-DoBdIZOpbgpkec-2PMQyzYWDNmeRh2vy1zqHPmld-L-WfRkZVQi4nizeFoCTmVlYtdhgmV8sJuNmJ7KjmQhrnw__&Key-Pair-Id=K1VGYTHIYLM9UM",
+      "emission": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe9a-12eb-796d-bbf2-d8587b245180/output/texture_0_emission.png?Expires=4931625600&Signature=Ek~ubzsNzEe6cq-f2HRKdZv2IKBw5-QieacdC0v8W5nz~sNMU-9gAgyjztzDa36O8D1wA2zoIQD~o9L8gwtrPrp~HClTGu6-WMMc0qmAohB3XtqiO6mw~kDiP2dTef4q99jZjjD1ljo2mugprOHM0OUSMsAVgVATLm5QusTkowh-gJOFmTeALIvNxTd1JoYmnklKcLGTIX2kIlOAzrO7gpln-DAySgNHJeOect~ooAXeOUz9M7AWNxXayh90P6Uh2C389JMj-xKuJXvZOcXa6tiAAVC~HkCGS4IFGKxueNAw~7Dv771ZVKJgTnGnH4r-pJmeLASloXxEbyH94lQPGg__&Key-Pair-Id=K1VGYTHIYLM9UM"
+    }
+  ],
+  "remove_lighting": true,
+  "hd_texture": true,
+  "consumed_credits": 10
+}

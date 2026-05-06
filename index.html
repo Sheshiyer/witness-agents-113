@@ -511,14 +511,51 @@
       </article>
 
       <!-- ═══════════ 02 I · Sigil Forge ═══════════ -->
-      <article class="content content--center" data-effect="2" data-section="02" data-acrostic="I">
+      <article class="content content--center" data-effect="2" data-section="02" data-acrostic="I" data-narrative-section="sigil-forge">
         <h3 class="meta">02 / BA · LA · KHA</h3>
         <h2 class="type" data-expand-2 data-acrostic-h>
           In the
           <span class="type__expand type__expand--center type__expand--reveal">
             <span class="aright">gap </span>
-            <span class="type__expand-img" aria-hidden="true">
+            <span class="type__expand-img type__expand-img--narrative" aria-hidden="true">
               <span class="type__expand-img-inner" style="background-image: url(/images/engines/fal/9A-16-sigil-forge-poster-fal-v1.png);"></span>
+              <span
+                class="narrative-object narrative-object--sigil-forge"
+                data-narrative-object
+                data-narrative-preset="sigil-forge"
+                data-narrative-status="loading">
+                <span class="narrative-object__glow"></span>
+                <span class="narrative-object__grid"></span>
+                <span class="narrative-object__shell">
+                  <span
+                    class="narrative-object__still"
+                    style="background-image: url(/models/engines/pass2/02-sigil-forge.png);"></span>
+                  <model-viewer
+                    class="narrative-object__viewer"
+                    src="/models/engines/pass2/02-sigil-forge.glb"
+                    poster="/models/engines/pass2/02-sigil-forge.png"
+                    alt=""
+                    loading="lazy"
+                    reveal="auto"
+                    interaction-prompt="none"
+                    touch-action="pan-y"
+                    disable-pan
+                    auto-rotate
+                    auto-rotate-delay="0"
+                    rotation-per-second="2deg"
+                    camera-orbit="-24deg 83deg 136%"
+                    min-camera-orbit="auto 68deg 110%"
+                    max-camera-orbit="auto 92deg 150%"
+                    field-of-view="26deg"
+                    shadow-intensity="0.9"
+                    shadow-softness="0.7"
+                    exposure="0.94"
+                    tabindex="-1">
+                  </model-viewer>
+                </span>
+                <span class="narrative-object__orbit narrative-object__orbit--outer"></span>
+                <span class="narrative-object__orbit narrative-object__orbit--inner"></span>
+              </span>
             </span>
             <span class="anim skewed">between</span>
           </span>
@@ -1143,11 +1180,14 @@
 
             <section class="signal__panel" id="signal-panel-daily" role="tabpanel" aria-labelledby="signal-tab-daily" data-signal-panel="daily">
               <div class="signal__route-head">
-                <p class="signal__label">Public browser flow · no key</p>
+                <p class="signal__label">Public browser flow · enterprise promo · no key</p>
                 <h3 class="signal__route-title">Run the Daily Witness now.</h3>
                 <p class="signal__body">
                   Four mirrors. Three layers. The live witness workflow opens a dedicated reading page that exposes synthesis, Aletheios, Pichet, and per-engine voices from <code>48.tryambakam.space</code>.
                 </p>
+                <div class="signal__promo" aria-label="Promo status">
+                  <span class="signal__status-pill signal__status-pill--promo">Enterprise promo · free through May 26, 2026</span>
+                </div>
               </div>
 
               <form class="signal__form" data-witness-form novalidate>

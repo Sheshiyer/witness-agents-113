@@ -3,8 +3,10 @@ import {
   firstFilledText,
   getWitnessLocation,
   getWitnessLocationGroups,
+  pickWitnessPrimary,
   readWitnessForm,
   splitWitnessResponse,
+  summarizeWitnessInference,
   textValue,
   writeWitnessForm,
   writeWitnessReading
@@ -200,14 +202,17 @@ export default function initAgentAccess({ reduced }) {
 
         const witnessLayer = body.witness_layer || {};
         const previewLine =
-          splitWitnessResponse(firstFilledText(witnessLayer.synthesis, witnessLayer.response)).title ||
+          splitWitnessResponse(pickWitnessPrimary(witnessLayer)).title ||
           'Reading ready.';
 
         writeWitnessReading({
           saved_at: new Date().toISOString(),
           form: storedForm,
           location,
-          payload: body
+          payload: body,
+          reporting: {
+            inference: summarizeWitnessInference(witnessLayer)
+          }
         });
 
         setStatus(statusNode, `Opening dedicated reading: ${previewLine}`, 'success');

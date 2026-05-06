@@ -1,0 +1,27 @@
+{
+  "id": "019dfe7a-17ad-7835-b4cc-39003317c37d",
+  "type": "text-to-3d-preview",
+  "mode": "preview",
+  "name": "",
+  "model_type": "standard",
+  "seed": 747631050,
+  "art_style": "realistic",
+  "texture_richness": "",
+  "prompt": "Toroidal field apparatus, dark central axis with translucent field shells, circulating emerald current lines, sacred-gold nodal crossings, readable torus silhouette, measurable subtle-anatomy instrument, coherence and fracture made visible, bioluminescent from within, no person, no text.",
+  "negative_prompt": "",
+  "texture_prompt": "",
+  "texture_image_url": "",
+  "status": "SUCCEEDED",
+  "created_at": 1778090909805,
+  "progress": 100,
+  "started_at": 1778090910275,
+  "finished_at": 1778091149434,
+  "task_error": null,
+  "model_urls": {
+    "glb": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe7a-17ad-7835-b4cc-39003317c37d/output/model.glb?Expires=4931625600&Signature=lwbaQGKPO~7t3trrH21rD5ShxLZnq2jKTlDp~O2Au1soWBB4tVQQvZcMMKp-8ydfX1CsCQf2~99B6rrvBlNiXasBAbPPcZSAs5xTPssAOBUmGUW9T7Qj7wZb2BfRbNT4h7XmGaxmc3xAl3vq2S~bhWOMg6uaDfgfi91STzgDkM-7pAFf06nnd04hn5Aa7SEPBs9RqTuPDDczthKjvuAgOdZr7w~iFB1-11RXCRjYnQpeZuTctQrGmFq35u-xy6sZy~zJsDHr~yGVFlq5KRxTPTMjJDfZWhhDvMnBn695QGdymeOUU7EvZ1bPyvIgG5crtIeomz0~HgU8hVnPa4UmLA__&Key-Pair-Id=K1VGYTHIYLM9UM"
+  },
+  "thumbnail_url": "https://assets.meshy.ai/google-oauth2%7C108619814590340458353/tasks/019dfe7a-17ad-7835-b4cc-39003317c37d/output/preview.png?Expires=4931625600&Signature=lF129Epsp~7naN9rFXEvoapkHIuEi3G~AASAdiFRjE~A64DoOYjEsaCz8qKvMvHK-sJDc-6SrZjFUaVKOwiOPsd72anJux3xKpuImQ7rvI5WLG0Arl6F~o9dSEAMPEweL6LgcNjQAhmCz6sg9EnT24D2NQkcVacRh5UsRzwoGt2cpOlJo4i42FGT83GVt1l8Kp-bq~UyrEb0avv9nrNRuhwcyYZ3n8acV19GBLGb5vAlPorIkTNdgIo8Q6VFtYDZ7F5RFP7p5i06o-8EE3EQSoviLWefZcB56ao4d-rSQj80efOIlxEwcllWESKJ2cOH43~u70YTPPZtaGyD4DBwIA__&Key-Pair-Id=K1VGYTHIYLM9UM",
+  "video_url": "",
+  "texture_urls": [],
+  "consumed_credits": 20
+}

@@ -2,6 +2,15 @@
 
 ## 2026-04-28
 
+- For this site, 3D assets are not standalone art swaps. They need to bind to scroll, pointer, and copy state inside the reveal system or they will read as ornament instead of narrative infrastructure.
+- In Meshy, simple silhouette instructions can correct whole classes of failure. `single torus ring` fixed Biofield more effectively than adding more atmospheric language.
+- If a non-human ceremonial object keeps turning into a humanoid figure, remove body nouns from the lead phrase and de-emphasize the character name. Named poles plus body-adjacent language still pull Meshy back toward person-shaped outputs.
+- In Meshy text-to-3D, trigger words like `torso`, `sigil`, and `field` can over-literalize into skeletons, foreign glyphs, or noisy cages. If those failure modes matter, say the forbidden form directly and replace the trigger word with the structural object class.
+- Before spending Meshy credits on a new asset family, check current Meshy docs and community examples for prompt-shape guidance. Tighten the prompt back to a single object, 3-5 dominant descriptors, and stable style anchors before generating.
+- Before planning an asset upgrade, audit the assets actually wired into `index.html` and separate `live`, `retained`, and `experimental`. Do not treat nearby repo files or prompt-bank references as proof of what the site is showing now.
+- Before concepting new 3D surfaces for Tryambakam Noesis, read the upstream `brand-docs-final` philosophy and map the visual to Kha-Ba-La first. Do not infer the whole visual system from the current page assets alone.
+- For this brand, a 3D asset needs a narrative job before it needs a prompt. Define the object class, the computation it spatializes, and the section role before generating anything in Meshy.
+- When the site’s visual language is symbolic, anatomical, and structural, do not swap in first-pass humanoid character renders just because they are technically available. Prove concept fit against the existing image system before replacing stronger abstract art.
 - When a user says the reading feels like marketing copy, verify whether the UI is inventing tone or merely echoing the API payload. Do not keep polishing presentation around a hidden payload mismatch.
 - For witness output, do not collapse the workflow result into a single landing-page card. Expose synthesis, Aletheios, Pichet, and engine voices on a dedicated reading surface so the actual dyad can be inspected.
 - After any broad copy replacement pass, run a link sanity check on every edited `href`. Text substitutions can silently corrupt URLs.
@@ -17,6 +26,10 @@
 - When footer or header links target reveal articles, add explicit `id` anchors on the article wrappers. Do not assume `data-section` names or comments are navigable anchors.
 - Do not promote internal voice DNA into public contributor credit. If a name came from tone/persona calibration, verify it separately before placing it in lineage or authorship copy.
 - When reader-facing copy starts describing the page, route, node, or funnel more than the subject itself, rewrite it into first-order claims. Interface self-commentary is usually a drift signal.
+- On the witness reading page, treat `workflow`, `model`, `API`, and similar implementation language as opt-in appendix vocabulary only. The default path should speak in readings, witnesses, mirrors, convergence, practice, and source, or the page stops sounding like meaning and starts sounding like instrumentation.
+- Before polishing witness-page copy, re-check whether the rendered object is actually the intended reading. If the UI is still composed around synthesis/agent surfaces and prompt-derived subviews, better labels will not fix the core drift.
+- When verifying empty-state behavior for witness pages, clear both `sessionStorage` and `localStorage`. This reader intentionally checks both, so clearing only one can produce a false “empty state is broken” diagnosis.
+- When backend reading fields become structured, do not pass them through generic text rendering. Arrays, objects, and source metadata need explicit frontend shaping, while markdown-like witness prose needs normalization before it reaches the public reading surface.
 - For decorative flares, placeholder copy and generic CSS loops read unfinished immediately. Use real source metadata, stronger typography, and a proper motion system or do not ship the flourish.
 - Never present a polished public CTA for a channel that is not actually live. If email, subscription, or intake wiring is pending, the interface must say so plainly and point to the implementation tracker instead.
 - Before tuning any reveal image system, audit the real asset dimensions first. A generic `16:9` container against portrait posters will force cropping and make every later mobile fix look random.
