@@ -316,6 +316,52 @@ const renderStructuredList = (selector, value) => {
   return true;
 };
 
+const renderStructuredListInNode = (node, items) => {
+  if (!node) return false;
+
+  node.innerHTML = '';
+  const normalized = normalizeListItems(items);
+  if (!normalized.length) {
+    node.hidden = true;
+    return false;
+  }
+
+  node.hidden = false;
+  node.append(createStructuredList(normalized));
+  return true;
+};
+
+const renderTokenItems = (node, items) => {
+  if (!node) return false;
+
+  const normalized = normalizeListItems(items);
+  node.innerHTML = '';
+  if (!normalized.length) {
+    node.hidden = true;
+    return false;
+  }
+
+  node.hidden = false;
+  normalized.forEach((itemText) => {
+    const token = document.createElement('span');
+    token.className = 'reading-token';
+    token.textContent = itemText;
+    node.append(token);
+  });
+
+  return true;
+};
+
+const setOptionalText = (selector, value) => {
+  const node = document.querySelector(selector);
+  if (!node) return false;
+
+  const text = cleanInlineWitnessText(value);
+  node.textContent = text;
+  node.hidden = !text;
+  return Boolean(text);
+};
+
 const createMetaChip = (label, value) => {
   const item = document.createElement('div');
   item.className = 'reading-chip';
@@ -457,16 +503,309 @@ const renderSummarySection = (summaryText, fallbackOrientationText = '') => {
   return true;
 };
 
-const renderPracticalSection = (practiceValue, fallbackDetail, actionText = '') => {
+const createResonanceMetric = (label, value) => {
+  const card = document.createElement('article');
+  card.className = 'reading-resonance__metric';
+
+  const kicker = document.createElement('p');
+  kicker.className = 'reading-label';
+  kicker.textContent = label;
+
+  const copy = document.createElement('p');
+  copy.className = 'reading-resonance__metric-copy';
+  copy.textContent = value;
+
+  card.append(kicker, copy);
+  return card;
+};
+
+const renderResonanceBody = (node, value, { compact = false } = {}) => {
+  const resonance = isRecord(value) ? value : null;
+  if (!node || !resonance) return false;
+
+  const primary = isRecord(resonance.primary_raga) ? resonance.primary_raga : null;
+  const supporting = Array.isArray(resonance.supporting_ragas)
+    ? resonance.supporting_ragas
+      .filter((entry) => isRecord(entry))
+      .map((entry) => cleanInlineWitnessText(entry.raga_name))
+      .filter(Boolean)
+    : [];
+  const listeningWindow = cleanInlineWitnessText(resonance.listening_window);
+  const doshaDominance = cleanInlineWitnessText(resonance.dosha_dominance);
+  const energyQuality = cleanInlineWitnessText(resonance.energy_quality);
+  const doshaGuidance = cleanInlineWitnessText(resonance.dosha_guidance);
+  const rasa = cleanInlineWitnessText(resonance.rasa);
+  const chakra = isRecord(resonance.chakra_attunement) ? resonance.chakra_attunement : null;
+  const primaryName = cleanInlineWitnessText(primary?.raga_name);
+  const primaryReason = cleanInlineWitnessText(primary?.reason);
+  const metrics = [
+    listeningWindow ? createResonanceMetric('Listening Window', listeningWindow) : null,
+    rasa ? createResonanceMetric('Rasa', rasa) : null,
+    doshaDominance ? createResonanceMetric('Dosha', doshaDominance) : null,
+    energyQuality ? createResonanceMetric('Energy', energyQuality) : null,
+    chakra?.chakra_name
+      ? createResonanceMetric(
+        'Chakra',
+        [
+          cleanInlineWitnessText(chakra.chakra_name),
+          chakra.solfeggio_hz ? `${chakra.solfeggio_hz}Hz` : '',
+        ].filter(Boolean).join(' · '),
+      )
+      : null,
+  ].filter(Boolean);
+
+  node.innerHTML = '';
+  node.hidden = false;
+
+  if (primaryName && !compact) {
+    const lead = document.createElement('article');
+    lead.className = 'reading-resonance__lead';
+
+    const kicker = document.createElement('p');
+    kicker.className = 'reading-label';
+    kicker.textContent = 'Primary Raga';
+
+    const title = document.createElement('h3');
+    title.className = 'reading-resonance__title';
+    title.textContent = primaryName;
+
+    lead.append(kicker, title);
+
+    if (primaryReason) {
+      const copy = document.createElement('p');
+      copy.className = 'reading-resonance__copy';
+      copy.textContent = primaryReason;
+      lead.append(copy);
+    }
+
+    node.append(lead);
+  }
+
+  if (metrics.length) {
+    const grid = document.createElement('div');
+    grid.className = compact ? 'reading-resonance__metrics reading-resonance__metrics--compact' : 'reading-resonance__metrics';
+    metrics.forEach((metric) => grid.append(metric));
+    node.append(grid);
+  }
+
+  if (supporting.length) {
+    const supportingShell = document.createElement('div');
+    supportingShell.className = 'reading-resonance__support';
+
+    const label = document.createElement('p');
+    label.className = 'reading-label';
+    label.textContent = 'Supporting Ragas';
+
+    const tokens = document.createElement('div');
+    tokens.className = 'reading-token-list';
+    supporting.forEach((itemText) => {
+      const token = document.createElement('span');
+      token.className = 'reading-token';
+      token.textContent = itemText;
+      tokens.append(token);
+    });
+
+    supportingShell.append(label, tokens);
+    node.append(supportingShell);
+  }
+
+  const notes = normalizeListItems([
+    doshaGuidance,
+    chakra?.binaural_target_hz ? `Binaural focus: ${chakra.binaural_target_hz}Hz.` : '',
+  ]);
+
+  if (notes.length) {
+    const noteShell = document.createElement('div');
+    noteShell.className = 'reading-resonance__notes';
+    noteShell.append(createStructuredList(notes));
+    node.append(noteShell);
+  }
+
+  const hasContent = node.childElementCount > 0;
+  node.hidden = !hasContent;
+  return hasContent;
+};
+
+const renderResonanceSection = (value, workflowId = 'daily-practice', creativeSurfaceVisible = false) => {
+  const shouldEmbedInCreative = workflowId === 'creative-expression' && creativeSurfaceVisible;
+  const panel = document.querySelector('[data-reading-resonance-panel]');
+  const body = document.querySelector('[data-reading-resonance]');
+  if (!panel || !body) return false;
+
+  if (shouldEmbedInCreative) {
+    panel.hidden = true;
+    return false;
+  }
+
+  const hasContent = renderResonanceBody(body, value);
+  toggleHidden('[data-reading-resonance-panel]', !hasContent);
+  if (!hasContent) return false;
+
+  setText('[data-reading-resonance-label]', 'Attunement');
+  setText('[data-reading-resonance-title]', 'Where to tune the day');
+  setText(
+    '[data-reading-resonance-lede]',
+    'The reading is not only directional. It is also tonal, and this is the line that steadies the pace.'
+  );
+  return true;
+};
+
+const renderCreativeSection = (value) => {
+  const surface = isRecord(value) ? value : null;
+  const panel = document.querySelector('[data-reading-creative-panel]');
+  if (!panel || !surface) {
+    toggleHidden('[data-reading-creative-panel]', true);
+    return false;
+  }
+
+  const sigil = isRecord(surface.sigil) ? surface.sigil : null;
+  const geometry = isRecord(surface.geometry) ? surface.geometry : null;
+  const resonance = isRecord(surface.resonance) ? surface.resonance : null;
+  const numerology = isRecord(surface.numerology) ? surface.numerology : null;
+  const ritual = normalizeListItems(surface.ritual);
+  const intention = cleanInlineWitnessText(surface.intention);
+
+  setText('[data-reading-creative-label]', 'Creative Surface');
+  setText('[data-reading-creative-title]', 'Symbol, form, and ritual');
+  setText(
+    '[data-reading-creative-lede]',
+    'This is where the reading becomes something you can hold, repeat, and return to with your body.'
+  );
+
+  if (intention) {
+    setText('[data-reading-creative-intention]', `Held intention: ${intention}`);
+    toggleHidden('[data-reading-creative-intention]', false);
+  } else {
+    toggleHidden('[data-reading-creative-intention]', true);
+  }
+
+  const sigilVisible = Boolean(sigil && (
+    textValue(sigil.method_name) || textValue(sigil.method_description) || textValue(sigil.note) || textValue(sigil.intention)
+  ));
+  toggleHidden('[data-reading-creative-sigil]', !sigilVisible);
+  if (sigilVisible && sigil) {
+    setText('[data-reading-creative-sigil-title]', cleanInlineWitnessText(sigil.method_name) || 'Portable mark');
+    setOptionalText(
+      '[data-reading-creative-sigil-body]',
+      cleanInlineWitnessText(sigil.method_description) || cleanInlineWitnessText(sigil.note) || cleanInlineWitnessText(sigil.intention)
+    );
+    renderTokenItems(
+      document.querySelector('[data-reading-creative-sigil-tags]'),
+      [
+        cleanInlineWitnessText(sigil.intention),
+        cleanInlineWitnessText(sigil.svg_status),
+      ]
+    );
+    renderStructuredListInNode(
+      document.querySelector('[data-reading-creative-sigil-list]'),
+      [
+        ...(Array.isArray(sigil.next_steps) ? sigil.next_steps : []),
+        ...(Array.isArray(sigil.charging_suggestions)
+          ? sigil.charging_suggestions
+            .filter((entry) => isRecord(entry))
+            .map((entry) => {
+              const name = cleanInlineWitnessText(entry.name);
+              const description = cleanInlineWitnessText(entry.description);
+              return name && description ? `${name}: ${description}` : name || description;
+            })
+          : []),
+      ]
+    );
+  }
+
+  const geometryVisible = Boolean(geometry && (
+    textValue(geometry.form_name) || textValue(geometry.description) || textValue(geometry.symbolism)
+  ));
+  toggleHidden('[data-reading-creative-geometry]', !geometryVisible);
+  if (geometryVisible && geometry) {
+    setText('[data-reading-creative-geometry-title]', cleanInlineWitnessText(geometry.form_name) || 'Sacred form');
+    setOptionalText(
+      '[data-reading-creative-geometry-body]',
+      cleanInlineWitnessText(geometry.symbolism) || cleanInlineWitnessText(geometry.description)
+    );
+    renderTokenItems(
+      document.querySelector('[data-reading-creative-geometry-elements]'),
+      Array.isArray(geometry.elements) ? geometry.elements : []
+    );
+    renderStructuredListInNode(
+      document.querySelector('[data-reading-creative-geometry-list]'),
+      [
+        cleanInlineWitnessText(geometry.description),
+        geometry.numerology ? `Geometry number: ${geometry.numerology}.` : '',
+        geometry.duration_suggestion && geometry.meditation_prompt
+          ? `${geometry.duration_suggestion}: ${cleanInlineWitnessText(geometry.meditation_prompt)}`
+          : cleanInlineWitnessText(geometry.meditation_prompt),
+      ]
+    );
+  }
+
+  const attunementVisible = Boolean(resonance);
+  toggleHidden('[data-reading-creative-attunement]', !attunementVisible);
+  if (attunementVisible) {
+    setText(
+      '[data-reading-creative-attunement-title]',
+      cleanInlineWitnessText(resonance.primary_raga?.raga_name) || 'Attunement'
+    );
+    setOptionalText(
+      '[data-reading-creative-attunement-body]',
+      cleanInlineWitnessText(resonance.primary_raga?.reason) || cleanInlineWitnessText(resonance.dosha_guidance)
+    );
+    renderResonanceBody(document.querySelector('[data-reading-creative-attunement-list]'), resonance, { compact: true });
+  }
+
+  const numerologyVisible = Boolean(numerology && (textValue(numerology.value) || textValue(numerology.phase)));
+  toggleHidden('[data-reading-creative-numerology]', !numerologyVisible);
+  if (numerologyVisible && numerology) {
+    setText('[data-reading-creative-numerology-title]', textValue(numerology.value) || 'Pulse');
+    setOptionalText(
+      '[data-reading-creative-numerology-body]',
+      cleanInlineWitnessText(numerology.phase) ? `${cleanInlineWitnessText(numerology.phase)} phase` : ''
+    );
+    renderStructuredListInNode(
+      document.querySelector('[data-reading-creative-numerology-list]'),
+      [
+        numerology.percentage ? `Current intensity: ${numerology.percentage}%.` : '',
+        numerology.cycle_day ? `Cycle day: ${numerology.cycle_day}.` : '',
+        numerology.is_critical ? 'This pulse is currently in a critical window.' : 'The pulse is currently stable enough for repetition.',
+      ]
+    );
+  }
+
+  const ritualVisible = renderStructuredListInNode(
+    document.querySelector('[data-reading-creative-ritual]'),
+    ritual
+  );
+  toggleHidden('[data-reading-creative-ritual-panel]', !ritualVisible);
+
+  const hasContent = [
+    sigilVisible,
+    geometryVisible,
+    attunementVisible,
+    numerologyVisible,
+    ritualVisible,
+    Boolean(intention),
+  ].some(Boolean);
+
+  toggleHidden('[data-reading-creative-panel]', !hasContent);
+  return hasContent;
+};
+
+const renderPracticalSection = (practiceValue, fallbackDetail, actionText = '', workflowId = 'daily-practice') => {
   const node = document.querySelector('[data-reading-practical]');
   const steps = normalizeListItems(practiceValue);
   const hasStructuredPractice = Boolean(node) && steps.length > 0;
 
   if (hasStructuredPractice && node) {
     toggleHidden('[data-reading-practical-panel]', false);
-    setText('[data-reading-practical-label]', 'Practice');
-    setText('[data-reading-practical-title]', 'What to carry into the day');
-    setText('[data-reading-practical-lede]', 'Let the reading leave you with one rhythm to embody, not just one idea to remember.');
+    if (workflowId === 'creative-expression') {
+      setText('[data-reading-practical-label]', 'Ritual');
+      setText('[data-reading-practical-title]', 'What to rehearse');
+      setText('[data-reading-practical-lede]', 'Take the symbol into repetition until it starts carrying you back into the state it names.');
+    } else {
+      setText('[data-reading-practical-label]', 'Practice');
+      setText('[data-reading-practical-title]', 'What to carry into the day');
+      setText('[data-reading-practical-lede]', 'Let the reading leave you with one rhythm to embody, not just one idea to remember.');
+    }
 
     node.innerHTML = '';
     steps.forEach((step, index) => {
@@ -493,9 +832,15 @@ const renderPracticalSection = (practiceValue, fallbackDetail, actionText = '') 
   toggleHidden('[data-reading-practical-panel]', !hasContent);
   if (!hasContent) return;
 
-  setText('[data-reading-practical-label]', 'Carry This');
-  setText('[data-reading-practical-title]', 'Next Move');
-  setText('[data-reading-practical-lede]', 'Reduce the reading to one act you can carry into the day.');
+  if (workflowId === 'creative-expression') {
+    setText('[data-reading-practical-label]', 'Carry This');
+    setText('[data-reading-practical-title]', 'First rehearsal');
+    setText('[data-reading-practical-lede]', 'Reduce the reading to the first gesture that makes the symbol usable.');
+  } else {
+    setText('[data-reading-practical-label]', 'Carry This');
+    setText('[data-reading-practical-title]', 'Next Move');
+    setText('[data-reading-practical-lede]', 'Reduce the reading to one act you can carry into the day.');
+  }
   renderCopy('[data-reading-practical]', detail);
 };
 
@@ -509,7 +854,7 @@ const renderQuestionSection = (value) => {
   setText('[data-reading-question]', question);
 };
 
-const renderEvidenceSection = (value) => {
+const renderEvidenceSection = (value, workflowId = 'daily-practice') => {
   const evidence = isRecord(value) ? value : null;
   const engines = Array.isArray(evidence?.engines_used)
     ? evidence.engines_used.map((engineId) => humanizeEngineId(engineId)).filter(Boolean)
@@ -525,6 +870,12 @@ const renderEvidenceSection = (value) => {
   setText(
     '[data-reading-evidence-count]',
     engines.length ? `${engines.length} mirror${engines.length === 1 ? '' : 's'}` : ''
+  );
+  setText(
+    '[data-reading-evidence-lede]',
+    workflowId === 'creative-expression'
+      ? 'These mirrors shaped the symbol, form, tone, and cadence beneath the reading.'
+      : 'This is the convergence beneath the reading: which mirrors were active and what each one contributed.'
   );
 
   const enginesNode = document.querySelector('[data-reading-evidence-engines]');
@@ -677,6 +1028,8 @@ const boot = () => {
   const payload = record?.payload;
   const witnessLayer = payload?.witness_layer || null;
   const engineResults = payload?.engine_results && typeof payload.engine_results === 'object' ? payload.engine_results : {};
+  const workflowId = textValue(payload?.workflow_id || witnessLayer?.workflow_id || 'daily-practice').trim().toLowerCase() || 'daily-practice';
+  const isCreativeExpression = workflowId === 'creative-expression';
 
   if (!witnessLayer) {
     setText('[data-reading-title]', 'No witness reading held here yet.');
@@ -716,14 +1069,18 @@ const boot = () => {
   const location = textValue(subject.location_label) || textValue(record?.location?.label);
   const heldAt = textValue(payload?.created_at) || textValue(record?.saved_at);
 
-  setText('[data-reading-kicker]', `${formatStoredMoment(heldAt)} · ${titleCase(payload?.workflow_id || 'daily-practice')}`);
+  setText('[data-reading-kicker]', `${formatStoredMoment(heldAt)} · ${titleCase(workflowId)}`);
   setText('[data-reading-title]', title || 'Witness reading');
   setText('[data-reading-intro]', formatReadingIntro(record, payload));
   setText(
     '[data-reading-status]',
-    showSummary || Array.isArray(witnessLayer.convergences) || Array.isArray(witnessLayer.frictions)
-      ? 'Read the opening first. Then follow the points of agreement, the strain, and the practice the reading leaves behind.'
-      : 'Read the opening first. Then let truth and action show you what is steady and what must move.'
+    isCreativeExpression
+      ? 'Read the opening first. Then move through the symbol, the form, the tone, and the ritual the reading leaves in your hands.'
+      : (
+        showSummary || Array.isArray(witnessLayer.convergences) || Array.isArray(witnessLayer.frictions)
+          ? 'Read the opening first. Then follow the points of agreement, the strain, and the practice the reading leaves behind.'
+          : 'Read the opening first. Then let truth and action show you what is steady and what must move.'
+      )
   );
   toggleHidden('[data-reading-promo]', !promoActive);
   if (promoActive) {
@@ -765,9 +1122,11 @@ const boot = () => {
 
   toggleHidden('[data-reading-convergences-panel]', !renderStructuredList('[data-reading-convergences]', witnessLayer.convergences));
   toggleHidden('[data-reading-frictions-panel]', !renderStructuredList('[data-reading-frictions]', witnessLayer.frictions));
-  renderPracticalSection(witnessLayer.practice, practicalDetail, pichet);
+  const creativeSurfaceVisible = renderCreativeSection(witnessLayer.creative_surface);
+  renderResonanceSection(witnessLayer.resonance, workflowId, creativeSurfaceVisible);
+  renderPracticalSection(witnessLayer.practice, practicalDetail, pichet, workflowId);
   renderQuestionSection(witnessLayer.question);
-  renderEvidenceSection(payload?.evidence || witnessLayer.evidence);
+  renderEvidenceSection(payload?.evidence || witnessLayer.evidence, workflowId);
   renderMirrorSection(engineResults);
   renderSourceMeta(record, payload, engineCount);
   renderAppendix(record, witnessLayer);

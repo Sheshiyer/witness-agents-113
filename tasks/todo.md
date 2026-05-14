@@ -1,3 +1,32 @@
+## 2026-05-14 Resonance + Creative Reading Surface
+
+### Plan
+- [x] Add a workflow-aware resonance section to `reading.html` / `reading.js` / `reading.css` so `daily-practice` can render the new raaga/attunement block as a first-class reading surface.
+- [x] Add a workflow-aware creative surface to the reading page for `creative-expression`, with explicit symbol, form, tone, numerology, and ritual rendering rather than generic text blobs.
+- [x] Keep the existing `daily-practice` reading path stable and backward-compatible with older payloads while the richer workflow blocks remain additive.
+- [x] Verify the updated reading page in build output and browser against both a `daily-practice` resonance payload and a `creative-expression` payload.
+
+### Review
+- Added two new workflow-aware reading surfaces:
+  - a standalone `Attunement` panel for `daily-practice`
+  - a first-class `Creative Surface` panel for `creative-expression`
+- The new renderer in `js/reading.js` now:
+  - formats the typed `resonance` object into visible attunement structure
+  - formats the typed `creative_surface` object into symbol / form / tone / numerology / ritual sections
+  - switches evidence and practice copy depending on workflow
+  - preserves the older daily-reading flow when those richer fields are absent
+- Added the corresponding markup in `reading.html` and styling in `css/reading.css`.
+- Verification:
+  - `npm run build`
+  - Playwright browser verification against seeded `witness-agents.latest-reading` records for:
+    - `daily-practice` at `1440px`
+    - `creative-expression` at `1440px`
+    - `creative-expression` at `390px`
+  - confirmed:
+    - `daily-practice` shows `Attunement`, keeps `Creative Surface` hidden, and preserves the generic evidence lede
+    - `creative-expression` shows `Creative Surface`, hides the standalone resonance panel, swaps the evidence lede, and relabels practice as rehearsal
+    - no horizontal overflow at the tested widths
+
 ## 2026-05-07 Narrative 3D Controller + Section 02 Wire-Up
 
 ### Plan
